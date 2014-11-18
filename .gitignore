@@ -1,0 +1,34 @@
+.DS_store
+*.rbc
+capybara-*.html
+.rspec
+/log/*.log
+/tmp
+/public/system
+/coverage/
+/spec/tmp
+/ssl-certificates
+**.orig
+rerun.txt
+pickle-email-*.html
+config/initializers/secret_token.rb
+config/initializers/devise.rb
+# config/secrets.yml
+*.env
+
+# My Dev Environment Variables
+config/initializers/01_development_env.rb
+
+# Environment normalisation:
+/.bundle
+/vendor/bundle
+
+# these should all be checked in to normalise the environment:
+# Gemfile.lock, .ruby-version, .ruby-gemset
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.rvmrc
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
