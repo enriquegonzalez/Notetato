@@ -1,5 +1,6 @@
 default: &default
   adapter: postgresql
+  encoding: unicode
   pool: 5
   timeout: 5000
 
@@ -15,7 +16,6 @@ development:
 test:
   <<: *default
   database: test_notetato
-  username: Test
   password:
 
 production:
