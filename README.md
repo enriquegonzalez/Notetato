@@ -2,7 +2,7 @@ Notetato
 ========
 * Recognize the good in today
 
-== README
+## README
 
 * Ruby version 2.1.4
 
