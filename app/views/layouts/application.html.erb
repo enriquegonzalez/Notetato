@@ -7,13 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<section>
+  <header>
+    <h1>Notetato</h1>
+    <p>Find the good in today.</p>
+  </header>
+  <nav>
+    <ul>
+      <li><%= render 'layouts/user_widget' %></li>
+    </ul
+  </nav>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
   <%= yield %>
 
-  <%= render 'layouts/user_widget' %>
-
+</section>
 </body>
 </html>
