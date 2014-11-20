@@ -11,11 +11,15 @@
   <header>
     <h1>Notetato</h1>
     <p>Find the good in today.</p>
+    <div>
+      <%= render 'layouts/user_widget' %>
+    </div>
   </header>
   <nav>
     <ul>
-      <li><%= render 'layouts/user_widget' %></li>
-    </ul
+      <li>Profile</li>
+      <li>Settings</li>
+    </ul>
   </nav>
 
   <p class="notice"><%= notice %></p>
