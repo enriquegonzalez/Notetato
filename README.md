@@ -1,6 +1,5 @@
-#Notetato
-*Recognize the good in today*
-___
+Notetato: Recognize the good in today
+=====================================
 
 ###README
 
