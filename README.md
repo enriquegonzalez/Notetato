@@ -1,10 +1,10 @@
 Notetato
 ========
-*Recognize the good in today
+**Recognize the good in today**
 
 ###README
 
-*Ruby version 2.1.4
+**Ruby version 2.1.4**
 
 ####System dependencies
   - Devise
