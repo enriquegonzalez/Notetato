@@ -1,6 +1,6 @@
-#Notetato
+Notetato
 *Recognize the good in today*
-========
+___
 
 ###README
 
