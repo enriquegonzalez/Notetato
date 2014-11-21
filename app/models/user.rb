@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 
   has_one :profile
   has_one :diary
+  has_one :reminder
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
