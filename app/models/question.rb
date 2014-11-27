@@ -1,3 +1,3 @@
 class Question < ActiveRecord::Base
-  has_many :entries
+  belongs_to :entry
 end
