@@ -69,6 +69,6 @@ class EntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params[:entry]
+      params.require(:entry).permit(:date, :how_do_you_feel, :what_went_well, :what_didnt_go_well, :how_to_make_it_better, :focus_on_tomorrow, :how_do_you_feel_now)
     end
 end

@@ -1,4 +1,9 @@
 class Entry < ActiveRecord::Base
   belongs_to :user
-  has_many :questions
+
+  before_create :set_todays_date
+
+  def set_todays_date
+    self.date = Date.today
+  end
 end

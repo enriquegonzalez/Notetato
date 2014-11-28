@@ -6,5 +6,6 @@ class AddColumnEntries < ActiveRecord::Migration
     add_column :entries, :how_to_make_it_better, :text
     add_column :entries, :focus_on_tomorrow,     :text
     add_column :entries, :how_do_you_feel_now,   :integer
+    add_column :entries, :user_id,               :integer
   end
 end
