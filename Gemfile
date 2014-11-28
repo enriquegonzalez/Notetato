@@ -28,6 +28,9 @@ gem 'binding_of_caller'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
 
+#Use Zurb's Foundation Framework
+gem 'foundation-rails'
+
 #Use Angular as the JavaScript library
 gem 'angularjs-rails'
 
