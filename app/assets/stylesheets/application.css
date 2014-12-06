@@ -17,13 +17,14 @@
 
 /* COLORS
   Black: hsla(0, 0%, 0%, 1)
+  Blue: hsla(210, 100%, 50%, 1)
   Gold: hsla(45, 100%, 50%, 1)
   Moodless Myst: hsla(135, 19%, 59%, 1)
   White: hsla(360, 100%, 100%, 1)
 */
 
 body {
-  background: hsla(135, 19%, 59%, 1);
+  background: hsla(201, 92%, 60%, .85);
   color: hsla(0, 0%, 0%, 1);
 }
 
@@ -32,6 +33,7 @@ body {
 }
 
 .title {
+  color: hsla(0, 0%, 0%, .5);
   font-family: 'Ultra', serif;
   font-size: 1.25rem;
   font-weight: bold;
@@ -69,6 +71,7 @@ body {
 .form__question {
   color: hsla(0, 0%, 0%, .65);
   font-size: 1.75rem;
+  font-weight: 200;
   letter-spacing: .025rem;
 }
 
@@ -87,7 +90,7 @@ body {
 
 /* LINKS */
 .login-state {
-  border-bottom: .15rem solid hsla(360, 100%, 100%, .25);
+  border-bottom: .15rem solid hsla(0, 0%, 0%, .25);
   color: hsla(0, 0%, 0%, .65);
   display: inline-block;
   font-weight: bold;
@@ -96,8 +99,7 @@ body {
 }
 
   .login-state:hover {
-    border-bottom: .15rem solid hsla(360, 100%, 100%, .25);
-    color: hsla(45, 100%, 50%, 1);
+    color: hsla(45, 100%, 30%, 1);
   }
 
 /* FOUNDATION OVERRIDES */
