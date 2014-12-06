@@ -1,4 +1,4 @@
-<%= form_for(@entry) do |f| %>
+<%= form_for(@entry, html: {class: "entry__form"}) do |f| %>
   <% if @entry.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
@@ -12,50 +12,50 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :how_do_you_feel %><br />
-    <%= f.label :how_do_you_feel, "Happy", :value => "1"  %>
+    <%= f.label :how_do_you_feel, class: "form__question" %>
     <%= f.radio_button :how_do_you_feel, 1 %>
-    <%= f.label :how_do_you_feel, "OK", :value => "2"  %>
+    <%= f.label :how_do_you_feel, "Happy", :value => "1"  %>
     <%= f.radio_button :how_do_you_feel, 2 %>
-    <%= f.label :how_do_you_feel, "Sad", :value => "3"  %>
+    <%= f.label :how_do_you_feel, "OK", :value => "2"  %>
     <%= f.radio_button :how_do_you_feel, 3 %>
-    <%= f.label :how_do_you_feel, "Angry", :value => "4"  %>
+    <%= f.label :how_do_you_feel, "Sad", :value => "3"  %>
     <%= f.radio_button :how_do_you_feel, 4 %>
+    <%= f.label :how_do_you_feel, "Angry", :value => "4"  %>
   </div>
 
    <div class="field">
-    <%= f.label :what_went_well %><br />
-    <%= f.text_area :what_went_well %>
+    <%= f.label :what_went_well, class: "form__question" %>
+    <%= f.text_area :what_went_well, class: "form__text-area" %>
   </div>
 
   <div class="field">
-    <%= f.label :what_didnt_go_well %><br />
-    <%= f.text_area :what_didnt_go_well %>
+    <%= f.label :what_didnt_go_well, "What didn't go well",class: "form__question" %>
+    <%= f.text_area :what_didnt_go_well, class: "form__text-area" %>
   </div>
 
   <div class="field">
-    <%= f.label :how_to_make_it_better %><br />
-    <%= f.text_area :how_to_make_it_better %>
+    <%= f.label :how_to_make_it_better, "How will you make it better", class: "form__question" %>
+    <%= f.text_area :how_to_make_it_better, class: "form__text-area" %>
   </div>
 
   <div class="field">
-    <%= f.label :focus_on_tomorrow %><br />
-    <%= f.text_area :focus_on_tomorrow %>
+    <%= f.label :focus_on_tomorrow, "What will you focus on tomorrow", class: "form__question" %>
+    <%= f.text_area :focus_on_tomorrow, class: "form__text-area" %>
   </div>
 
   <div class="field">
-    <%= f.label :how_do_you_feel_now %><br />
-    <%= f.label :how_do_you_feel_now, "Happy", :value => "1"  %>
+    <%= f.label :how_do_you_feel_now, class: "form__question" %>
     <%= f.radio_button :how_do_you_feel_now, 1 %>
-    <%= f.label :how_do_you_feel_now, "OK", :value => "2"  %>
+    <%= f.label :how_do_you_feel_now, "Happy", :value => "1"  %>
     <%= f.radio_button :how_do_you_feel_now, 2 %>
-    <%= f.label :how_do_you_feel_now, "Sad", :value => "3"  %>
+    <%= f.label :how_do_you_feel_now, "OK", :value => "2"  %>
     <%= f.radio_button :how_do_you_feel_now, 3 %>
-    <%= f.label :how_do_you_feel_now, "Angry", :value => "4"  %>
+    <%= f.label :how_do_you_feel_now, "Sad", :value => "3"  %>
     <%= f.radio_button :how_do_you_feel_now, 4 %>
+    <%= f.label :how_do_you_feel_now, "Angry", :value => "4"  %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Note it!", class: "button radius button--save" %>
   </div>
 <% end %>

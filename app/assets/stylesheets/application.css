@@ -13,5 +13,79 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
  */
+
+/* COLORS
+  Black: hsla(0, 0%, 0%, 1)
+  Moodless Myst: hsla(135, 19%, 59%, 1)
+  White: hsla(360, 100%, 100%, 1)
+*/
+
+body {
+  background: hsla(135, 19%, 59%, 1);
+  color: hsla(0, 0%, 0%, 1);
+}
+
+.screen {
+  margin: 2em 0 2em 0;
+}
+
+.title {
+  font-family: 'Ultra', serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: .075rem;
+  margin: 0;
+}
+
+/*BUTTONS*/
+.button--save {
+  background: hsla(0, 0%, 0%, .65);
+  color: hsla(360, 100%, 100%, .85);
+  font-family: 'Ultra', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: .085rem;
+  margin-top: 2rem;
+  text-transform: capitalize;
+}
+  .button--save:hover {
+    background: hsla(0, 0%, 0%, 1);
+    color: hsla(360, 100%, 100%, 1);
+  }
+
+/*FORMS*/
+.entry__prompt{
+  color: hsla(360, 100%, 100%, .65);
+  font-family: 'Lobster', cursive;
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: .125rem;
+  margin: 0 0 1.5rem 0;
+  text-transform: capitalize;
+}
+
+.form__question {
+  color: hsla(0, 0%, 0%, .65);
+  font-family: 'Lobster Two', cursive;
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: .025rem;
+}
+
+  .form__question:after {
+    content: "?";
+  }
+
+.form__text-area {
+  border: transparent;
+  height: 7rem;
+}
+
+  .form__text-area:focus {
+    border-left: 1.65rem solid hsla(45, 100%, 50%, 1);
+  }
+
+
+
+/* FOUNDATION OVERRIDES */

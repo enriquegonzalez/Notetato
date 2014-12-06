@@ -4,16 +4,39 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
-
+    <title><%= content_for?(:title) ? yield(:title) : "Notetato: Tell me about your day" %></title>
+    <%= google_webfonts_init({google: ['Lobster','Lobster Two', 'Ultra']}) %>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <section class="screen">
+    <div class="row">
+    <div class="small-12 columns">
 
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
+      <div class="row">
+        <div class="large-9 columns">
+          <header>
+            <h1 class="title">Notetato</h1>
+          </header>
+        </div>
+        <div class="large-3 columns">
+          <%= render 'layouts/user_widget' %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 medium-9 large-9 large-centered columns">
+          <%= yield %>
+        </div>
+      </div>
+
+
+    </div>
+    </div>
+    </section>
   </body>
 </html>

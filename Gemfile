@@ -23,10 +23,8 @@ gem 'omniauth-google-oauth2'
 gem 'better_errors'
 gem 'binding_of_caller'
 
-# Use jquery as the JavaScript library
-# gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-# gem 'turbolinks'
+# Web Fonts
+gem 'google-webfonts-rails'
 
 #Use Zurb's Foundation Framework
 gem 'foundation-rails'

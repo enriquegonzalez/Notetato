@@ -1,11 +1,4 @@
-<!-- <section>
-  <header><h1><%#= current_user.profile.first_name.capitalize %>'s Dashboard</h1></header>
-  <p><em>Greeting or quote, something to make you feel good.</em></p>
-
-    Things you are working on by date last 5 entries.(Only sows up if you have an entry for that question.)
-</section> -->
-
 <section>
-  <header><h1><%= Date.today.strftime("%A, %B %d, %Y") %></h1></header>
+  <h1 class="entry__prompt">Tell me about your day</h1>
   <%= render 'new_entry' %>
 </section>
