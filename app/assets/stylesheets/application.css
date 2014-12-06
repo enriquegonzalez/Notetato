@@ -69,7 +69,7 @@ body {
 }
 
 .form__question {
-  color: hsla(0, 0%, 0%, .65);
+  color: hsla(0, 0%, 0%, 1);
   font-size: 1.75rem;
   font-weight: 200;
   letter-spacing: .025rem;
