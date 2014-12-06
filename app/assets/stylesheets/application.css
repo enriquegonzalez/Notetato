@@ -17,6 +17,7 @@
 
 /* COLORS
   Black: hsla(0, 0%, 0%, 1)
+  Gold: hsla(45, 100%, 50%, 1)
   Moodless Myst: hsla(135, 19%, 59%, 1)
   White: hsla(360, 100%, 100%, 1)
 */
@@ -56,18 +57,18 @@ body {
 
 /*FORMS*/
 .entry__prompt{
-  color: hsla(360, 100%, 100%, .65);
+  color: hsla(0, 0%, 0%, 1);
   font-family: 'Lobster', cursive;
-  font-size: 1.75rem;
+  font-size: 3rem;
   font-weight: bold;
   letter-spacing: .125rem;
-  margin: 0 0 1.5rem 0;
+  margin-bottom: 1rem;
   text-transform: capitalize;
 }
 
 .form__question {
   color: hsla(0, 0%, 0%, .65);
-  font-family: 'Lobster Two', cursive;
+  /*font-family: 'Lobster Two', cursive;*/
   font-size: 1.75rem;
   font-weight: bold;
   letter-spacing: .025rem;
@@ -86,6 +87,19 @@ body {
     border-left: 1.65rem solid hsla(45, 100%, 50%, 1);
   }
 
+/* LINKS */
+.login-state {
+  border-bottom: .15rem solid hsla(360, 100%, 100%, .25);
+  color: hsla(0, 0%, 0%, .65);
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-transform: lowercase;
+}
 
+  .login-state:hover {
+    border-bottom: .15rem solid hsla(360, 100%, 100%, .25);
+    color: hsla(45, 100%, 50%, 1);
+  }
 
 /* FOUNDATION OVERRIDES */
