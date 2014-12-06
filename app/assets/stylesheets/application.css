@@ -68,9 +68,7 @@ body {
 
 .form__question {
   color: hsla(0, 0%, 0%, .65);
-  /*font-family: 'Lobster Two', cursive;*/
   font-size: 1.75rem;
-  font-weight: bold;
   letter-spacing: .025rem;
 }
 
