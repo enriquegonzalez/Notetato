@@ -72,7 +72,7 @@ body {
 /*FORMS*/
 
 .form__question {
-  color: hsla(0, 0%, 0%, 1);
+  color: hsla(0, 0%, 0%, .85);
   font-family: 'Varela Round', sans-serif;
   font-size: 2.25rem;
   font-weight: 800;
