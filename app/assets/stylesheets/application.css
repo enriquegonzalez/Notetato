@@ -28,10 +28,6 @@ body {
   color: hsla(0, 0%, 0%, 1);
 }
 
-/*header {
- height: 5rem;
-}*/
-
 .screen {
   margin: 2em 0 2em 0;
 }
@@ -43,6 +39,19 @@ body {
   letter-spacing: .075rem;
   margin: 0 0 0 -1000rem;
 }
+
+.tagline {
+  color: hsla(0, 0%, 0%, .75);
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  font-style: italic;
+  letter-spacing: .125rem;
+  margin-bottom: 1rem;
+  position: relative;
+  bottom: 2.65rem;
+  text-transform: capitalize;
+}
+
 
 /*BUTTONS*/
 .button--save {
@@ -61,16 +70,6 @@ body {
   }
 
 /*FORMS*/
-.entry__prompt{
-  color: hsla(0, 0%, 0%, .75);
-  font-family: 'Lobster', cursive;
-  font-size: 3rem;
-  font-style: italic;
-  font-weight: bold;
-  letter-spacing: .125rem;
-  margin-bottom: 1rem;
-  text-transform: capitalize;
-}
 
 .form__question {
   color: hsla(0, 0%, 0%, 1);
