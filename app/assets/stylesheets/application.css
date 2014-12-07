@@ -74,8 +74,8 @@ body {
 .form__question {
   color: hsla(0, 0%, 0%, 1);
   font-family: 'Varela Round', sans-serif;
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 2.25rem;
+  font-weight: 800;
   letter-spacing: .025rem;
 }
 
