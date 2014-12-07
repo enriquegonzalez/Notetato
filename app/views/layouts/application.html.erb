@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title><%= content_for?(:title) ? yield(:title) : "Notetato: Tell me about your day" %></title>
-    <%= google_webfonts_init({google: ['Lobster', 'Ultra']}) %>
+    <%= google_webfonts_init({google: ['Lobster']}) %>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application" %>
@@ -21,6 +21,7 @@
         <div class="small-6 medium-9 large-9 columns">
           <header>
             <h1 class="title">Notetato</h1>
+            <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/notetato-logo-grey.png" class="app-logo">
           </header>
         </div>
         <div class="small-6 medium-3 large-3 columns">
