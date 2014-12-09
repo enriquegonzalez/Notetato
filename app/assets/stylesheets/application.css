@@ -41,7 +41,7 @@ body {
 }
 
 .tagline {
-  color: hsla(0, 0%, 0%, .75);
+  color: hsla(0, 0%, 20%, 1);
   font-family: 'Lobster', cursive;
   font-size: 2rem;
   font-style: italic;

@@ -26,13 +26,28 @@ class EntriesController < ApplicationController
   def create
     @entry = Entry.new(entry_params)
 
+
     respond_to do |format|
-      if @entry.save
-        format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
-        format.json { render :show, status: :created, location: @entry }
+      if user_signed_in?
+        if @entry.save
+          format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
+          format.json { render :show, status: :created, location: @entry }
+        else
+          format.html { render :new }
+          format.json { render json: @entry.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render :new }
-        format.json { render json: @entry.errors, status: :unprocessable_entity }
+        cookies[:guest_entry] = {:date => Time.now,
+                                 :how_do_you_feel       => entry_params[:how_do_you_feel],
+                                 :what_went_well        => entry_params[:what_went_well],
+                                 :what_didnt_go_well    => entry_params[:what_didnt_go_well],
+                                 :how_to_make_it_better => entry_params[:how_to_make_it_better],
+                                 :focus_on_tomorrow     => entry_params[:focus_on_tomorrow],
+                                 :how_do_you_feel_now   => entry_params[:how_do_you_feel_now],
+                                 :expires               => Time.now + 1800}
+
+        format.html { redirect_to new_user_session_path}
+
       end
     end
   end

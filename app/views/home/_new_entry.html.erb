@@ -56,6 +56,10 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Note it!", class: "button radius button--save" %>
+      <% if user_signed_in? %>
+        <%= f.submit "Note it!", class: "button radius button--save" %>
+      <% else %>
+        <%= f.submit "Login and Note it!", class: "button radius button--save" %>
+      <% end %>
   </div>
 <% end %>
