@@ -37,7 +37,7 @@ class EntriesController < ApplicationController
           format.json { render json: @entry.errors, status: :unprocessable_entity }
         end
       else
-        cookies[:guest_entry] = {:date => Time.now,
+        cookies[:guest_entry] = {:date                  => Time.now,
                                  :how_do_you_feel       => entry_params[:how_do_you_feel],
                                  :what_went_well        => entry_params[:what_went_well],
                                  :what_didnt_go_well    => entry_params[:what_didnt_go_well],
