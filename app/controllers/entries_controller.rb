@@ -37,6 +37,9 @@ class EntriesController < ApplicationController
           format.json { render json: @entry.errors, status: :unprocessable_entity }
         end
       else
+        # YOU NEED TO SET ONE COOKIE PER KEY/VALUE PAIR
+        # cookies[:date] = Time.now
+        # cookies[:how_do_you_feel] = entry_params[:how_do_you_feel]
         cookies[:guest_entry] = {:value => {
                                  :date                  => Time.now,
                                  :how_do_you_feel       => entry_params[:how_do_you_feel],
