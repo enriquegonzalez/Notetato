@@ -6,4 +6,5 @@ class Entry < ActiveRecord::Base
   def set_todays_date
     self.date = Date.today
   end
+
 end

@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :answers
 
   resources :reminders
-
-  resources :questions
 
   resources :entries
 

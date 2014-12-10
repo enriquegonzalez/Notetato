@@ -37,19 +37,21 @@ class EntriesController < ApplicationController
           format.json { render json: @entry.errors, status: :unprocessable_entity }
         end
       else
-        # YOU NEED TO SET ONE COOKIE PER KEY/VALUE PAIR
-        # cookies[:date] = Time.now
-        # cookies[:how_do_you_feel] = entry_params[:how_do_you_feel]
-        cookies[:guest_entry] = {:value => {
-                                 :date                  => Time.now,
-                                 :how_do_you_feel       => entry_params[:how_do_you_feel],
-                                 :what_went_well        => entry_params[:what_went_well],
-                                 :what_didnt_go_well    => entry_params[:what_didnt_go_well],
-                                 :how_to_make_it_better => entry_params[:how_to_make_it_better],
-                                 :focus_on_tomorrow     => entry_params[:focus_on_tomorrow],
-                                 :how_do_you_feel_now   => entry_params[:how_do_you_feel_now]
-                                 },
-                                 :expires               => Time.now + 1800}
+
+        cookies[:guest_entry]           = { :value    => "exists",
+                                            :expires  => Time.now + 900 }
+        cookies[:how_do_you_feel]       = { :value    => entry_params[:how_do_you_feel],
+                                            :expires  => Time.now + 900 }
+        cookies[:what_went_well]        = { :value    => entry_params[:what_went_well],
+                                            :expires  => Time.now + 900 }
+        cookies[:what_didnt_go_well]    = { :value    => entry_params[:what_didnt_go_well ],
+                                            :expires  => Time.now + 900 }
+        cookies[:how_to_make_it_better] = { :value    => entry_params[:how_to_make_it_better],
+                                            :expires  => Time.now + 900 }
+        cookies[:focus_on_tomorrow]     = { :value    => entry_params[:focus_on_tomorrow ],
+                                            :expires  => Time.now + 900 }
+        cookies[:how_do_you_feel_now]   = { :value    => entry_params[:how_do_you_feel_now],
+                                            :expires  => Time.now + 900 }
 
         format.html { redirect_to new_user_session_path}
 
