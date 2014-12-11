@@ -54,7 +54,7 @@ body {
 
 
 /*BUTTONS*/
-.button--save {
+.button--save, .button--login {
   background: hsla(0, 0%, 0%, .65);
   color: hsla(360, 100%, 100%, .85);
   font-family: 'Lobster', serif;
@@ -64,14 +64,33 @@ body {
   margin-top: 2rem;
   text-transform: capitalize;
 }
-  .button--save:hover {
+  .button--save:hover, .button--login:hover {
     background: hsla(0, 0%, 0%, 1);
     color: hsla(360, 100%, 100%, 1);
   }
 
 /*FORMS*/
+.form__header {
+  background: hsla(360, 100%, 100%, .65);
+  border-radius: 1rem 1rem 0 0;
+  padding: 2rem 4rem;
+  margin: 0;
+}
 
-.form__question {
+.form__title {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 2.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.form--login {
+  background: hsla(360, 100%, 100%, .65);
+  border-radius: 0 0 1rem 1rem;
+  padding: 0 4rem 2rem 4rem;
+}
+
+.form__question, .form__label {
   color: hsla(0, 0%, 0%, .85);
   font-family: 'Varela Round', sans-serif;
   font-size: 2.25rem;
@@ -79,18 +98,24 @@ body {
   letter-spacing: .025rem;
 }
 
+  .form__label:after {
+    content: ":";
+  }
   .form__question:after {
     content: "?";
   }
 
-.form__text-area {
+.form__field {
   border: transparent;
-  height: 7rem;
 }
 
-  .form__text-area:focus {
-    border-left: 1.65rem solid hsla(45, 100%, 50%, 1);
+  .form__field--text-area {
+    height: 7rem;
   }
+
+    .form__field--text-area:focus {
+      border-left: 1.65rem solid hsla(45, 100%, 50%, 1);
+    }
 
 /* IMAGES */
 .app-logo {
