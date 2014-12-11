@@ -105,6 +105,14 @@ body {
     content: "?";
   }
 
+  .form__question--remember {
+    font-size: 1.25rem;
+  }
+
+  .form__label--remember {
+    width: 5rem;
+  }
+
 .form__field {
   border: transparent;
 }
@@ -143,4 +151,12 @@ body {
 
 input[type="email"], input[type="password"]  {
   border: transparent;
+}
+
+.switch label {
+  background: hsla(0, 0%, 0%, .65);
+}
+
+.switch input:checked + label {
+  background: hsla(45, 100%, 50%, 1);
 }

@@ -18,8 +18,11 @@
 
         <% if devise_mapping.rememberable? -%>
           <div class="field">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %>
+            <%= f.label :remember_me, class: "form__question form__question--remember" %>
+            <div class="switch clearfix">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
           </div>
         <% end -%>
 
