@@ -140,3 +140,7 @@ body {
   }
 
 /* FOUNDATION OVERRIDES */
+
+input[type="email"], input[type="password"]  {
+  border: transparent;
+}
