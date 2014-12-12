@@ -54,7 +54,7 @@ body {
 
 
 /*BUTTONS*/
-.button--save, .button--login {
+.form__button {
   background: hsla(0, 0%, 0%, .65);
   color: hsla(360, 100%, 100%, .85);
   font-family: 'Lobster', serif;
@@ -64,7 +64,7 @@ body {
   margin-top: 2rem;
   text-transform: capitalize;
 }
-  .button--save:hover, .button--login:hover {
+  .form__button:hover {
     background: hsla(0, 0%, 0%, 1);
     color: hsla(360, 100%, 100%, 1);
   }
@@ -84,7 +84,7 @@ body {
   text-transform: uppercase;
 }
 
-.form--login, .form--reset-password {
+.form--login, .form--reset-password, .form--sign-up {
   background: hsla(360, 100%, 100%, .65);
   border-radius: 0 0 1rem 1rem;
   padding: 0 4rem 2rem 4rem;
