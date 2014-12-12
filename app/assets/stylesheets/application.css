@@ -151,6 +151,7 @@ body {
 
 input[type="email"], input[type="password"]  {
   border: transparent;
+  padding: 1.5rem;
 }
 
   input[type="email"]:focus, input[type="password"]:focus  {
