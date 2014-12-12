@@ -52,6 +52,17 @@ body {
   text-transform: capitalize;
 }
 
+.value-statement {
+  color: hsla(360, 100%, 100%, .85);
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.65rem;
+  font-weight: 300;
+  position: relative;
+  text-align: center;
+  text-transform: capitalize;
+  width: 65ex;
+}
+
 
 /*BUTTONS*/
 .form__button {
