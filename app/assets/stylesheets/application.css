@@ -17,7 +17,7 @@
 
 /* COLORS
   Black: hsla(0, 0%, 0%, 1)
-  Blue: hsla(210, 100%, 50%, 1)
+  Blue: hsla(201, 92%, 60%, 1)
   Gold: hsla(45, 100%, 50%, 1)
   Moodless Myst: hsla(135, 19%, 59%, 1)
   White: hsla(360, 100%, 100%, 1)
@@ -33,52 +33,9 @@ body {
   margin: 2em 0 2em 0;
 }
 
-.title {
-  color: hsla(0, 0%, 0%, .5);
-  font-size: 1.25rem;
-  font-weight: bold;
-  letter-spacing: .075rem;
-  margin: 0 0 0 -1000rem;
-}
-
-.value-statement {
-  color: hsla(0, 0%, 20%, 1);
-  font-family: 'Varela Round', sans-serif;
-  font-size: 1.85rem;
-  margin: 0 auto 2rem auto;
-  position: relative;
-  bottom: 1.25rem;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.heading {
-  color: hsla(0, 0%, 0%, 1);
-  font-family: 'Varela Round', sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: .075rem;
-  margin: 0;
-}
-
-.date-range {
-  font-size: 1.65rem;
-}
-
-/*.entry__prompt {
-  color: hsla(0, 0%, 20%, 1);
-  font-family: 'Lobster', cursive;
-  font-size: 2rem;
-  font-style: italic;
-  letter-spacing: .125rem;
-  margin-bottom: 1rem;
-  position: relative;
-  bottom: 2.65rem;
-  text-transform: capitalize;
-}*/
-
-.notetatos {
+.report-ad {
   background: hsla(360, 100%, 100%, .45);
+  border-radius: .85rem;
   padding: 2rem;
 }
 
@@ -96,6 +53,18 @@ body {
   .form__button:hover {
     background: hsla(0, 0%, 0%, 1);
     color: hsla(360, 100%, 100%, 1);
+  }
+
+.button--weekly {
+  background: hsla(16, 100%, 50%, .75);
+  display: block;
+  font-size: .85rem;
+  letter-spacing: .065rem;
+  margin: 1rem auto;
+  text-transform: uppercase;
+}
+  .button--weekly:hover {
+    background: hsla(16, 100%, 50%, 1);
   }
 
 /*FORMS*/
@@ -162,25 +131,89 @@ body {
   width: 20rem;
 }
 
-/* LINKS */
-.login-state {
-  border-bottom: .15rem solid hsla(0, 0%, 0%, .25);
-  color: hsla(0, 0%, 0%, .65);
-  display: inline-block;
-  font-weight: bold;
-  font-size: 1.25rem;
-  text-transform: lowercase;
+.ad__emoticon {
+  display: block;
+  margin: 0 auto -1rem auto;
 }
 
-  .login-state--sign-up {
-    border-bottom: .15rem solid hsla(57, 100%, 50%, 1);
-    color: hsla(57, 100%, 50%, 1);
+
+/* LINKS */
+
+.login-state {
+  position: absolute;
+  top: 0 ;
+  right: 0;
+}
+
+  .login-state__message {
+    border-bottom: .15rem solid hsla(0, 0%, 0%, .25);
+    color: hsla(0, 0%, 0%, .65);
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 0 .5rem 0 .5rem;
+    text-transform: lowercase;
   }
 
-  .login-state:hover {
-    border-bottom: .15rem solid hsla(360, 100%, 100%, 1);
-    color: hsla(360, 100%, 100%, 1);
-  }
+    .login-state__message--sign-up {
+      border-bottom: .15rem solid hsla(57, 100%, 50%, 1);
+      color: hsla(57, 100%, 50%, 1);
+    }
+
+    .login-state__message:hover {
+      border-bottom: .15rem solid hsla(360, 100%, 100%, 1);
+      color: hsla(360, 100%, 100%, 1);
+    }
+
+/* TEXT */
+.ad__emotion {
+  text-align: center;
+  font-size: 2.65rem;
+}
+
+.title {
+  color: hsla(0, 0%, 0%, .5);
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: .075rem;
+  margin: 0 0 0 -1000rem;
+}
+
+.value-statement {
+  color: hsla(0, 0%, 20%, 1);
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.85rem;
+  margin: 0 auto 2rem auto;
+  position: relative;
+  bottom: 1.25rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.heading {
+  color: hsla(0, 0%, 0%, 1);
+  font-family: 'Varela Round', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: .025rem;
+  margin: 0;
+}
+
+.date-range {
+  font-size: 1.65rem;
+}
+
+/*.entry__prompt {
+  color: hsla(0, 0%, 20%, 1);
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  font-style: italic;
+  letter-spacing: .125rem;
+  margin-bottom: 1rem;
+  position: relative;
+  bottom: 2.65rem;
+  text-transform: capitalize;
+}*/
 
 /* FOUNDATION OVERRIDES */
 
