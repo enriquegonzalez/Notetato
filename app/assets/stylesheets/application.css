@@ -21,6 +21,7 @@
   Gold: hsla(45, 100%, 50%, 1)
   Moodless Myst: hsla(135, 19%, 59%, 1)
   White: hsla(360, 100%, 100%, 1)
+  Yellow: hsla(57, 100%, 50%, 1)
 */
 
 body {
@@ -41,27 +42,40 @@ body {
 }
 
 .value-statement {
-  color: hsla(360, 100%, 100%, 1);
+  color: hsla(0, 0%, 20%, 1);
   font-family: 'Varela Round', sans-serif;
-  font-size: 1.65rem;
-  font-weight: 800;
+  font-size: 1.85rem;
   margin: 0 auto 2rem auto;
+  position: relative;
+  bottom: 1.25rem;
   text-align: center;
   text-transform: capitalize;
-  /*width: 45ex;*/
 }
 
-.entry__prompt {
+.heading {
+  color: hsla(0, 0%, 0%, 1);
+  font-family: 'Varela Round', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: .075rem;
+  margin: 0;
+}
+
+.date-range {
+  font-size: 1.65rem;
+}
+
+/*.entry__prompt {
   color: hsla(0, 0%, 20%, 1);
   font-family: 'Lobster', cursive;
   font-size: 2rem;
   font-style: italic;
   letter-spacing: .125rem;
   margin-bottom: 1rem;
-/*  position: relative;
-  bottom: 2.65rem;*/
+  position: relative;
+  bottom: 2.65rem;
   text-transform: capitalize;
-}
+}*/
 
 
 /*BUTTONS*/
@@ -104,7 +118,7 @@ body {
 .form__question, .form__label {
   color: hsla(0, 0%, 0%, .85);
   font-family: 'Varela Round', sans-serif;
-  font-size: 2.25rem;
+  font-size: 1.625rem;
   font-weight: 800;
   letter-spacing: .025rem;
 }
@@ -132,7 +146,7 @@ body {
     height: 7rem;
   }
 
-    .form__field--text-area:focus,  {
+    .form__field--text-area:focus  {
       border-left: 1.65rem solid hsla(45, 100%, 50%, 1);
     }
 
@@ -154,7 +168,13 @@ body {
   text-transform: lowercase;
 }
 
+  .login-state--sign-up {
+    border-bottom: .15rem solid hsla(57, 100%, 50%, 1);
+    color: hsla(57, 100%, 50%, 1);
+  }
+
   .login-state:hover {
+    border-bottom: .15rem solid hsla(360, 100%, 100%, 1);
     color: hsla(360, 100%, 100%, 1);
   }
 

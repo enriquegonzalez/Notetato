@@ -5,29 +5,26 @@
     <div class="row">
       <div class="small-12 medium-9 large-6 columns">
         <section>
-          <p class="entry__prompt">Find the good in today</p>
           <%= render 'new_entry' %>
         </section>
       </div>
       <div class="small-12 medium-9 large-5 columns">
-        <section>
-          <!-- If the user is logged in -->
-            <!-- If the user has enough entries for last week -->
-              <%#= render '_weekly_notetato' %>
-            <!-- ELSE if the user has an entry for yesterday -->
-              <%#= render '_yesterdays_notetato' %>
-            <!-- ELSE -->
-              <!-- IF they havent logged at all -->
-                <!-- Show this nice welcome message encouraging them to log today -->
-              <!-- ELse -->
-                <!-- Show this tank you message encouraging them to log back in tomorrow, or set their reminders if they haven't, or fill in their profile, etc -->
-              <!-- END -->
+        <!-- If the user is logged in -->
+          <!-- If the user has enough entries for last week -->
+            <%= render 'weekly_notetato' %>
+          <!-- ELSE if the user has an entry for yesterday -->
+            <%#= render '_yesterdays_notetato' %>
+          <!-- ELSE -->
+            <!-- IF they havent logged at all -->
+              <!-- Show this nice welcome message encouraging them to log today -->
+            <!-- ELse -->
+              <!-- Show this tank you message encouraging them to log back in tomorrow, or set their reminders if they haven't, or fill in their profile, etc -->
             <!-- END -->
-          <!-- Else -->
-            <!-- Show this mockup -->
           <!-- END -->
-          <h1>The Notetato Report</h1>
-        </section>
+        <!-- Else -->
+          <!-- Show this mockup -->
+        <!-- END -->
+        <!-- <h1>The Notetato Report</h1> -->
       </div>
     </div>
   </div>
