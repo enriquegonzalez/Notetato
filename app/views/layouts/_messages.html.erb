@@ -1,6 +1,5 @@
-  <% flash.each do |type, message| %>
-    <div data-alert class="alert-box <%= flash_class(type) %>">
-      <%= message %>
-      <a href="#" class="close">&times;</a>
-    </div>
-  <% end %>
+<% flash.each do |type, message| %>
+  <div class="message <%= flash_class(type) %>">
+    <%= message %>
+  </div>
+<% end %>
