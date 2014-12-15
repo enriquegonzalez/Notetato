@@ -13,37 +13,22 @@
   </head>
 
   <body>
-    <% flash.each do |type, message| %>
-      <div data-alert class="alert-box <%= flash_class(type) %>">
-        <%= message %>
-        <a href="#" class="close">&times;</a>
-      </div>
-    <% end %>
-    <section class="screen">
-    <div class="row">
-    <div class="small-12 columns">
-
-      <div class="row">
-        <div class="small-12 medium-8 large-12 columns">
-          <header>
-            <h1 class="title">Notetato</h1>
-            <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/notetato-logo-grey.png" class="app-logo">
-            <p class="value-statement">Learn from each day, and focus on what matters with Notetato.</p>
-          </header>
-          <div class="login-state">
-            <%= render 'layouts/user_widget' %>
-          </div>
-        </div>
-
+    <%= render 'layouts/messages' %>
+    <section class="container">
       <div class="row">
         <div class="small-12 columns">
-          <%= yield %>
+          <div class="row">
+            <div class="large-12 columns">
+                <%= render 'layouts/header' %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-12 columns ">
+              <%= yield %>
+            </div>
+          </div>
         </div>
       </div>
-
-
-    </div>
-    </div>
     </section>
   </body>
 </html>

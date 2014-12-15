@@ -1,26 +1,27 @@
-<div class="row">
-  <div class="small-12 medium-9 large-6 columns">
-    <section>
-      <%= render 'new_entry' %>
-    </section>
-  </div>
-  <div class="small-12 medium-9 large-5 columns">
-    <% if user_signed_in? %>
-      <!-- If the user has enough entries for last week -->
-        <%= render 'weekly_notetato' %>
-      <!-- ELSE if the user has an entry for yesterday -->
-        <%#= render '_yesterdays_notetato' %>
-      <!-- ELSE -->
-        <!-- IF they havent logged at all -->
-          <!-- Show this nice welcome message encouraging them to log today -->
-        <!-- ELse -->
-          <!-- Show this tank you message encouraging them to log back in tomorrow, or set their reminders if they haven't, or fill in their profile, etc -->
+<section class="screen--new-entry">
+  <div class="row">
+    <div class="small-12 medium-9 large-6 columns">
+        <%= render 'new_entry' %>
+    </div>
+
+    <div class="small-12 medium-9 large-5 columns">
+      <% if user_signed_in? %>
+        <!-- If the user has enough entries for last week -->
+          <%= render 'weekly_notetato' %>
+        <!-- ELSE if the user has an entry for yesterday -->
+          <%#= render '_yesterdays_notetato' %>
+        <!-- ELSE -->
+          <!-- IF they havent logged at all -->
+            <!-- Show this nice welcome message encouraging them to log today -->
+          <!-- ELse -->
+            <!-- Show this tank you message encouraging them to log back in tomorrow, or set their reminders if they haven't, or fill in their profile, etc -->
+          <!-- END -->
         <!-- END -->
+      <% else %>
+        <!-- Show this mockup -->
+        <%= render 'report_mockup' %>
       <!-- END -->
-    <% else %>
-      <!-- Show this mockup -->
-      <%= render 'report_mockup' %>
-    <!-- END -->
-    <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
+</section>
