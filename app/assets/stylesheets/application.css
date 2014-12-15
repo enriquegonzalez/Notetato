@@ -55,6 +55,7 @@ body {
   letter-spacing: .195rem;
   margin-top: 2rem;
   text-transform: capitalize;
+  width: 100%;
 }
   .form__button:hover {
     background: hsla(0, 0%, 0%, 1);
@@ -63,7 +64,6 @@ body {
 
 .button--weekly {
   background: hsla(16, 100%, 50%, .75);
-  display: block;
   font-size: .85rem;
   letter-spacing: .065rem;
   margin: 1rem auto;
@@ -255,4 +255,8 @@ input[type="email"], input[type="password"]  {
 
 .switch input:checked + label {
   background: hsla(45, 100%, 50%, 1);
+}
+
+.button {
+  display: block;
 }
