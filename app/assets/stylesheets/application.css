@@ -97,11 +97,9 @@ body {
 .form__question, .form__label {
   color: hsla(0, 0%, 0%, .85);
   font-family: 'Varela Round', sans-serif;
-  /*font-size: 1.625rem;*/
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: .025rem;
-  margin-bottom: 2rem;
 }
 
   .form__label:after {
@@ -131,7 +129,7 @@ body {
       border-left: 1.65rem solid hsla(45, 100%, 50%, 1);
     }
 
-.field {
+.new-entry__form .field {
   border-top: 2px solid hsla(201, 92%, 40%, .25);
   padding: 2rem 0rem;
 }
