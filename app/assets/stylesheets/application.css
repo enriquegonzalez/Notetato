@@ -35,7 +35,7 @@ body {
 
   }
 
-.screen--new-entry {
+.screen--new-entry, .screen--login {
   padding: 1em 0 2em 0;
 }
 
@@ -77,7 +77,7 @@ body {
 .form__header {
   background: hsla(360, 100%, 100%, .65);
   border-radius: 1rem 1rem 0 0;
-  padding: 2rem 4rem;
+  padding: 2rem 2rem 0 2rem;
   margin: 0;
 }
 
@@ -88,11 +88,21 @@ body {
   text-transform: uppercase;
 }
 
-.form--login, .form--reset-password, .form--sign-up {
+.form--login {
   background: hsla(360, 100%, 100%, .65);
   border-radius: 0 0 1rem 1rem;
-  padding: 0 4rem 2rem 4rem;
+  padding: 1rem 2rem;
 }
+
+.field {
+
+}
+
+.new-entry__form .field {
+  border-top: 2px solid hsla(201, 92%, 40%, .25);
+  padding: 2rem 0rem;
+}
+
 
 .form__question, .form__label {
   color: hsla(0, 0%, 0%, .85);
@@ -129,10 +139,6 @@ body {
       border-left: 1.65rem solid hsla(45, 100%, 50%, 1);
     }
 
-.new-entry__form .field {
-  border-top: 2px solid hsla(201, 92%, 40%, .25);
-  padding: 2rem 0rem;
-}
 
 /* IMAGES */
 .app-logo {
