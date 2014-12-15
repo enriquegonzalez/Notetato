@@ -1,6 +1,6 @@
-<div class="row">
-  <div class="small-12 medium-9 large-8 large-centered columns"
-    <section>
+<section class="screen--sign-up">
+  <div class="row">
+    <div class="small-12 medium-9 large-8 large-centered columns">
       <header class="form__header clearfix">
         <h1 class="form__title left">Edit <%= resource_name.to_s.humanize %></h1>
       </header>
@@ -39,6 +39,6 @@
         <h2 class="form__label">Cancel my account</h2>
         <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button radius form__button"%>
       </div>
-    </section>
+    </div>
   </div>
-</div>
+</section>

@@ -1,10 +1,10 @@
-<div class="row">
-  <div class="small-12 medium-9 large-8 large-centered columns"
-    <section>
+<section class="screen--change-password">
+  <div class="row">
+    <div class="small-12 medium-9 large-8 large-centered columns">
       <header class="form__header">
         <h1 class="form__title">Forgot your password?</h1>
       </header>
-      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { class: "form--reset-password",method: :post }) do |f| %>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { class: "form--change-password",method: :post }) do |f| %>
         <%= devise_error_messages! %>
 
         <div class="field">
@@ -16,6 +16,6 @@
           <%= f.submit "Send me reset instructions", class: "button radius form__button" %>
         </div>
       <% end %>
-    </section>
+    </div>
   </div>
-</div>
+</section>

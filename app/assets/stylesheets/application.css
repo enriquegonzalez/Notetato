@@ -35,7 +35,7 @@ body {
 
   }
 
-.screen--new-entry, .screen--login {
+.screen--new-entry {
   padding: 1em 0 2em 0;
 }
 
@@ -88,7 +88,7 @@ body {
   text-transform: uppercase;
 }
 
-.form--login {
+.form--login, .form--sign-up, .form--change-password {
   background: hsla(360, 100%, 100%, .65);
   border-radius: 0 0 1rem 1rem;
   padding: 1rem 2rem;
@@ -236,7 +236,7 @@ body {
 
 /* FOUNDATION OVERRIDES */
 
-p {
+h1, p {
   margin-bottom: 0;
 }
 
