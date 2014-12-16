@@ -151,8 +151,26 @@ figure {
   display: inline-block;
 }
 
+  .option--feeling__emoticon {
+    width: 5rem;
+  }
+
+  .option--feeling__emotion {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
 label > input{ /* HIDE RADIO */
   display:none;
+}
+
+label > input + figure > img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+
+label > input:checked + figure > img{ /* (CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
 }
 
 
@@ -168,10 +186,6 @@ label > input{ /* HIDE RADIO */
   display: block;
   margin: 0 auto -1rem auto;
   width: 12rem;
-}
-
-.option--feeling__emoticon {
-  width: 5rem;
 }
 
 
@@ -261,11 +275,6 @@ label > input{ /* HIDE RADIO */
   .message--warning {
     color: hsla(45, 100%, 50%, 1);
   }
-
-.option--feeling__emotion {
-  text-align: center;
-  text-transform: uppercase;
-}
 
 /*.entry__prompt {
   color: hsla(0, 0%, 20%, 1);
