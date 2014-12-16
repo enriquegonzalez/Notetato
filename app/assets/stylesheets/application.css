@@ -29,6 +29,10 @@ body {
   color: hsla(0, 0%, 0%, 1);
 }
 
+figure {
+  margin: 1rem;
+}
+
 /*.container {
 }
   .container__bar {
@@ -143,6 +147,14 @@ body {
       border-left: 1.65rem solid hsla(45, 100%, 50%, 1);
     }
 
+.option--feeling {
+  display: inline-block;
+}
+
+label > input{ /* HIDE RADIO */
+  display:none;
+}
+
 
 /* IMAGES */
 .app-logo {
@@ -155,6 +167,11 @@ body {
 .ad__emoticon {
   display: block;
   margin: 0 auto -1rem auto;
+  width: 12rem;
+}
+
+.option--feeling__emoticon {
+  width: 5rem;
 }
 
 
@@ -244,6 +261,11 @@ body {
   .message--warning {
     color: hsla(45, 100%, 50%, 1);
   }
+
+.option--feeling__emotion {
+  text-align: center;
+  text-transform: uppercase;
+}
 
 /*.entry__prompt {
   color: hsla(0, 0%, 20%, 1);
