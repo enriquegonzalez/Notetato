@@ -30,7 +30,7 @@ body {
 }
 
 figure {
-  margin: 1rem;
+  margin: .65rem;
 }
 
 /*.container {
@@ -164,13 +164,25 @@ label > input{ /* HIDE RADIO */
   display:none;
 }
 
-label > input + figure > img{ /* IMAGE STYLES */
+label > input + figure { /* IMAGE STYLES */
   cursor:pointer;
-  border:2px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 3px solid transparent;
+  border-radius: 1rem;
+  padding: .45rem;
 }
 
-label > input:checked + figure > img{ /* (CHECKED) IMAGE STYLES */
-  border:2px solid #f00;
+label > input + figure:hover { /* (CHECKED) IMAGE STYLES */
+  border-bottom: 3px solid hsla(45, 100%, 50%, .85);
+  border-left: 3px solid hsla(45, 100%, 50%, .65);
+  background: hsla(45, 100%, 50%, .85);
+}
+
+label > input:checked + figure { /* (CHECKED) IMAGE STYLES */
+  border-bottom: 3px solid hsla(45, 100%, 50%, .65);
+  border-left: 3px solid hsla(45, 100%, 50%, .65);
+  /*background: hsla(45, 100%, 50%, .85);*/
+  background: hsla(57, 100%, 50%, .85);
 }
 
 
