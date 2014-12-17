@@ -152,7 +152,8 @@ figure {
 }
 
   .option--feeling__emoticon {
-    width: 5rem;
+    width: 4.75rem;
+    transition: all 0.2s ease;
   }
 
   .option--feeling__emotion {
@@ -173,16 +174,26 @@ label > input + figure { /* IMAGE STYLES */
 }
 
 label > input + figure:hover { /* (CHECKED) IMAGE STYLES */
-  border-bottom: 3px solid hsla(45, 100%, 50%, .85);
-  border-left: 3px solid hsla(45, 100%, 50%, .65);
-  background: hsla(45, 100%, 50%, .85);
+/*  border-bottom: 3px solid transparent;
+  border-left: 3px solid transparent;*/
+  background: hsla(45, 100%, 50%, .65);
+  transition: all 0.2s ease;
 }
 
 label > input:checked + figure { /* (CHECKED) IMAGE STYLES */
-  border-bottom: 3px solid hsla(45, 100%, 50%, .65);
-  border-left: 3px solid hsla(45, 100%, 50%, .65);
+/*  border-bottom: 3px solid hsla(45, 100%, 50%, .65);
+  border-left: 3px solid hsla(45, 100%, 50%, .65);*/
   /*background: hsla(45, 100%, 50%, .85);*/
   background: hsla(57, 100%, 50%, .85);
+}
+
+label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: tada;
+  animation-name: tada;
 }
 
 
@@ -299,6 +310,22 @@ label > input:checked + figure { /* (CHECKED) IMAGE STYLES */
   bottom: 2.65rem;
   text-transform: capitalize;
 }*/
+
+/* ANIMATIONS */
+@-webkit-keyframes tada {
+    0% {-webkit-transform: scale(1);}
+    10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
+    30%, 50%, 70%, 90% {-webkit-transform: scale(1.1) rotate(3deg);}
+    40%, 60%, 80% {-webkit-transform: scale(1.1) rotate(-3deg);}
+    100% {-webkit-transform: scale(1) rotate(-7deg);}
+}
+@keyframes tada {
+    0% {transform: scale(1);}
+    10%, 20% {transform: scale(0.9) rotate(-3deg);}
+    30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
+    40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
+    100% {transform: scale(1) rotate(-7deg);}
+}
 
 /* FOUNDATION OVERRIDES */
 h1, p {
