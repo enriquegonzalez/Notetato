@@ -1,8 +1,10 @@
 <header class="container__bar">
   <h1 class="title">Notetato</h1>
   <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/notetato-logo-grey.png" class="app-logo">
-  <% if current_page? root_path %>
+  <% if current_page?(root_path) && !user_signed_in? %>
     <p class="value-statement">Learn from each day, and focus on what matters with Notetato.</p>
+  <% elsif user_signed_in? %>
+    <nav>Navigation goes here.</nav>
   <% end %>
   <%= render 'layouts/login_state' %>
 </header>

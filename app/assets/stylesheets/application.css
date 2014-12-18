@@ -43,6 +43,11 @@ figure {
   padding: 1em 0 2em 0;
 }
 
+.screen--report {
+  background: hsla(360, 100%, 100%, 1);
+  padding: 1em 1rem 2em 1rem;
+}
+
 .report-ad {
   background: hsla(360, 100%, 100%, .45);
   border-radius: .85rem;
@@ -87,13 +92,6 @@ figure {
   border-radius: 1rem 1rem 0 0;
   padding: 2rem 2rem 0 2rem;
   margin: 0;
-}
-
-.form__title {
-  font-family: 'Varela Round', sans-serif;
-  font-size: 2.65rem;
-  font-weight: 800;
-  text-transform: uppercase;
 }
 
 .form--login, .form--sign-up, .form--change-password {
@@ -248,10 +246,24 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
 
 .title {
   color: hsla(0, 0%, 0%, .5);
+  font-family: 'Varela Round', sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: .075rem;
   margin: 0 0 0 -1000rem;
+  text-transform: uppercase;
+}
+
+.title--screen {
+  color: hsla(0, 0%, 0%, 1);
+  font-size: 2.25rem;
+  margin: 0;
+}
+
+.title--section {
+  color: hsla(0, 0%, 0%, 1);
+  font-size: 2rem;
+  margin: 0;
 }
 
 .value-statement {
@@ -266,14 +278,14 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   text-transform: capitalize;
 }
 
-.heading {
+/*.heading {
   color: hsla(0, 0%, 0%, 1);
   font-family: 'Varela Round', sans-serif;
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: .025rem;
   margin: 0;
-}
+}*/
 
 .date-range {
   font-size: 1.65rem;

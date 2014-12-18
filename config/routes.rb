@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :reports
+
   resources :reminders
 
   resources :entries
