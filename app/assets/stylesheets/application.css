@@ -209,6 +209,20 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   width: 12rem;
 }
 
+.report__emoticon {
+  display: inline-block;
+  margin: 0 auto -1rem auto;
+  width: 7rem;
+}
+
+.arrow--right {
+  color: hsla(0, 0%, 0%, .85);
+  /*background: hsla(201, 92%, 60%, 1);*/
+  font-size: 3rem;
+  position: relative;
+  top: 1rem;
+}
+
 
 /* LINKS */
 .login-state {
@@ -258,6 +272,10 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   color: hsla(0, 0%, 0%, 1);
   font-size: 2.25rem;
   margin: 0;
+}
+
+.title--screen--report {
+  text-align: center;
 }
 
 .title--section {
