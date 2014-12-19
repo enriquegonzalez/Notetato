@@ -352,6 +352,7 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
 .report__mood {
   /*background: hsla(360, 100%, 100%, .45);*/
   /*background: hsla(57, 100%, 50%, .25);*/
+  /*border: 2px dashed hsla(0, 0%, 93%, 1);*/
   border-radius: 2rem;
   padding: 2rem;
 }
@@ -391,7 +392,7 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
 .mood__emoticon {
   display: inline-block;
   margin: 0 auto;
-  width: 6rem;
+  width: 5rem;
 }
 
 .arrow--right {
