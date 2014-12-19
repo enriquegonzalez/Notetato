@@ -330,8 +330,11 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
 
 /* REPORTS */
 .report__title__days {
-  background: hsla(360, 100%, 100%, .85);
+  /*background: hsla(360, 100%, 100%, .85);*/
+  /*background: hsla(45, 100%, 50%, .15);*/
+  background: hsla(0, 0%, 93%, .25);
   border-radius: 5rem;
+  /*border: 1px dashed hsla(0, 0%, 0%, .45);*/
   color: hsla(16, 100%, 50%, 1);
   display: inline-block;
   height: 4rem;
