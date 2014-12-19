@@ -44,7 +44,7 @@ figure {
 }
 
 .screen--report {
-  background: hsla(360, 100%, 100%, 1);
+  /*background: hsla(360, 100%, 100%, 1);*/
   padding: 1em 1rem 2em 1rem;
 }
 
@@ -209,20 +209,6 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   width: 12rem;
 }
 
-.report__emoticon {
-  display: inline-block;
-  margin: 0 auto -1rem auto;
-  width: 7rem;
-}
-
-.arrow--right {
-  color: hsla(0, 0%, 0%, .85);
-  /*background: hsla(201, 92%, 60%, 1);*/
-  font-size: 3rem;
-  position: relative;
-  top: 1rem;
-}
-
 
 /* LINKS */
 .login-state {
@@ -282,6 +268,7 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   color: hsla(0, 0%, 0%, 1);
   font-size: 2rem;
   margin: 0;
+  padding: 1rem;
 }
 
 .value-statement {
@@ -340,6 +327,56 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   bottom: 2.65rem;
   text-transform: capitalize;
 }*/
+
+/* REPORTS */
+
+.report__title__days {
+  background: hsla(360, 100%, 100%, .85);
+  border-radius: 5rem;
+  color: hsla(16, 100%, 50%, 1);
+  display: inline-block;
+  height: 4rem;
+  padding: .65rem;
+  width: 4rem;
+}
+.report__focus, .report__mood, .report__action {
+  /*border: 1px solid hsla(0, 0%, 0%, .25);*/
+  border-radius: 2rem;
+  padding: .65rem;
+  margin: 1rem;
+}
+
+.cards {
+  list-style: none;
+  margin: 1rem;
+}
+
+.card {
+  border: 1px dotted hsla(0, 0%, 0%, .25);
+  padding: .65rem;
+}
+
+.mood-shift > figure {
+  display: inline-block;
+}
+
+.mood__emoticon {
+  display: inline-block;
+  margin: 0 auto;
+  width: 7rem;
+}
+
+.arrow--right {
+  color: hsla(0, 0%, 0%, .85);
+  font-size: 3rem;
+  position: relative;
+  top: -3rem;
+}
+
+.mood {
+  text-align: center;
+  text-transform: uppercase;
+}
 
 /* ANIMATIONS */
 @-webkit-keyframes tada {
