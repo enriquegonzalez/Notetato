@@ -46,6 +46,7 @@ figure {
 .screen--report {
   background: hsla(360, 100%, 100%, 1);
   padding: 1em 1rem 2em 1rem;
+  margin-bottom: 5rem;
 }
 
 .report-ad {
