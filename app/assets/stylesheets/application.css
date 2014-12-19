@@ -268,7 +268,7 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   color: hsla(0, 0%, 0%, 1);
   font-size: 2rem;
   margin: 0;
-  padding: 1rem;
+  /*padding: 1rem;*/
 }
 
 .value-statement {
@@ -329,7 +329,6 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
 }*/
 
 /* REPORTS */
-
 .report__title__days {
   background: hsla(360, 100%, 100%, .85);
   border-radius: 5rem;
@@ -340,10 +339,14 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   width: 4rem;
 }
 .report__focus, .report__mood, .report__action {
-  /*border: 1px solid hsla(0, 0%, 0%, .25);*/
   border-radius: 2rem;
-  padding: .65rem;
+  padding: 1rem;
   margin: 1rem;
+}
+
+.report__mood {
+  background: hsla(360, 100%, 100%, .25);
+  padding: 2rem;
 }
 
 .cards {
@@ -363,13 +366,15 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
 .mood__emoticon {
   display: inline-block;
   margin: 0 auto;
-  width: 7rem;
+  width: 6rem;
 }
 
 .arrow--right {
-  color: hsla(0, 0%, 0%, .85);
+  color: hsla(16, 100%, 50%, 1);
+  display: inline-block;
   font-size: 3rem;
   position: relative;
+  text-align: center;
   top: -3rem;
 }
 

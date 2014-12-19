@@ -5,3 +5,18 @@
   Orange: hsla(16, 100%, 50%, 1);
   White: hsla(360, 100%, 100%, 1)
   Yellow: hsla(57, 100%, 50%, 1)
+
+
+/*IF YOU WANT THE ARROW CIRCLED*/
+/*.arrow--right {
+  background: hsla(360, 100%, 100%, .85);
+  border-radius: 3rem;
+  color: hsla(16, 100%, 50%, 1);
+  display: inline-block;
+  font-size: 3rem;
+  position: relative;
+  top: -3rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  text-align: center;
+}*/
