@@ -354,7 +354,7 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   /*background: hsla(57, 100%, 50%, .25);*/
   /*border: 2px dashed hsla(0, 0%, 93%, 1);*/
   border-radius: 2rem;
-  padding: 2rem;
+/*  padding: 2rem;*/
 }
 
 .report__action {
