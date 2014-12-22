@@ -385,6 +385,11 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   font-weight: 800;
 }
 
+.mood-shift {
+  margin: 0 auto;
+  width: 80%;
+}
+
 .mood-shift > figure {
   display: inline-block;
 }
