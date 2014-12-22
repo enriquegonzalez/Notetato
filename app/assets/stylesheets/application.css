@@ -419,6 +419,33 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   }
 
 /* ANIMATIONS */
+.fade-out {
+    -webkit-animation-name: byebye;
+    animation-name: byebye;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+@keyframes byebye {
+        0% {opacity: 1;}
+      100% {opacity: 0;
+            visibility:hidden;
+            margin-top: -65px;
+            }
+}
+@-webkit-keyframes byebye {
+        0% {opacity: 1;}
+      100% {opacity: 0;
+            visibility:hidden;
+            margin-top: -65px;
+           }
+}
+
+
 @-webkit-keyframes tada {
     0% {-webkit-transform: scale(1);}
     10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
