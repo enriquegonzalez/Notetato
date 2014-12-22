@@ -377,7 +377,7 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
 
   .card--action, .card--gratitude {
     border: none;
-    padding: 3rem;
+    padding: 2rem 3rem;
   }
 
 .focus__date, .action__date, .gratitude__date {
