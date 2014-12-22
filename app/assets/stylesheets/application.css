@@ -343,7 +343,7 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   padding: .65rem;
   width: 4rem;
 }
-.report__focus, .report__mood, .report__action {
+.report__focus, .report__mood, .report__action, .report__gratitude {
   background: hsla(360, 100%, 100%, .45);
   padding: 1rem;
   margin: 1rem;
@@ -375,12 +375,12 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
     /*border: none;*/
   }
 
-  .card--action {
+  .card--action, .card--gratitude {
     border: none;
     padding: 3rem;
   }
 
-.focus__date, .action__date {
+.focus__date, .action__date, .gratitude__date {
   color: hsla(16, 100%, 50%, 1);
   font-weight: 800;
 }
@@ -412,10 +412,10 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
 .card__content {
   margin: 0 0 .85rem 0;
 }
-  .card__content--solution {
+  .card__content--gratitude, .card__content--solution {
     font-size: 1.65rem;
-    font-weight: 800;
-    line-height: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
   }
 
 /* ANIMATIONS */
