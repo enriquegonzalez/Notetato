@@ -8,12 +8,11 @@
     <div class="large-12 columns">
     <p><%= @entry.date.strftime("%m/%d/%Y") %></p>
     <p><%= mood(@entry.how_do_you_feel) %></p>
-       "what_went_well"
-       "what_didnt_go_well"
-        "how_to_make_it_better"
-       "focus_on_tomorrow"
-    "how_do_you_feel_now"
-      "user_id"
+    <p><%= @entry.what_went_well %></p>
+    <p><%= @entry.what_didnt_go_well %></p>
+    <p><%= @entry.how_to_make_it_better %></p>
+    <p><%= @entry.focus_on_tomorrow %></p>
+    <p><%= mood(@entry.how_do_you_feel_now) %></p>
     </div>
   </div>
 </section>
