@@ -2,3 +2,18 @@
 
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>
+
+<section class="screen--show-entry">
+  <div class="row">
+    <div class="large-12 columns">
+    <p><%= @entry.date.strftime("%m/%d/%Y") %></p>
+    <p><%= mood(@entry.how_do_you_feel) %></p>
+       "what_went_well"
+       "what_didnt_go_well"
+        "how_to_make_it_better"
+       "focus_on_tomorrow"
+    "how_do_you_feel_now"
+      "user_id"
+    </div>
+  </div>
+</section>

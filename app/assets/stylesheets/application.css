@@ -377,7 +377,19 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
 
   .card--action, .card--gratitude {
     border: none;
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
+  }
+
+  .card__content {
+  margin: 0 0 .85rem 0;
+}
+  .card__content--gratitude, .card__content--solution {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  .card__content--solution {
+    font-weight: 500;
   }
 
 .focus__date, .action__date, .gratitude__date {
@@ -413,15 +425,6 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   text-align: center;
   text-transform: uppercase;
 }
-
-.card__content {
-  margin: 0 0 .85rem 0;
-}
-  .card__content--gratitude, .card__content--solution {
-    font-size: 1.65rem;
-    font-weight: 500;
-    line-height: 2rem;
-  }
 
 /* ANIMATIONS */
 .fade-out {

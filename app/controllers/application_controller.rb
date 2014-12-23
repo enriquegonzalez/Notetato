@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+  helper_method :mood
 
   # before_filter :authenticate_user!
 
@@ -30,6 +31,19 @@ class ApplicationController < ActionController::Base
       cookies.delete(:how_to_make_it_better)
       cookies.delete(:focus_on_tomorrow)
       cookies.delete(:how_do_you_feel_now)
+  end
+
+  def mood(type)
+    case type
+      when 1
+        "happy"
+      when 2
+        "pleasant"
+      when 3
+        "sad"
+      when 4
+        "angry"
+    end
   end
 
 end

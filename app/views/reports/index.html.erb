@@ -6,6 +6,6 @@
 <% if !user_signed_in? %>
   <%= render 'reports/sample_report' %>
 <% else %>
-  Render the current_user's report.
+  <%= render 'reports/report' %>
 <% end %>
 </section>

@@ -1,0 +1,96 @@
+  <div class="row">
+    <div class="medium-7 large-7 columns">
+      <section class="report__focus">
+        <header>
+          <h1 class="title title--section">Focus</h1>
+        </header>
+        <ul class="cards">
+        <% @entries.each do |entry|  %>
+          <li class="card card--focus">
+            <div class="row">
+              <div class="large-2 columns">
+                <span class="focus__date"><%= entry.date %></span>
+              </div>
+              <div class="large-10 columns">
+                <p class="card__content"><%= entry.focus_on_tomorrow %></p>
+              </div>
+            </div>
+          </li>
+        <% end %>
+        </ul>
+      </section>
+    </div>
+
+    <div class="medium-5 large-5 columns">
+      <section class="report__mood">
+        <header>
+          <h1 class="title title--section">Mood</h1>
+          <h2><%= @mood_start %></h2>
+        </header>
+
+        <p>Your mood is better in the last five days.</p>
+
+        <div class="mood-shift">
+          <figure class="feeling--pleasant">
+            <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-pleasant.png" alt="Feeling Pleasant" class="mood__emoticon">
+          <figcaption class="mood">Pleasant</figcaption>
+        </figure>
+          <span class="arrow--right">&#10157;</span>
+          <figure class="feeling--happy">
+            <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-happy.png" alt="Feeling Happy" class="mood__emoticon">
+          <figcaption class="mood">Happy</figcaption>
+        </figure>
+        </div>
+
+      </section>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <section class="report__gratitude">
+        <header>
+          <h1 class="title title--section">Gratitude</h1>
+        </header>
+        <ul class="cards">
+        <% @entries.each do |entry|  %>
+          <li class="card card--gratitude">
+            <div class="row">
+              <div class="large-2 columns">
+                <span class="gratitude__date"><%= entry.date %></span>
+              </div>
+              <div class="large-10 columns">
+                <p class="card__content card__content--gratitude"><%= entry.what_went_well %></p>
+              </div>
+            </div>
+          </li>
+        <% end %>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+    <div class="row">
+    <div class="large-12 columns">
+      <section class="report__action">
+        <header>
+          <h1 class="title title--section">Action</h1>
+        </header>
+       <ul class="cards">
+        <% @entries.each do |entry|  %>
+          <li class="card card--action">
+            <div class="row">
+              <div class="large-2 columns">
+                <span class="action__date"><%= entry.date %></span>
+              </div>
+              <div class="large-10 columns">
+                <p class="card__content card__content--solution"><%= entry.how_to_make_it_better %></p>
+                <p class="card__content"><%= entry.what_didnt_go_well %></p>
+              </div>
+            </div>
+          </li>
+        <% end %>
+        </ul>
+      </section>
+    </div>
+  </div>
