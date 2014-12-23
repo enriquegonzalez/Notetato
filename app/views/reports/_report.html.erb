@@ -1,4 +1,4 @@
-  <%= @entries.inspect %><div class="row">
+ <div class="row">
     <div class="medium-7 large-7 columns">
       <section class="report__focus">
         <header>
@@ -9,7 +9,7 @@
           <li class="card card--focus">
             <div class="row">
               <div class="large-2 columns">
-                <span class="focus__date"><%= entry.date %></span>
+                <span class="focus__date"><%= entry.date.strftime("%m/%d") %></span>
               </div>
               <div class="large-10 columns">
                 <p class="card__content"><%= entry.focus_on_tomorrow %></p>
@@ -25,7 +25,6 @@
       <section class="report__mood">
         <header>
           <h1 class="title title--section">Mood</h1>
-          <h2><%= @mood_start %></h2>
         </header>
 
         <p>Your mood is better in the last five days.</p>
@@ -57,7 +56,7 @@
           <li class="card card--gratitude">
             <div class="row">
               <div class="large-2 columns">
-                <span class="gratitude__date"><%= entry.date %></span>
+                <span class="gratitude__date"><%= entry.date.strftime("%m/%d") %></span>
               </div>
               <div class="large-10 columns">
                 <p class="card__content card__content--gratitude"><%= entry.what_went_well %></p>
@@ -81,7 +80,7 @@
           <li class="card card--action">
             <div class="row">
               <div class="large-2 columns">
-                <span class="action__date"><%= entry.date %></span>
+                <span class="action__date"><%= entry.date.strftime("%m/%d") %></span>
               </div>
               <div class="large-10 columns">
                 <p class="card__content card__content--solution"><%= entry.how_to_make_it_better %></p>
