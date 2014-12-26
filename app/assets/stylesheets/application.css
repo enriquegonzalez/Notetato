@@ -372,7 +372,7 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   padding: .65rem;
 }
   .card--focus {
-    /*border: none;*/
+    border: none;
   }
 
   .card--action, .card--gratitude {
