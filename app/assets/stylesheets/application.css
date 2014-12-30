@@ -362,7 +362,11 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
 }
 
 .report__description {
-  font-style: italic;
+  color: hsla(16, 100%, 50%, 1);
+  font-family: 'Varela Round', sans-serif;
+  font-size: .85rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .cards {

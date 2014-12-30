@@ -7,6 +7,10 @@
   Yellow: hsla(57, 100%, 50%, 1)
   Light-grey: hsla(0, 0%, 93%, 1);
 
+/*FONTS*/
+  font-family: 'Lobster', serif;
+  font-family: 'Varela Round', sans-serif;
+
 
 /*IF YOU WANT THE ARROW CIRCLED*/
 /*.arrow--right {
