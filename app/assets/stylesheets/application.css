@@ -364,8 +364,8 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
 .report__description {
   color: hsla(16, 100%, 50%, 1);
   font-family: 'Varela Round', sans-serif;
-  font-size: .85rem;
-  font-weight: 800;
+  font-size: .95rem;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
