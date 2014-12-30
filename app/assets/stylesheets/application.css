@@ -376,15 +376,20 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
 
 .card {
   background: hsla(360, 100%, 100%, .85);
-  border: 1px dotted hsla(0, 0%, 0%, .15);
+  border-bottom: 1px dotted hsla(0, 0%, 0%, .15);
   padding: .65rem;
 }
+
+  .card:first-of-type {
+    border-top: 1px dotted hsla(0, 0%, 0%, .15);
+  }
+
   .card--focus {
-    border: none;
+    padding: .5rem .65rem;
   }
 
   .card--action, .card--gratitude {
-    border: none;
+    /*border: none;*/
     padding: 1rem 3rem;
   }
 
