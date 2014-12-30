@@ -361,6 +361,10 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   /*padding: 2rem;*/
 }
 
+.report__description {
+  font-style: italic;
+}
+
 .cards {
   list-style: none;
   margin: 1rem;
