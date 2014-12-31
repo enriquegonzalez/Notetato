@@ -340,7 +340,8 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   color: hsla(16, 100%, 50%, 1);
   display: inline-block;
   height: 4rem;
-  padding: .65rem;
+  padding: .65rem 0;
+  text-align: center;
   width: 4rem;
 }
 .report__focus, .report__mood, .report__action, .report__gratitude {
@@ -376,12 +377,12 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
 
 .card {
   background: hsla(360, 100%, 100%, .85);
-  border-bottom: 1px dotted hsla(0, 0%, 0%, .15);
+  /*border-bottom: 1px dotted hsla(0, 0%, 0%, .15);*/
   padding: .65rem;
 }
 
   .card:first-of-type {
-    border-top: 1px dotted hsla(0, 0%, 0%, .15);
+    /*border-top: 1px dotted hsla(0, 0%, 0%, .15);*/
   }
 
   .card--focus {

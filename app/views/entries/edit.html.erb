@@ -1,6 +1,10 @@
 <h1>Editing entry</h1>
 
-<%= render 'form' %>
+<% if @entry.date.strftime("%Y-%m-%d") == Date.today.to_s %>
+  <%= render 'form' %>
+<% else %>
+  <p>Redirect and flash a message, maybe this logic should be in the controller</p>
+<% end %>
 
 <%= link_to 'Show', @entry %> |
 <%= link_to 'Back', entries_path %>

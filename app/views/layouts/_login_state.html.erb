@@ -1,7 +1,6 @@
 <% if user_signed_in? %>
   <div class="login-state">
     <p>
-      Hello (link to profile) <%#= current_user.full_name %> <br />
       <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, class: "login-state__message login-state__message--sign-out" %>
     </p>
   </div>
