@@ -34,25 +34,15 @@ class ApplicationController < ActionController::Base
   end
 
   def mood(type)
-    case type.round
-      when 1
+    if type <= 1.5
         "happy"
-      when 2
+    elsif type > 1.5 && type <= 2.5
         "pleasant"
-      when 3
+    elsif type > 2.5 && type <= 3.5
         "sad"
-      when 4
+    elsif type > 3.5 && type <= 4
         "angry"
     end
-    # if type <= 1.5
-    #     "happy"
-    # elsif type > 1.5 && type <= 2.5
-    #     "pleasant"
-    # elsif type > 2.5 && type <= 3.5
-    #     "sad"
-    # elsif type > 3.5 && type <= 4
-    #     "angry"
-    # end
   end
 
 end
