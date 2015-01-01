@@ -26,7 +26,7 @@
       <section class="report__mood">
         <header>
           <h1 class="title title--section">Mood</h1>
-          <p class="report__description">Your mood is getting better</p>
+          <p class="report__description"><%= mood_shift(@avg_start_feeling,@avg_end_feeling) %></p>
         </header>
 
         <div class="mood-shift">

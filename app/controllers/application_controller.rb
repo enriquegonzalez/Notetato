@@ -38,9 +38,9 @@ class ApplicationController < ActionController::Base
         "happy"
     elsif type > 1.5 && type <= 2.5
         "pleasant"
-     elsif type > 2.5 && type <= 3.5
+    elsif type > 2.5 && type <= 3.5
         "sad"
-     elsif type > 3.5 && type <= 4
+    elsif type > 3.5 && type <= 4
         "angry"
     end
   end
