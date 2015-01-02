@@ -346,10 +346,6 @@ figure.feeling {
   margin: 1rem 0;
 }
 
-.report__mood {
-  border-radius: 2rem;
-}
-
 .report__description {
   color: hsla(16, 100%, 50%, 1);
   font-family: 'Varela Round', sans-serif;
@@ -362,33 +358,32 @@ figure.feeling {
   list-style: none;
   margin: 1rem;
 }
+  .card {
+    background: hsla(360, 100%, 100%, .85);
+    padding: .65rem;
+  }
+    .card__content {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      margin: 0 0 .65rem 0;
+    }
+    .card__date {
+      color: hsla(16, 100%, 50%, 1);
+      font-weight: 800;
+    }
 
-.card {
-  background: hsla(360, 100%, 100%, .85);
-  padding: .65rem;
-}
-
+/*****************************************/
+/* FOCUS */
+/*****************************************/
   .card--focus {
     padding: .5rem .65rem;
   }
 
-  .card--action, .card--gratitude {
-    padding: 1rem 3rem;
-  }
-
-  .card__content {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    margin: 0 0 .65rem 0;
-  }
-
-  .card__content--solution {
-    font-weight: 500;
-  }
-
-.card__date {
-  color: hsla(16, 100%, 50%, 1);
-  font-weight: 800;
+/*****************************************/
+/* MOOD */
+/*****************************************/
+.report__mood {
+  border-radius: 2rem;
 }
 
 .mood-shift {
@@ -396,7 +391,7 @@ figure.feeling {
   width: 80%;
 }
 
-.mood-shift > figure {
+.mood-shift > .feeling {
   display: inline-block;
 }
 
@@ -420,7 +415,28 @@ figure.feeling {
   text-transform: uppercase;
 }
 
+/*****************************************/
+/* GRATITUDE */
+/*****************************************/
+.card--gratitude {
+  padding: 1rem 3rem;
+}
+
+/*****************************************/
+/* ACTION */
+/*****************************************/
+.card--action {
+  padding: 1rem 3rem;
+}
+
+  .card__content--solution {
+    font-weight: 500;
+  }
+
+
+/*************************************************************/
 /* SCREENS */
+/*************************************************************/
 .screen {
   background: hsla(360, 100%, 100%, 1);
   padding: 3rem;
@@ -433,18 +449,20 @@ figure.feeling {
 
 
 
-
-
 /*************************************************************/
-
 /* RAILS SELECTORS */
+/*************************************************************/
+/*****************************************/
 /* ERRORS */
+/*****************************************/
 #error_explanation, #error_explanation h2 {
   color: hsla(0, 100%, 50%, 1);
 }
 
 
+/*************************************************************/
 /* FOUNDATION OVERRIDES */
+/*************************************************************/
 h1, p {
   margin-bottom: 0;
 }
