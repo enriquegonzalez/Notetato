@@ -15,15 +15,6 @@
  *= require foundation_and_overrides
  */
 
-/* COLORS
-  Black: hsla(0, 0%, 0%, 1)
-  Blue: hsla(201, 92%, 60%, 1)
-  Gold: hsla(45, 100%, 50%, 1)
-  Orange: hsla(16, 100%, 50%, 1);
-  White: hsla(360, 100%, 100%, 1)
-  Yellow: hsla(57, 100%, 50%, 1)
-*/
-
 body {
   background: hsla(201, 92%, 60%, .85);
   color: hsla(0, 0%, 0%, 1);
@@ -222,9 +213,9 @@ label.option--feeling > input[type=radio]:checked + .feeling > .option--feeling_
 }
 
 
-/*****************************************/
+/*************************************************************/
 /* IMAGES */
-/*****************************************/
+/*************************************************************/
 .app-logo {
   margin: 0;
   position: relative;
@@ -237,9 +228,9 @@ figure.feeling {
 }
 
 
-/*****************************************/
+/*************************************************************/
 /* LINKS */
-/*****************************************/
+/*************************************************************/
 .login-state {
   margin-right: 1rem;
   position: absolute;
@@ -268,11 +259,9 @@ figure.feeling {
     }
 
 
-/*****************************************/
+/*************************************************************/
 /* TEXT */
-/*****************************************/
-
-
+/*************************************************************/
 .title {
   color: hsla(0, 0%, 0%, .5);
   font-family: 'Varela Round', sans-serif;
@@ -297,12 +286,10 @@ figure.feeling {
   color: hsla(0, 0%, 0%, 1);
   font-size: 2rem;
   margin: 0;
-  /*padding: 1rem;*/
 }
 
 .value-statement {
   background: hsla(360, 100%, 100%, 1);
-  /*border-radius: .65rem;*/
   color: hsla(16, 100%, 50%, 1);
   font-family: 'Varela Round', sans-serif;
   font-size: 1.65rem;
@@ -312,10 +299,13 @@ figure.feeling {
   text-transform: capitalize;
 }
 
-.date-range {
+/*.date-range {
   font-size: 1.65rem;
-}
+}*/
 
+/*****************************************/
+/* NOTIFICATIONS */
+/*****************************************/
 .message {
   background: hsla(360, 100%, 100%, 1);
   color: hsla(16, 100%, 50%, 1);
@@ -336,10 +326,11 @@ figure.feeling {
     color: hsla(45, 100%, 50%, 1);
   }
 
-/* REPORTS */
+
+/*************************************************************/
+/* REPORT */
+/*************************************************************/
 .report__title__days {
-  /*background: hsla(360, 100%, 100%, .85);*/
-  /*background: hsla(45, 100%, 50%, .15);*/
   background: hsla(0, 0%, 93%, .25);
   border-radius: 5rem;
   /*border: 1px dashed hsla(0, 0%, 0%, .45);*/
