@@ -48,9 +48,7 @@ body {
   margin: 1rem auto;
   text-transform: uppercase;
 }
-  .ad__button:hover {
-    background: hsla(16, 100%, 50%, 1);
-  }
+  .ad__button:hover { background: hsla(16, 100%, 50%, 1);}
 
 
 /*************************************************************/
@@ -129,24 +127,11 @@ body {
   margin-bottom: 1rem;
 }
 
-  .form__label:after {
-    content: ":";
-  }
-  .form__question:after {
-    content: "?";
-  }
-
-  .form__question--remember {
-    font-size: 1.25rem;
-  }
-
-  .form__label--remember {
-    width: 5rem;
-  }
-
-  .form__field--text-area {
-    height: 7rem;
-  }
+  .form__label:after { content: ":"; }
+  .form__question:after { content: "?"; }
+  .form__question--remember { font-size: 1.25rem; }
+  .form__label--remember { width: 5rem; }
+  .form__field--text-area { height: 7rem; }
 
   .form__button {
   background: hsla(0, 0%, 0%, .65);
@@ -170,22 +155,22 @@ body {
 .option--feeling {
   display: inline-block;
 }
-
   .option--feeling__emoticon {
     width: 4.85rem;
     transition: all 0.2s ease;
   }
-
   .option--feeling__emotion {
     text-align: center;
     text-transform: uppercase;
   }
 
-label.option--feeling > input[type=radio] { /* HIDE RADIO */
+label.option--feeling > input[type=radio],
+label.option--feeling > .field_with_errors > input[type=radio] { /* HIDE RADIO */
   display: none;
 }
 
-label.option--feeling > input[type=radio] + .feeling {  /*IMAGE STYLES*/
+label.option--feeling > input[type=radio] + .feeling,
+label.option--feeling > .feeling  {  /*IMAGE STYLES*/
   cursor:pointer;
   border-bottom: 3px solid transparent;
   border-left: 3px solid transparent;
@@ -193,11 +178,13 @@ label.option--feeling > input[type=radio] + .feeling {  /*IMAGE STYLES*/
   padding: .45rem;
 }
 
-label.option--feeling > input[type=radio] + .feeling:hover { /* (CHECKED) IMAGE STYLES */
+label.option--feeling > input[type=radio] + .feeling:hover,
+label.option--feeling > .feeling:hover { /*HOVER IMAGE STYLES */
   background: hsla(0, 0%, 93%, 1);
   transition: all 0.2s ease;
 }
 
+label.option--feeling > input[type=radio]:checked + .feeling,
 label.option--feeling > input[type=radio]:checked + .feeling { /* (CHECKED) IMAGE STYLES */
   background: hsla(57, 100%, 50%, .85);
 }
@@ -223,9 +210,7 @@ label.option--feeling > input[type=radio]:checked + .feeling > .option--feeling_
   width: 20rem;
 }
 
-figure.feeling {
-  margin: .35rem;
-}
+figure.feeling { margin: .35rem; }
 
 
 /*************************************************************/
@@ -237,7 +222,6 @@ figure.feeling {
   top: 0 ;
   right: 0;
 }
-
   .login-state__message {
     border-bottom: .15rem solid hsla(0, 0%, 0%, .25);
     color: hsla(0, 0%, 0%, .65);
@@ -247,12 +231,10 @@ figure.feeling {
     margin: 0 .5rem 0 .5rem;
     text-transform: lowercase;
   }
-
     .login-state__message--sign-up {
       border-bottom: .15rem solid hsla(57, 100%, 50%, 1);
       color: hsla(57, 100%, 50%, 1);
     }
-
     .login-state__message:hover {
       border-bottom: .15rem solid hsla(360, 100%, 100%, 1);
       color: hsla(360, 100%, 100%, 1);
@@ -278,9 +260,7 @@ figure.feeling {
   margin: 0;
 }
 
-.title--screen--report {
-  text-align: center;
-}
+.title--screen--report { text-align: center; }
 
 .title--section {
   color: hsla(0, 0%, 0%, 1);
@@ -299,10 +279,6 @@ figure.feeling {
   text-transform: capitalize;
 }
 
-/*.date-range {
-  font-size: 1.65rem;
-}*/
-
 /*****************************************/
 /* TEXT - NOTIFICATIONS */
 /*****************************************/
@@ -313,18 +289,9 @@ figure.feeling {
   padding: 1rem;
   width: 100%;
 }
-
-  .message--alert {
-    color: hsla(1, 100%, 40%, 1);
-  }
-
-  .message--success {
-    color: hsla(116, 100%, 30%, 1);
-  }
-
-  .message--warning {
-    color: hsla(45, 100%, 50%, 1);
-  }
+  .message--alert { color: hsla(1, 100%, 40%, 1); }
+  .message--success { color: hsla(116, 100%, 30%, 1); }
+  .message--warning { color: hsla(45, 100%, 50%, 1); }
 
 
 /*************************************************************/
@@ -375,25 +342,19 @@ figure.feeling {
 /*****************************************/
 /* FOCUS */
 /*****************************************/
-  .card--focus {
-    padding: .5rem .65rem;
-  }
+  .card--focus { padding: .5rem .65rem; }
 
 /*****************************************/
 /* MOOD */
 /*****************************************/
-.report__mood {
-  border-radius: 2rem;
-}
+.report__mood { border-radius: 2rem; }
 
 .mood-shift {
   margin: 0 auto;
   width: 80%;
 }
 
-.mood-shift > .feeling {
-  display: inline-block;
-}
+.mood-shift > .feeling { display: inline-block; }
 
 .mood__emoticon {
   display: inline-block;
@@ -418,20 +379,13 @@ figure.feeling {
 /*****************************************/
 /* GRATITUDE */
 /*****************************************/
-.card--gratitude {
-  padding: 1rem 3rem;
-}
+.card--gratitude { padding: 1rem 3rem; }
 
 /*****************************************/
 /* ACTION */
 /*****************************************/
-.card--action {
-  padding: 1rem 3rem;
-}
-
-  .card__content--solution {
-    font-weight: 500;
-  }
+.card--action { padding: 1rem 3rem; }
+.card__content--solution { font-weight: 500; }
 
 
 /*************************************************************/
@@ -442,11 +396,7 @@ figure.feeling {
   padding: 3rem;
   margin-bottom: 5rem;
 }
-
-  .screen--home {
-    padding: 0 3rem 3rem 3rem;
-  }
-
+  .screen--home { padding: 0 3rem 3rem 3rem; }
 
 
 /*************************************************************/
@@ -459,30 +409,25 @@ figure.feeling {
   color: hsla(0, 100%, 50%, 1);
 }
 
+.field_with_errors { display: inline; }
+
 
 /*************************************************************/
 /* FOUNDATION OVERRIDES */
 /*************************************************************/
-h1, p {
-  margin-bottom: 0;
-}
+h1, p { margin-bottom: 0; }
 
 input[type="email"], input[type="password"]  {
   border: transparent;
   padding: 1.5rem;
 }
 
-  input[type="email"]:focus, input[type="password"]:focus  {
+input[type="email"]:focus, input[type="password"]:focus  {
   border-left: 1.65rem solid hsla(45, 100%, 50%, 1);
 }
 
-.switch label {
-  background: hsla(0, 0%, 0%, .65);
-}
-
-.switch input:checked + label {
-  background: hsla(45, 100%, 50%, 1);
-}
+.switch label { background: hsla(0, 0%, 0%, .65); }
+.switch input:checked + label { background: hsla(45, 100%, 50%, 1); }
 
 .button {
   display: block;
