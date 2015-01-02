@@ -165,7 +165,7 @@ body {
   }
 
 /*****************************************/
-/* ENTRY FORM EMOTION OPTIONS */
+/* FORM - ENTRY EMOTION OPTIONS */
 /*****************************************/
 .option--feeling {
   display: inline-block;
@@ -304,7 +304,7 @@ figure.feeling {
 }*/
 
 /*****************************************/
-/* NOTIFICATIONS */
+/* TEXT - NOTIFICATIONS */
 /*****************************************/
 .message {
   background: hsla(360, 100%, 100%, 1);
