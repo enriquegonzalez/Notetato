@@ -30,12 +30,12 @@
         </header>
 
         <div class="mood-shift">
-          <figure class="feeling--<%= @mood_start %>">
+          <figure class="feeling feeling--<%= @mood_start %>">
             <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-<%= @mood_start %>.png" alt="Feeling <%= @mood_start %>" class="mood__emoticon">
           <figcaption class="mood"><%= @mood_start %></figcaption>
         </figure>
           <span class="arrow--right">&#10157;</span>
-          <figure class="feeling--<%= @mood_end %>">
+          <figure class="feeling feeling--<%= @mood_end %>">
             <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-<%= @mood_end %>.png" alt="Feeling <%= @mood_end %>" class="mood__emoticon">
           <figcaption class="mood"><%= @mood_end %></figcaption>
         </figure>
