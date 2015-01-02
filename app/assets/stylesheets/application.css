@@ -29,65 +29,95 @@ body {
   color: hsla(0, 0%, 0%, 1);
 }
 
-figure.feeling {
-  margin: .35rem;
+
+/*************************************************************/
+/* ADS */
+/*************************************************************/
+.report-ad {
+  background: hsla(201, 92%, 60%, .25);
+  border-radius: .85rem;
+  padding: 2rem;
 }
 
-.screen {
-  background: hsla(360, 100%, 100%, 1);
-  padding: 3rem;
-  margin-bottom: 5rem;
-}
-
-/*BUTTONS*/
-.form__button {
-  background: hsla(0, 0%, 0%, .65);
-  color: hsla(360, 100%, 100%, .85);
-  font-family: 'Lobster', serif;
-  font-size: 2rem;
-  font-style: italic;
-  letter-spacing: .195rem;
-  margin-top: 2rem;
-  text-transform: capitalize;
-  width: 100%;
-}
-  .form__button:hover {
-    background: hsla(0, 0%, 0%, 1);
-    color: hsla(360, 100%, 100%, 1);
-  }
-
-.button--weekly {
+.ad__button {
   background: hsla(16, 100%, 50%, .75);
   font-size: .85rem;
   letter-spacing: .065rem;
   margin: 1rem auto;
   text-transform: uppercase;
 }
-  .button--weekly:hover {
+  .ad__button:hover {
     background: hsla(16, 100%, 50%, 1);
   }
 
-/*FORMS*/
-.new-entry__form {
-  /*padding: 1.65rem;*/
+.ad__emoticon {
+  display: block;
+  margin: 0 auto -1rem auto;
+  width: 12rem;
 }
 
-.form__header {
+
+/*************************************************************/
+/* ANIMATIONS */
+/*************************************************************/
+.fade-out {
+    -webkit-animation-name: byebye;
+    animation-name: byebye;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+@keyframes byebye {
+        0% {opacity: 1;}
+      100% {opacity: 0;
+            visibility:hidden;
+            margin-top: -65px;
+            }
+}
+@-webkit-keyframes byebye {
+        0% {opacity: 1;}
+      100% {opacity: 0;
+            visibility:hidden;
+            margin-top: -65px;
+           }
+}
+
+
+@-webkit-keyframes tada {
+    0% {-webkit-transform: scale(1);}
+    10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
+    30%, 50%, 70%, 90% {-webkit-transform: scale(1.1) rotate(3deg);}
+    40%, 60%, 80% {-webkit-transform: scale(1.1) rotate(-3deg);}
+    100% {-webkit-transform: scale(1) rotate(-7deg);}
+}
+@keyframes tada {
+    0% {transform: scale(1);}
+    10%, 20% {transform: scale(0.9) rotate(-3deg);}
+    30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
+    40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
+    100% {transform: scale(1) rotate(-7deg);}
+}
+
+
+/*************************************************************/
+/*FORMS*/
+/*************************************************************/
+.form--authentication__header {
   background: hsla(360, 100%, 100%, .65);
   border-radius: 1rem 1rem 0 0;
   padding: 2rem 2rem 0 2rem;
   margin: 0;
 }
 
-.form--login, .form--sign-up, .form--change-password {
+.form--authentication {
   background: hsla(360, 100%, 100%, .65);
   border-radius: 0 0 1rem 1rem;
   padding: 1rem 2rem;
 }
-
-/*.field {
-
-}*/
 
 .new-entry__form .field {
   border-top: 2px dotted hsla(0, 0%, 93%, 1);
@@ -118,17 +148,9 @@ figure.feeling {
     width: 5rem;
   }
 
-/*.form__field {
-  border: transparent;
-}*/
-
   .form__field--text-area {
     height: 7rem;
   }
-
-/*    .form__field--text-area:focus  {
-      border-left: 1.65rem solid hsla(45, 100%, 50%, 1);
-    }*/
 
 .option--feeling {
   display: inline-block;
@@ -179,6 +201,23 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   animation-name: tada;
 }
 
+.form__button {
+  background: hsla(0, 0%, 0%, .65);
+  color: hsla(360, 100%, 100%, .85);
+  font-family: 'Lobster', serif;
+  font-size: 2rem;
+  font-style: italic;
+  letter-spacing: .195rem;
+  margin-top: 2rem;
+  text-transform: capitalize;
+  width: 100%;
+}
+  .form__button:hover {
+    background: hsla(0, 0%, 0%, 1);
+    color: hsla(360, 100%, 100%, 1);
+  }
+
+
 
 /* IMAGES */
 .app-logo {
@@ -188,10 +227,8 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   width: 20rem;
 }
 
-.ad__emoticon {
-  display: block;
-  margin: 0 auto -1rem auto;
-  width: 12rem;
+figure.feeling {
+  margin: .35rem;
 }
 
 
@@ -268,15 +305,6 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   text-transform: capitalize;
 }
 
-/*.heading {
-  color: hsla(0, 0%, 0%, 1);
-  font-family: 'Varela Round', sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: .025rem;
-  margin: 0;
-}*/
-
 .date-range {
   font-size: 1.65rem;
 }
@@ -300,18 +328,6 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   .message--warning {
     color: hsla(45, 100%, 50%, 1);
   }
-
-/*.entry__prompt {
-  color: hsla(0, 0%, 20%, 1);
-  font-family: 'Lobster', cursive;
-  font-size: 2rem;
-  font-style: italic;
-  letter-spacing: .125rem;
-  margin-bottom: 1rem;
-  position: relative;
-  bottom: 2.65rem;
-  text-transform: capitalize;
-}*/
 
 /* REPORTS */
 .report__title__days {
@@ -423,54 +439,28 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
   text-transform: uppercase;
 }
 
-/* ANIMATIONS */
-.fade-out {
-    -webkit-animation-name: byebye;
-    animation-name: byebye;
-    -webkit-animation-duration: .5s;
-    animation-duration: .5s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-delay: 3s;
-    animation-delay: 3s;
+/* SCREENS */
+.screen {
+  background: hsla(360, 100%, 100%, 1);
+  padding: 3rem;
+  margin-bottom: 5rem;
 }
 
-@keyframes byebye {
-        0% {opacity: 1;}
-      100% {opacity: 0;
-            visibility:hidden;
-            margin-top: -65px;
-            }
-}
-@-webkit-keyframes byebye {
-        0% {opacity: 1;}
-      100% {opacity: 0;
-            visibility:hidden;
-            margin-top: -65px;
-           }
-}
+  .screen--home {
+    padding: 0 3rem 3rem 3rem;
+  }
 
 
-@-webkit-keyframes tada {
-    0% {-webkit-transform: scale(1);}
-    10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
-    30%, 50%, 70%, 90% {-webkit-transform: scale(1.1) rotate(3deg);}
-    40%, 60%, 80% {-webkit-transform: scale(1.1) rotate(-3deg);}
-    100% {-webkit-transform: scale(1) rotate(-7deg);}
-}
-@keyframes tada {
-    0% {transform: scale(1);}
-    10%, 20% {transform: scale(0.9) rotate(-3deg);}
-    30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
-    40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
-    100% {transform: scale(1) rotate(-7deg);}
-}
 
-/*RAILS SELECTORS*/
+
+
+/*************************************************************/
+
+/* RAILS SELECTORS */
+/* ERRORS */
 #error_explanation, #error_explanation h2 {
   color: hsla(0, 100%, 50%, 1);
 }
-
 
 
 /* FOUNDATION OVERRIDES */
