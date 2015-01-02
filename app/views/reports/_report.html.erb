@@ -10,7 +10,7 @@
           <li class="card card--focus">
             <div class="row">
               <div class="large-2 columns">
-                <span class="focus__date"><%= entry.date.strftime("%m/%d") %></span>
+                <span class="card__date"><%= entry.date.strftime("%m/%d") %></span>
               </div>
               <div class="large-10 columns">
                 <p class="card__content"><%= entry.focus_on_tomorrow %></p>
@@ -57,7 +57,7 @@
           <li class="card card--gratitude">
             <div class="row">
               <div class="large-2 columns">
-                <span class="gratitude__date"><%= entry.date.strftime("%m/%d") %></span>
+                <span class="card__date"><%= entry.date.strftime("%m/%d") %></span>
               </div>
               <div class="large-10 columns">
                 <p class="card__content card__content--gratitude"><%= entry.what_went_well %></p>
@@ -82,7 +82,7 @@
           <li class="card card--action">
             <div class="row">
               <div class="large-2 columns">
-                <span class="action__date"><%= entry.date.strftime("%m/%d") %></span>
+                <span class="card__date"><%= entry.date.strftime("%m/%d") %></span>
               </div>
               <div class="large-10 columns">
                 <p class="card__content card__content--solution"><%= entry.how_to_make_it_better %></p>

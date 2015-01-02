@@ -333,7 +333,6 @@ figure.feeling {
 .report__title__days {
   background: hsla(0, 0%, 93%, .25);
   border-radius: 5rem;
-  /*border: 1px dashed hsla(0, 0%, 0%, .45);*/
   color: hsla(16, 100%, 50%, 1);
   display: inline-block;
   height: 4rem;
@@ -343,20 +342,12 @@ figure.feeling {
 }
 .report__focus, .report__mood, .report__action, .report__gratitude {
   background: hsla(360, 100%, 100%, .45);
-  padding: 1rem;
-  margin: 1rem;
+  padding: 2rem;
+  margin: 1rem 0;
 }
 
 .report__mood {
-  /*background: hsla(360, 100%, 100%, .45);*/
-  /*background: hsla(57, 100%, 50%, .25);*/
-  /*border: 2px dashed hsla(0, 0%, 93%, 1);*/
   border-radius: 2rem;
-/*  padding: 2rem;*/
-}
-
-.report__action {
-  /*padding: 2rem;*/
 }
 
 .report__description {
@@ -374,36 +365,28 @@ figure.feeling {
 
 .card {
   background: hsla(360, 100%, 100%, .85);
-  /*border-bottom: 1px dotted hsla(0, 0%, 0%, .15);*/
   padding: .65rem;
 }
-
-  .card:first-of-type {
-    /*border-top: 1px dotted hsla(0, 0%, 0%, .15);*/
-  }
 
   .card--focus {
     padding: .5rem .65rem;
   }
 
   .card--action, .card--gratitude {
-    /*border: none;*/
     padding: 1rem 3rem;
   }
 
   .card__content {
-  margin: 0 0 .85rem 0;
-}
-  .card__content--gratitude, .card__content--solution {
     font-size: 1.25rem;
     line-height: 1.5rem;
+    margin: 0 0 .65rem 0;
   }
 
   .card__content--solution {
     font-weight: 500;
   }
 
-.focus__date, .action__date, .gratitude__date {
+.card__date {
   color: hsla(16, 100%, 50%, 1);
   font-weight: 800;
 }
