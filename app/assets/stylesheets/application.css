@@ -39,6 +39,17 @@ body {
   padding: 2rem;
 }
 
+.ad__emoticon {
+  display: block;
+  margin: 0 auto -1rem auto;
+  width: 12rem;
+}
+
+.ad__copy {
+  text-align: center;
+  font-size: 2.65rem;
+}
+
 .ad__button {
   background: hsla(16, 100%, 50%, .75);
   font-size: .85rem;
@@ -49,12 +60,6 @@ body {
   .ad__button:hover {
     background: hsla(16, 100%, 50%, 1);
   }
-
-.ad__emoticon {
-  display: block;
-  margin: 0 auto -1rem auto;
-  width: 12rem;
-}
 
 
 /*************************************************************/
@@ -104,7 +109,7 @@ body {
 
 
 /*************************************************************/
-/*FORMS*/
+/* FORMS */
 /*************************************************************/
 .form--authentication__header {
   background: hsla(360, 100%, 100%, .65);
@@ -152,56 +157,7 @@ body {
     height: 7rem;
   }
 
-.option--feeling {
-  display: inline-block;
-}
-
-  .option--feeling__emoticon {
-    width: 4.85rem;
-    transition: all 0.2s ease;
-  }
-
-  .option--feeling__emotion {
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-label > input{ /* HIDE RADIO */
-  display: none;
-}
-
-label > input + figure { /* IMAGE STYLES */
-  cursor:pointer;
-  border-bottom: 3px solid transparent;
-  border-left: 3px solid transparent;
-  border-radius: 1rem;
-  padding: .45rem;
-}
-
-label > input + figure:hover { /* (CHECKED) IMAGE STYLES */
-/*  border-bottom: 3px solid transparent;
-  border-left: 3px solid transparent;*/
-  background: hsla(0, 0%, 93%, 1);
-  transition: all 0.2s ease;
-}
-
-label > input:checked + figure { /* (CHECKED) IMAGE STYLES */
-/*  border-bottom: 3px solid hsla(45, 100%, 50%, .65);
-  border-left: 3px solid hsla(45, 100%, 50%, .65);*/
-  /*background: hsla(45, 100%, 50%, .85);*/
-  background: hsla(57, 100%, 50%, .85);
-}
-
-label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: tada;
-  animation-name: tada;
-}
-
-.form__button {
+  .form__button {
   background: hsla(0, 0%, 0%, .65);
   color: hsla(360, 100%, 100%, .85);
   font-family: 'Lobster', serif;
@@ -217,9 +173,58 @@ label > input:checked + figure > img { /* (CHECKED) IMAGE STYLES */
     color: hsla(360, 100%, 100%, 1);
   }
 
+/*****************************************/
+/* ENTRY FORM EMOTION OPTIONS */
+/*****************************************/
+.option--feeling {
+  display: inline-block;
+}
+
+  .option--feeling__emoticon {
+    width: 4.85rem;
+    transition: all 0.2s ease;
+  }
+
+  .option--feeling__emotion {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+label.option--feeling > input[type=radio] { /* HIDE RADIO */
+  display: none;
+}
+
+label.option--feeling > input[type=radio] + .feeling {  /*IMAGE STYLES*/
+  cursor:pointer;
+  border-bottom: 3px solid transparent;
+  border-left: 3px solid transparent;
+  border-radius: 1rem;
+  padding: .45rem;
+}
+
+label.option--feeling > input[type=radio] + .feeling:hover { /* (CHECKED) IMAGE STYLES */
+  background: hsla(0, 0%, 93%, 1);
+  transition: all 0.2s ease;
+}
+
+label.option--feeling > input[type=radio]:checked + .feeling { /* (CHECKED) IMAGE STYLES */
+  background: hsla(57, 100%, 50%, .85);
+}
 
 
+label.option--feeling > input[type=radio]:checked + .feeling > .option--feeling__emoticon{ /* (CHECKED) IMAGE STYLES */
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: tada;
+  animation-name: tada;
+}
+
+
+/*****************************************/
 /* IMAGES */
+/*****************************************/
 .app-logo {
   margin: 0;
   position: relative;
@@ -232,7 +237,9 @@ figure.feeling {
 }
 
 
+/*****************************************/
 /* LINKS */
+/*****************************************/
 .login-state {
   margin-right: 1rem;
   position: absolute;
@@ -260,11 +267,11 @@ figure.feeling {
       color: hsla(360, 100%, 100%, 1);
     }
 
+
+/*****************************************/
 /* TEXT */
-.ad__emotion {
-  text-align: center;
-  font-size: 2.65rem;
-}
+/*****************************************/
+
 
 .title {
   color: hsla(0, 0%, 0%, .5);
