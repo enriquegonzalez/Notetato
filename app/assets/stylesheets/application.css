@@ -417,17 +417,22 @@ figure.feeling {
 
 .show-entry__date {
   color: hsla(16, 100%, 50%, 1);
-  font-size: 1.45rem;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
+.show-entry__questions {
+  padding: 0 5rem 5rem 5rem;
+}
 .show-entry__question {
+  border-top: 1px dotted hsla(0, 0%, 0%, .25);
   color: hsla(0, 0%, 0%, .85);
-  font-family: 'Varela Round', sans-serif;
-  font-size: 1.45rem;
-  font-weight: 800;
+  font-size: 1.25rem;
+  font-weight: 600;
   letter-spacing: .025rem;
   line-height: 1.5rem;
   margin: 1rem;
+  padding-top: 2rem;
 }
 
 .show-entry__question ~ figure {
@@ -436,9 +441,9 @@ figure.feeling {
 
 .show-entry__answer {
   display:  inline-block;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 300;
-  margin: 1rem;
+  margin: 1rem 1rem 3rem 1rem;
 }
 
 
