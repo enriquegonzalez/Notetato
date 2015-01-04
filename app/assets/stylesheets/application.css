@@ -212,7 +212,7 @@ label.option--feeling > input[type=radio]:checked + .feeling > .option--feeling_
 
 figure.feeling {
   display: inline-block;
-  margin: .35rem;
+  margin: .25rem;
 }
 
 
