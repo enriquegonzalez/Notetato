@@ -106,6 +106,7 @@
 
     <div class="actions">
         <% if user_signed_in? %>
+          <%= f.hidden_field :user_id, :value => current_user.id %>
           <%= f.submit "Note it!", class: "button radius form__button" %>
         <% else %>
           <%= f.submit "Login and Note it!", class: "button radius form__button" %>
