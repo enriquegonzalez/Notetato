@@ -403,19 +403,23 @@ figure.feeling {
   .screen--home { padding: 0 3rem 3rem 3rem; }
 
 .show-entry__menu__item {
-  border-bottom: 2px solid hsla(201, 92%, 40%, 1);
-  color: hsla(201, 92%, 40%, 1);
+  background: hsla(35, 100%, 50%, 1);
+  color: hsla(360, 100%, 100%, 1);
   display: inline-block;
-  font-size: 1rem;
-  font-weight: 800;
   letter-spacing: .15rem;
   text-transform: uppercase;
 }
+
+  .show-entry__menu__item:hover {
+    background: hsla(40, 100%, 50%, 1);
+    color: hsla(360, 100%, 100%, 1);
+  }
 
 .show-entry__date {
   color: hsla(16, 100%, 50%, 1);
   font-size: 1.45rem;
 }
+
 .show-entry__question {
   color: hsla(0, 0%, 0%, .85);
   font-family: 'Varela Round', sans-serif;
