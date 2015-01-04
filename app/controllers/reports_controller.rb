@@ -3,7 +3,7 @@ class ReportsController < ApplicationController
   def index
 
     if user_signed_in?
-      @entries = Entry.last_five_days(current_user)
+      @entries = Entry.last_five_days(current_user).order("date desc")
 
       # Mood Shift
       @avg_start_feeling = @entries.average(:how_do_you_feel)
