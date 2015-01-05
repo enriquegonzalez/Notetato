@@ -5,7 +5,7 @@ module ReportsHelper
     elsif mood(feeling_start) == mood(feeling_end) && mood(feeling_end) == "happy"
       "You're a happy camper"
     elsif mood(feeling_start) == mood(feeling_end)
-      "Your mood is staying samesies"
+      "Your mood stayed samesies"
     else
       "Uh oh! Your mood is worse"
     end
