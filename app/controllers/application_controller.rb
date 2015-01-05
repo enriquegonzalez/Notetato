@@ -33,7 +33,7 @@ class ApplicationController < ActionController::Base
       cookies.delete(:how_do_you_feel_now)
   end
 
-  def todays
+  def todays_entry
     @todays = Entry.where("date = ?", Date.today).last
   end
 
