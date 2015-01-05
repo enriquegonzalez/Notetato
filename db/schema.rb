@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20150105044555) do
     t.integer  "user_id"
   end
 
-  add_index "entries", ["date"], name: "index_entries_on_date", unique: true, using: :btree
+  add_index "entries", ["user_id", "date"], name: "index_entries_on_user_id_and_date", unique: true, using: :btree
 
   create_table "profiles", force: true do |t|
     t.integer  "user_id"
