@@ -12,4 +12,12 @@ class Entry < ActiveRecord::Base
     self.date = Date.today
   end
 
+  def save(*args)
+    super
+  rescue ActiveRecord::RecordNotUnique => error
+    # errors[:base] << error.message
+    errors[:base] <<  "You've already created a Notetato today"
+    false
+  end
+
 end
