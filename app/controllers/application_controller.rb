@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
   end
 
   def todays_entry
-    @todays = Entry.where("date = ?", Date.today).last
+    @todays = Entry.where("date = ? and user_id = ?", Date.today, current_user.id).last
   end
 
   def mood(type)
