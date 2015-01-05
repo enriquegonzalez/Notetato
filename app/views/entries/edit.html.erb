@@ -3,18 +3,18 @@
     <div class="small-12 columns">
       <section class="edit-entry__response">
         <% if @entry.date.strftime("%Y-%m-%d") == Date.today.to_s %>
-            <header>
-              <p class="clearfix">
-                <span class="show-entry__date"><%= @entry.date.strftime("%m/%d/%Y") %></span>
-                <span class="show-entry__menu right">
-                  <%= link_to 'Cancel', @entry, class: "button radius tiny show-entry__menu__item" %>
-                </span>
-              </p>
-            </header>
+          <header>
+            <p class="clearfix">
+              <span class="show-entry__date"><%= @entry.date.strftime("%m/%d/%Y") %></span>
+              <span class="show-entry__menu right">
+                <%= link_to 'Cancel', @entry, class: "button radius tiny show-entry__menu__item" %>
+              </span>
+            </p>
+          </header>
 
-            <section class="edit-entry__questions">
-              <%= render 'form' %>
-            </section>
+          <section class="edit-entry__questions">
+            <%= render 'form' %>
+          </section>
         <% else %>
           <p>Redirect and flash a message, maybe this logic should be in the controller</p>
         <% end %>
