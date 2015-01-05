@@ -1,10 +1,17 @@
-<h1>Editing entry</h1>
+<section class="screen screen--edit-entry">
+  <div class="row">
+    <div class="small-12 columns">
 
-<% if @entry.date.strftime("%Y-%m-%d") == Date.today.to_s %>
-  <%= render 'form' %>
-<% else %>
-  <p>Redirect and flash a message, maybe this logic should be in the controller</p>
-<% end %>
-
-<%= link_to 'Show', @entry %> |
-<%= link_to 'Back', entries_path %>
+      <% if @entry.date.strftime("%Y-%m-%d") == Date.today.to_s %>
+        <span class="edit-entry__menu right">
+          <%= link_to 'Cancel Edit', @entry, class: "button radius tiny show-entry__menu__item" %>
+        </span>
+        <section class="edit-entry__questions">
+          <%= render 'form' %>
+        </section>
+      <% else %>
+        <p>Redirect and flash a message, maybe this logic should be in the controller</p>
+      <% end %>
+    </div>
+  </div>
+</section>

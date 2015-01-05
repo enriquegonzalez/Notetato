@@ -6,7 +6,9 @@
             <p class="clearfix">
                 <span class="show-entry__date"><%= @entry.date.strftime("%m/%d/%Y") %></span>
                 <% if @entry.date.strftime("%Y-%m-%d") == Date.today.to_s %>
-                  <span class="show-entry__menu right"><%= link_to 'Edit', edit_entry_path(@entry), class: "button radius tiny show-entry__menu__item" %></span>
+                  <span class="show-entry__menu right">
+                    <%= link_to 'Edit', edit_entry_path(@entry), class: "button radius tiny show-entry__menu__item" %>
+                  </span>
                 <% end %>
             </p>
             </header>
