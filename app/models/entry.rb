@@ -16,7 +16,7 @@ class Entry < ActiveRecord::Base
     super
   rescue ActiveRecord::RecordNotUnique => error
     # errors[:base] << error.message
-    errors[:base] <<  "You've already created a Notetato today"
+    # errors[:base] <<  "You've already created a Notetato today"
     false
   end
 

@@ -34,6 +34,8 @@ class EntriesController < ApplicationController
         if @entry.save
           format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
           format.json { render :show, status: :created, location: @entry }
+        elsif ActiveRecord::RecordNotUnique
+            format.html { redirect_to root_path, alert: "Silly! You've already created a Notetato today." }
         else
           format.html { render :new }
           format.json { render json: @entry.errors, status: :unprocessable_entity }
