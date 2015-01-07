@@ -3,7 +3,7 @@ class Entry < ActiveRecord::Base
 
   scope :last_five_days, -> (user) { where("date >= ? AND user_id = ?", 5.days.ago, user.id).limit(5) }
 
-
+  validates_uniqueness_of :date, :scope => :user_id
   validates_presence_of :how_do_you_feel, :how_do_you_feel_now
   before_create :set_todays_date
 
