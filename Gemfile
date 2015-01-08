@@ -29,7 +29,8 @@ gem 'google-webfonts-rails'
 #Use Zurb's Foundation Framework
 gem 'foundation-rails'
 
-#Use Angular as the JavaScript library
+#Use Angular and jQuery JavaScript libraries
+gem 'jquery-rails'
 gem 'angularjs-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
