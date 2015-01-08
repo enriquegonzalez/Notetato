@@ -446,6 +446,20 @@ figure.feeling {
   margin: 1rem 1rem 3rem 1rem;
 }
 
+.show-entry__button--delete{
+  background: hsla(0, 100%, 50%, 1);
+  color: hsla(360, 100%, 100%, 1);
+  display: inline-block;
+  letter-spacing: .15rem;
+  text-transform: uppercase;
+  width: 20rem;
+}
+
+  .show-entry__button--delete:hover {
+    background: hsla(0, 100%, 40%, 1);
+    color: hsla(360, 100%, 100%, 1);
+  }
+
 .edit-entry__questions {
   padding: 0 5rem 5rem 5rem;
 }

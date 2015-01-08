@@ -5,7 +5,7 @@
         <header>
           <p class="clearfix">
             <span class="show-entry__date"><%= @entry.date.strftime("%m/%d/%Y") %></span>
-            <% if @entry.date.strftime("%Y-%m-%d") == Date.today.to_s %>
+            <% if @entry.date == Date.today %>
               <span class="show-entry__menu right">
               <%= link_to 'Edit', edit_entry_path(@entry), class: "button radius tiny show-entry__menu__item" %>
               </span>
@@ -50,6 +50,11 @@
             </figcaption>
           </figure>
         </section>
+        <footer>
+          <div class="clearfix">
+            <%= link_to 'Delete', @entry, method: :delete, data: { confirm: 'Are you sure?' }, class: "button radius right show-entry__button--delete" %>
+          </div>
+        </footer>
       </section>
     </div>
   </div>
