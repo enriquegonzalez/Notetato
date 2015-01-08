@@ -21,6 +21,11 @@ class EntriesController < ApplicationController
 
   # GET /entries/1/edit
   def edit
+    unless @entry.date == Date.today
+      respond_to do |format|
+        format.html { redirect_to entry_path, alert: "Sorry Charlie! You can only edit today's Notetato." }
+      end
+    end
   end
 
   # POST /entries
