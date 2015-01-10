@@ -6,22 +6,11 @@
 
     <div class="small-12 medium-9 large-5 columns">
       <% if user_signed_in? %>
-        <!-- If the user has enough entries for last week -->
-          <%= render 'home/five_day_report_ad' %>
-        <!-- ELSE if the user has an entry for yesterday -->
-          <%#= render '_yesterdays_notetato' %>
-        <!-- ELSE -->
-          <!-- IF they havent logged at all -->
-            <!-- Show this nice welcome message encouraging them to log today -->
-          <!-- ELse -->
-            <!-- Show this tank you message encouraging them to log back in tomorrow, or set their reminders if they haven't, or fill in their profile, etc -->
-          <!-- END -->
-        <!-- END -->
+          <%= render 'home/report_ad' %>
       <% else %>
-        <!-- Show this mockup -->
         <%= render 'home/report_sample_ad' %>
-      <!-- END -->
       <% end %>
     </div>
+
   </div>
 </section>

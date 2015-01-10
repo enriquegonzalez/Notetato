@@ -7,6 +7,8 @@ class EntriesController < ApplicationController
   # GET /entries.json
   def index
     @entries = Entry.order("date desc")
+    @todays_entry = Entry.today(current_user)
+    @yesterdays_entry = Entry.yesterday(current_user)
   end
 
   # GET /entries/1

@@ -1,11 +1,7 @@
 <section class="screen screen--report">
-  <header>
-    <h1 class="title title--screen title--screen--report">The Notetato <span class="report__title__days">5</span> Report</h1>
-  </header>
-
-<% if !user_signed_in? %>
-  <%= render 'reports/sample_report' %>
-<% else %>
-  <%= render 'reports/report' %>
-<% end %>
+  <% if !user_signed_in? %>
+    <%= render 'reports/sample_report' %>
+  <% else %>
+    <%= render 'reports/report' %>
+  <% end %>
 </section>

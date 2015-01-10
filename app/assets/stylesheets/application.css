@@ -247,6 +247,9 @@ figure.feeling {
 /*************************************************************/
 /* TEXT */
 /*************************************************************/
+.lowercase {
+  text-transform: lowercase;
+}
 .title {
   color: hsla(0, 0%, 0%, .5);
   font-family: 'Varela Round', sans-serif;
@@ -354,6 +357,9 @@ figure.feeling {
 
 .mood-shift {
   margin: 0 auto;
+}
+
+.mood-shift--report {
   width: 80%;
 }
 
@@ -400,69 +406,97 @@ figure.feeling {
   margin-bottom: 5rem;
 }
 
+  /* HOME */
   .screen--home { padding: 0 3rem 3rem 3rem; }
 
-.show-entry__menu__item {
-  background: hsla(35, 100%, 50%, 1);
-  color: hsla(360, 100%, 100%, 1);
-  display: inline-block;
-  letter-spacing: .15rem;
-  text-transform: uppercase;
-}
+  /* ENTRY */
+    /* ENTRY INDEX */
+    .index-entry {
+      padding: 1rem;
+    }
 
-  .show-entry__menu__item:hover {
-    background: hsla(40, 100%, 50%, 1);
-    color: hsla(360, 100%, 100%, 1);
-  }
+    .index-entry__title {
+      color: hsla(16, 100%, 50%, 1);
+      font-size: 1.65rem;
+      margin: 0;
+      text-align: center;
+    }
 
-.show-entry__date {
-  color: hsla(16, 100%, 50%, 1);
-  font-size: 1rem;
-  font-weight: 600;
-}
+    .index-entry__mood-shift {
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
 
-.show-entry__questions {
-  padding: 0 5rem 5rem 5rem;
-}
-.show-entry__question {
-  border-top: 1px dotted hsla(0, 0%, 0%, .25);
-  color: hsla(0, 0%, 0%, .85);
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: .025rem;
-  line-height: 1.5rem;
-  margin: 1rem;
-  padding-top: 2rem;
-}
+      .index-entry__mood-shift__arrow--right {
+        color: hsla(16, 100%, 50%, 1);
+        font-size: 3rem;
+      }
 
-.show-entry__question ~ figure {
-  margin-left:  2rem;
-}
 
-.show-entry__answer {
-  display:  inline-block;
-  font-size: 1.25rem;
-  font-weight: 300;
-  margin: 1rem 1rem 3rem 1rem;
-}
+    /* ENTRY SHOW */
+    .show-entry__menu__item {
+      background: hsla(35, 100%, 50%, 1);
+      color: hsla(360, 100%, 100%, 1);
+      display: inline-block;
+      letter-spacing: .15rem;
+      text-transform: uppercase;
+    }
 
-.show-entry__button--delete{
-  background: hsla(0, 100%, 50%, 1);
-  color: hsla(360, 100%, 100%, 1);
-  display: inline-block;
-  letter-spacing: .15rem;
-  text-transform: uppercase;
-  width: 20rem;
-}
+      .show-entry__menu__item:hover {
+        background: hsla(40, 100%, 50%, 1);
+        color: hsla(360, 100%, 100%, 1);
+      }
 
-  .show-entry__button--delete:hover {
-    background: hsla(0, 100%, 40%, 1);
-    color: hsla(360, 100%, 100%, 1);
-  }
+    .show-entry__date {
+      color: hsla(16, 100%, 50%, 1);
+      font-size: 1rem;
+      font-weight: 600;
+    }
 
-.edit-entry__questions {
-  padding: 0 5rem 5rem 5rem;
-}
+    .show-entry__questions {
+      padding: 0 5rem 5rem 5rem;
+    }
+    .show-entry__question {
+      border-top: 1px dotted hsla(0, 0%, 0%, .25);
+      color: hsla(0, 0%, 0%, .85);
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: .025rem;
+      line-height: 1.5rem;
+      margin: 1rem;
+      padding-top: 2rem;
+    }
+
+    .show-entry__question ~ figure {
+      margin-left:  2rem;
+    }
+
+    .show-entry__answer {
+      display:  inline-block;
+      font-size: 1.25rem;
+      font-weight: 300;
+      margin: 1rem 1rem 3rem 1rem;
+    }
+
+    .show-entry__button--delete{
+      background: hsla(0, 100%, 50%, 1);
+      color: hsla(360, 100%, 100%, 1);
+      display: inline-block;
+      letter-spacing: .15rem;
+      text-transform: uppercase;
+      width: 20rem;
+    }
+
+      .show-entry__button--delete:hover {
+        background: hsla(0, 100%, 40%, 1);
+        color: hsla(360, 100%, 100%, 1);
+      }
+
+    /* ENTRY EDIT */
+    .edit-entry__questions {
+      padding: 0 5rem 5rem 5rem;
+    }
 
 
 /*************************************************************/
@@ -491,7 +525,8 @@ h1, p { margin-bottom: 0; }
 
 input[type="email"], input[type="password"]  {
   border: transparent;
-  padding: 1.5rem;
+  /*padding: 1.5rem;*/
+  height: 3rem;
 }
 
 input[type="email"]:focus, input[type="password"]:focus  {
