@@ -17,6 +17,7 @@
             <figcaption class="mood"><%= mood(@yesterdays_entry.last.how_do_you_feel_now) %></figcaption>
           </figure>
         </div>
+        <p class="index-entry__excerpt"><%= truncate(@yesterdays_entry.last.what_went_well, length: 65) %></p>
       </section>
     </div>
     <% end %>

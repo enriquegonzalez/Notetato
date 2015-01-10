@@ -432,7 +432,10 @@ figure.feeling {
         color: hsla(16, 100%, 50%, 1);
         font-size: 3rem;
       }
-
+    .index-entry__excerpt {
+      padding: 0 2rem;
+      text-align: center;
+    }
 
     /* ENTRY SHOW */
     .show-entry__menu__item {
