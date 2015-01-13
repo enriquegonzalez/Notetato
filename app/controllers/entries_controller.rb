@@ -6,7 +6,6 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.order("date desc")
     @todays_entry = Entry.today(current_user).last
     @yesterdays_entry = Entry.yesterday(current_user).last
   end
@@ -25,7 +24,7 @@ class EntriesController < ApplicationController
   def edit
     unless @entry.date == Date.today
       respond_to do |format|
-        format.html { redirect_to entry_path, alert: "Sorry Charlie! You can only edit today's Notetato." }
+        format.html { redirect_to entry_path, alert: "I like you a lot, but you can only edit today's Notetato." }
       end
     end
   end
