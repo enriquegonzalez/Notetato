@@ -7,8 +7,8 @@ class EntriesController < ApplicationController
   # GET /entries.json
   def index
     @entries = Entry.order("date desc")
-    @todays_entry = Entry.today(current_user)
-    @yesterdays_entry = Entry.yesterday(current_user)
+    @todays_entry = Entry.today(current_user).last
+    @yesterdays_entry = Entry.yesterday(current_user).last
   end
 
   # GET /entries/1
@@ -34,6 +34,7 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(entry_params)
+    @todays_entry = Entry.today(current_user).last
 
 
     respond_to do |format|
@@ -42,7 +43,7 @@ class EntriesController < ApplicationController
           format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
           format.json { render :show, status: :created, location: @entry }
         elsif ActiveRecord::RecordNotUnique
-            format.html { redirect_to entry_path(todays_entry), alert: "Silly! You've already entered a Notetato today, see." }
+            format.html { redirect_to entry_path(@todays_entry), alert: "Silly! You've already entered a Notetato today, see." }
         else
           format.html { render :new }
           format.json { render json: @entry.errors, status: :unprocessable_entity }
