@@ -445,8 +445,9 @@ figure.feeling {
       }
     .index-entry__excerpt {
       padding: 0 2rem;
-      text-align: center;
+      font-size: 1.25rem;
       font-style: italic;
+      text-align: center;
     }
       .index-entry__excerpt:before {
         content: '\201C';
