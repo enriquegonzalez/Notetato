@@ -1,5 +1,6 @@
 <section class="screen screen--index-entry">
   <div class="row">
+
   <% if @yesterdays_entry.exists? %>
     <div class=" large-6 columns">
       <section class="index-entry index-entry--yesterday">
@@ -18,6 +19,7 @@
             <figcaption class="mood"><%= mood(@yesterdays_entry.last.how_do_you_feel_now) %></figcaption>
           </figure>
         </div>
+        <%= link_to "View Notetato", @yesterdays_entry.last, class: "button radius index-entry__button" %>
       </section>
     </div>
     <% end %>
@@ -40,21 +42,23 @@
               <figcaption class="mood"><%= mood(@todays_entry.last.how_do_you_feel_now) %></figcaption>
             </figure>
           </div>
+          <%= link_to "View Notetato", @todays_entry.last, class: "button radius index-entry__button" %>
         </section>
       </div>
     <% else %>
-        <!-- PROMPT TODAYS ENTRY -->
-      <div class=" large-6 columns">
-      <section class="index-entry index-entry--today">
+      <div class=" large-5 columns">
+      <aside class="ad">
         <header>
-          <h1 class="title index-entry__title">Enter something for today!</h1>
+          <h1 class="title ad__title">&#x266A; Don't you forget about me &#x266A;</h1>
         </header>
+        <div class="center">
+          <figure class="feeling feeling--sad">
+            <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-sad.png" alt="Feeling sad %>" class="mood__emoticon">
+          </figure>
+        </div>
+        <%= link_to "Add today's Notetato", new_entry_path, class: "button radius ad__button" %>
       </div>
     <% end %>
 
   </div>
-</section>
-
-
-<%= link_to 'New Entry', root_path %>
 </section>

@@ -20,14 +20,82 @@ body {
   color: hsla(0, 0%, 0%, 1);
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+
+/*************************************************************/
+/* TEXT */
+/*************************************************************/
+.lowercase {
+  text-transform: lowercase;
+}
+.title {
+  color: hsla(0, 0%, 0%, .5);
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: .075rem;
+  margin: 0 0 0 -1000rem;
+  text-transform: uppercase;
+}
+
+.title--screen {
+  color: hsla(0, 0%, 0%, 1);
+  font-size: 2.25rem;
+  margin: 0;
+}
+
+.title--screen--report { text-align: center; }
+
+.title--section {
+  color: hsla(0, 0%, 0%, 1);
+  font-size: 2rem;
+  margin: 0;
+}
+
+.value-statement {
+  background: hsla(360, 100%, 100%, 1);
+  color: hsla(16, 100%, 50%, 1);
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.65rem;
+  margin: -2rem auto 0 auto;
+  padding: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/*****************************************/
+/* TEXT - NOTIFICATIONS */
+/*****************************************/
+.message {
+  background: hsla(360, 100%, 100%, 1);
+  color: hsla(16, 100%, 50%, 1);
+  font-size: 1.45rem;
+  padding: 1rem;
+  width: 100%;
+}
+  .message--alert { color: hsla(1, 100%, 40%, 1); }
+  .message--success { color: hsla(116, 100%, 30%, 1); }
+  .message--warning { color: hsla(45, 100%, 50%, 1); }
+
+
 
 /*************************************************************/
 /* ADS */
 /*************************************************************/
-.report-ad {
+.ad {
   background: hsla(201, 92%, 60%, .25);
   border-radius: .85rem;
   padding: 2rem;
+}
+
+.ad__title {
+  color: hsla(16, 100%, 50%, 1);
+  margin: 0 0 1rem 0;
+  text-align: center;
 }
 
 .ad__emoticon {
@@ -243,63 +311,6 @@ figure.feeling {
       color: hsla(360, 100%, 100%, 1);
     }
 
-
-/*************************************************************/
-/* TEXT */
-/*************************************************************/
-.lowercase {
-  text-transform: lowercase;
-}
-.title {
-  color: hsla(0, 0%, 0%, .5);
-  font-family: 'Varela Round', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: .075rem;
-  margin: 0 0 0 -1000rem;
-  text-transform: uppercase;
-}
-
-.title--screen {
-  color: hsla(0, 0%, 0%, 1);
-  font-size: 2.25rem;
-  margin: 0;
-}
-
-.title--screen--report { text-align: center; }
-
-.title--section {
-  color: hsla(0, 0%, 0%, 1);
-  font-size: 2rem;
-  margin: 0;
-}
-
-.value-statement {
-  background: hsla(360, 100%, 100%, 1);
-  color: hsla(16, 100%, 50%, 1);
-  font-family: 'Varela Round', sans-serif;
-  font-size: 1.65rem;
-  margin: -2rem auto 0 auto;
-  padding: 2rem;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-/*****************************************/
-/* TEXT - NOTIFICATIONS */
-/*****************************************/
-.message {
-  background: hsla(360, 100%, 100%, 1);
-  color: hsla(16, 100%, 50%, 1);
-  font-size: 1.45rem;
-  padding: 1rem;
-  width: 100%;
-}
-  .message--alert { color: hsla(1, 100%, 40%, 1); }
-  .message--success { color: hsla(116, 100%, 30%, 1); }
-  .message--warning { color: hsla(45, 100%, 50%, 1); }
-
-
 /*************************************************************/
 /* REPORT */
 /*************************************************************/
@@ -436,6 +447,15 @@ figure.feeling {
       padding: 0 2rem;
       text-align: center;
     }
+
+    .index-entry__button {
+      background: hsla(0, 0%, 0%, .75);
+      font-size: .85rem;
+      letter-spacing: .065rem;
+      margin: 1rem auto;
+      text-transform: uppercase;
+    }
+    .index-entry__button:hover { background: hsla(0, 0%, 0%, 1);}
 
     /* ENTRY SHOW */
     .show-entry__menu__item {
