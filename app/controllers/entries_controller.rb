@@ -6,8 +6,10 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @todays_entry = Entry.today(current_user).last
-    @yesterdays_entry = Entry.yesterday(current_user).last
+    if user_signed_in?
+      @todays_entry = Entry.today(current_user).last
+      @yesterdays_entry = Entry.yesterday(current_user).last
+    end
   end
 
   # GET /entries/1
