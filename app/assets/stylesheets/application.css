@@ -56,6 +56,10 @@ body {
   margin: 0;
 }
 
+.reference--title {
+  font-style: italic;
+}
+
 .value-statement {
   background: hsla(360, 100%, 100%, 1);
   color: hsla(16, 100%, 50%, 1);
@@ -100,13 +104,13 @@ body {
 
 .ad__emoticon {
   display: block;
-  margin: 0 auto -1rem auto;
+  margin: 0 auto;
   width: 12rem;
 }
 
 .ad__copy {
+  font-size: 1.25rem;
   text-align: center;
-  font-size: 2.65rem;
 }
 
 .ad__button {
