@@ -357,13 +357,14 @@ figure.feeling {
     }
     .card__date {
       color: hsla(16, 100%, 50%, 1);
+      font-size: 1rem;
       font-weight: 800;
     }
 
 /*****************************************/
 /* FOCUS */
 /*****************************************/
-  .card--focus { padding: .5rem .65rem; }
+  .card--focus { padding: .5rem 0; }
 
 /*****************************************/
 /* MOOD */
