@@ -33,11 +33,6 @@ class ApplicationController < ActionController::Base
       cookies.delete(:how_do_you_feel_now)
   end
 
-  # Might not need it
-  # def todays_entry
-  #   @todays = Entry.where("date = ? and user_id = ?", Date.today, current_user.id).last
-  # end
-
   def mood(type)
     if type <= 1.5
         "happy"

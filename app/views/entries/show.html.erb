@@ -32,16 +32,6 @@
             <span class="show-entry__answer"><%= @entry.what_didnt_go_well %></span>
           </p>
 
-          <p class="show-entry__question">
-            How will you make it better?<br />
-            <span class="show-entry__answer"><%= @entry.how_to_make_it_better %></span>
-          </p>
-
-          <p class="show-entry__question">
-            What do you want to work on tomorrow?<br />
-            <span class="show-entry__answer"><%= @entry.focus_on_tomorrow %></span>
-          </p>
-
           <p class="show-entry__question">How do you feel now?</p>
           <figure class="feeling feeling--<%= mood(@entry.how_do_you_feel_now) %>">
             <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-<%= mood(@entry.how_do_you_feel_now) %>.png" alt="Feeling <%= mood(@entry.how_do_you_feel_now) %>" class="option--feeling__emoticon">
