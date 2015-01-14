@@ -2,27 +2,42 @@
     <h1 class="title title--screen title--screen--report">The Daily <span class="report__title__days"><img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-happy.png" alt="Feeling happy" class="mood__emoticon"></span> Notetato</h1>
   </header>
 
- <div class="row">
+
+    <div class="row">
     <div class="medium-7 large-7 columns">
       <section class="report__focus">
         <header>
           <h1 class="title title--section">Focus</h1>
           <p class="report__description">Work on what matters to you</p>
         </header>
-        <ul class="cards">
-        <% @entries.each do |entry|  %>
-          <li class="card card--focus">
-            <div class="row">
-              <div class="large-2 columns">
-                <span class="card__date"><%= entry.date.strftime("%m/%d") %></span>
+        <% if @yesterdays_entry || @todays_entry %>
+          <ul class="cards">
+            <% if @yesterdays_entry %>
+              <li class="card card--focus">
+                <h2 class="card__date">Today</h2>
+                <p class="card__content"><%= @yesterdays_entry.focus_on_tomorrow %></p>
+              </li>
+            <% end %>
+            <% if @todays_entry %>
+              <li class="card card--focus">
+                <h2 class="card__date">Tomorrow</h2>
+                <p class="card__content"><%= @todays_entry.focus_on_tomorrow %></p>
+              </li>
+            <% end %>
+          </ul>
+        <% else %>
+            <aside class="ad">
+              <header>
+                <h1 class="title ad__title">&#x266A; Don't you forget about me &#x266A;</h1>
+              </header>
+              <div class="center">
+                <figure class="feeling feeling--sad">
+                  <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-sad.png" alt="Feeling sad %>" class="mood__emoticon">
+                </figure>
               </div>
-              <div class="large-10 columns">
-                <p class="card__content"><%= entry.focus_on_tomorrow %></p>
-              </div>
-            </div>
-          </li>
+              <%= link_to "Add today's Notetato", new_entry_path, class: "button radius ad__button" %>
+            </aside>
         <% end %>
-        </ul>
       </section>
     </div>
 
@@ -57,11 +72,11 @@
           <p class="report__description">Recognize the good that happened this week</p>
         </header>
         <ul class="cards">
-        <% @entries.each do |entry|  %>
+        <% @weeks_entries.each do |entry|  %>
           <li class="card card--gratitude">
             <div class="row">
               <div class="large-2 columns">
-                <span class="card__date"><%= entry.date.strftime("%m/%d") %></span>
+                <span class="card__date"><%= entry.date.strftime("%A") %></span>
               </div>
               <div class="large-10 columns">
                 <p class="card__content card__content--gratitude"><%= entry.what_went_well %></p>
@@ -74,7 +89,7 @@
     </div>
   </div>
 
-    <div class="row">
+<!--     <div class="row">
     <div class="large-12 columns">
       <section class="report__action">
         <header>
@@ -82,20 +97,20 @@
           <p class="report__description">Everyday counts; make tomorrow even better</p>
         </header>
        <ul class="cards">
-        <% @entries.each do |entry|  %>
+        <%# @entries.each do |entry|  %>
           <li class="card card--action">
             <div class="row">
               <div class="large-2 columns">
-                <span class="card__date"><%= entry.date.strftime("%m/%d") %></span>
+                <span class="card__date"><%#= entry.date.strftime("%m/%d") %></span>
               </div>
               <div class="large-10 columns">
-                <p class="card__content card__content--solution"><%= entry.how_to_make_it_better %></p>
-                <p class="card__content"><%= entry.what_didnt_go_well %></p>
+                <p class="card__content card__content--solution"><%#= entry.how_to_make_it_better %></p>
+                <p class="card__content"><%#= entry.what_didnt_go_well %></p>
               </div>
             </div>
           </li>
-        <% end %>
+        <%# end %>
         </ul>
       </section>
     </div>
-  </div>
+  </div> -->

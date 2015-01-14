@@ -1,7 +1,8 @@
 class Entry < ActiveRecord::Base
   belongs_to :user
 
-  scope :last_five_days, -> (user) { where("date >= ? AND user_id = ?", 5.days.ago, user.id).limit(5) }
+  scope :this_week, -> (user) { where("date >= ? AND user_id = ?", DateTime.now.beginning_of_week, user.id) }
+  # scope :last_five_days, -> (user) { where("date >= ? AND user_id = ?", 5.days.ago, user.id).limit(5) }
   scope :yesterday, -> (user) { where("date = ? AND user_id = ?", Date.yesterday, user.id) }
   scope :today, -> (user) { where("date = ? AND user_id = ?", Date.today, user.id) }
 
@@ -16,8 +17,8 @@ class Entry < ActiveRecord::Base
 
   def save(*args)
     super
-  rescue ActiveRecord::RecordNotUnique => error
-    false
+    rescue ActiveRecord::RecordNotUnique => error
+      false
   end
 
 end
