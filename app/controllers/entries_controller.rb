@@ -17,7 +17,13 @@ class EntriesController < ApplicationController
 
   # GET /entries/new
   def new
-    @entry = Entry.new
+    if Entry.today(current_user).exists?
+      respond_to do |format|
+        format.html { redirect_to reports_path }
+      end
+    else
+      @entry = Entry.new
+    end
   end
 
   # GET /entries/1/edit
@@ -39,7 +45,7 @@ class EntriesController < ApplicationController
     respond_to do |format|
       if user_signed_in?
         if @entry.save
-          format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
+          format.html { redirect_to @entry, notice: 'Notetato was successfully created.' }
           format.json { render :show, status: :created, location: @entry }
         elsif ActiveRecord::RecordNotUnique
             format.html { redirect_to entry_path(@todays_entry), alert: "Silly! You've already entered a Notetato today, see." }
@@ -75,7 +81,7 @@ class EntriesController < ApplicationController
   def update
     respond_to do |format|
       if @entry.update(entry_params)
-        format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
+        format.html { redirect_to @entry, notice: 'Your Notetato was successfully updated.' }
         format.json { render :show, status: :ok, location: @entry }
       else
         format.html { render :edit }
