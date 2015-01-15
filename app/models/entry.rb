@@ -17,6 +17,7 @@ class Entry < ActiveRecord::Base
   def save(*args)
     super
   rescue ActiveRecord::RecordNotUnique => error
+    errors[:base] << "already exists"
     false
   end
 
