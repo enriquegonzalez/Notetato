@@ -63,10 +63,6 @@ class EntriesController < ApplicationController
                                             :expires  => Time.now + 900 }
         cookies[:what_went_well]        = { :value    => entry_params[:what_went_well],
                                             :expires  => Time.now + 900 }
-        cookies[:what_didnt_go_well]    = { :value    => entry_params[:what_didnt_go_well ],
-                                            :expires  => Time.now + 900 }
-        cookies[:how_to_make_it_better] = { :value    => entry_params[:how_to_make_it_better],
-                                            :expires  => Time.now + 900 }
         cookies[:focus_on_tomorrow]     = { :value    => entry_params[:focus_on_tomorrow ],
                                             :expires  => Time.now + 900 }
         cookies[:how_do_you_feel_now]   = { :value    => entry_params[:how_do_you_feel_now],

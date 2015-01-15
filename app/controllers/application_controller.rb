@@ -11,8 +11,6 @@ class ApplicationController < ActionController::Base
       @entry = Entry.new
         @entry.how_do_you_feel       = cookies[:how_do_you_feel].to_i
         @entry.what_went_well        = cookies[:what_went_well]
-        @entry.what_didnt_go_well    = cookies[:what_didnt_go_well]
-        @entry.how_to_make_it_better = cookies[:how_to_make_it_better]
         @entry.focus_on_tomorrow     = cookies[:focus_on_tomorrow]
         @entry.how_do_you_feel_now   = cookies[:how_do_you_feel_now].to_i
         @entry.user_id               = current_user.id
@@ -27,8 +25,6 @@ class ApplicationController < ActionController::Base
       cookies.delete(:guest_entry)
       cookies.delete(:how_do_you_feel)
       cookies.delete(:what_went_well)
-      cookies.delete(:what_didnt_go_well)
-      cookies.delete(:how_to_make_it_better)
       cookies.delete(:focus_on_tomorrow)
       cookies.delete(:how_do_you_feel_now)
   end
