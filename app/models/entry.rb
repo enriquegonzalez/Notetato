@@ -16,8 +16,8 @@ class Entry < ActiveRecord::Base
 
   def save(*args)
     super
-    rescue ActiveRecord::RecordNotUnique => error
-      false
+  rescue ActiveRecord::RecordNotUnique => error
+    false
   end
 
 end

@@ -46,14 +46,15 @@ class EntriesController < ApplicationController
 
     respond_to do |format|
       if user_signed_in?
-        if @entry.save
-          format.html { redirect_to @entry, notice: 'Notetato was successfully created.' }
-          format.json { render :show, status: :created, location: @entry }
-        elsif ActiveRecord::RecordNotUnique
-            format.html { redirect_to entry_path(@todays_entry), alert: "Silly! You've already entered a Notetato today, see." }
-        else
-          format.html { render :new }
-          format.json { render json: @entry.errors, status: :unprocessable_entity }
+          if @entry.save
+            format.html { redirect_to @entry, notice: 'Notetato was successfully created.' }
+            format.json { render :show, status: :created, location: @entry }
+          # elsif ActiveRecord::RecordNotUnique
+          #     format.html { redirect_to entry_path(@todays_entry), alert: "Silly! You've already entered a Notetato today, see." }
+          else
+            format.html { render :new }
+            format.json { render json: @entry.errors, status: :unprocessable_entity }
+          end
         end
       else
 
