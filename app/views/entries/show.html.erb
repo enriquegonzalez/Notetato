@@ -25,11 +25,13 @@
           <p class="show-entry__question">What went well today?</p>
           <%= simple_format(@entry.what_went_well, class: "show-entry__answer") %>
 
+          <p class="show-entry__question">What is the one thing you want to work on tomorrow?</p>
+          <% if !@entry.focus_on_tomorrow.blank? %>
+            <%= simple_format(@entry.focus_on_tomorrow, class: "show-entry__answer") %>
+          <% else %>
+            <p class="show-entry__answer show-entry__answer--none">No answer.</p>
+          <% end %>
 
-          <p class="show-entry__question">
-            What is the one thing you want to work on tomorrow?<br />
-            <span class="show-entry__answer"><%= @entry.focus_on_tomorrow %></span>
-          </p>
 
           <p class="show-entry__question">How do you feel now?</p>
           <figure class="feeling feeling--<%= mood(@entry.how_do_you_feel_now) %>">

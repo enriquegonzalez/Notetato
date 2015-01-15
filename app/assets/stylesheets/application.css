@@ -514,6 +514,11 @@ figure.feeling {
       font-weight: 300;
       margin: 1rem;
     }
+      .show-entry__answer--none {
+        color: hsla(0, 0%, 0%, .65);
+        font-style: italic;
+        text-transform: capitalize;
+      }
 
     .show-entry__button--delete{
       background: hsla(0, 100%, 50%, 1);
