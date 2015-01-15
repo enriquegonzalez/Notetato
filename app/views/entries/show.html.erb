@@ -22,10 +22,9 @@
             </figcaption>
           </figure>
 
-          <p class="show-entry__question">
-            What went well today?<br />
-            <span class="show-entry__answer"><%= @entry.what_went_well %></span>
-          </p>
+          <p class="show-entry__question">What went well today?</p>
+          <%= simple_format(@entry.what_went_well, class: "show-entry__answer") %>
+
 
           <p class="show-entry__question">
             What is the one thing you want to work on tomorrow?<br />
