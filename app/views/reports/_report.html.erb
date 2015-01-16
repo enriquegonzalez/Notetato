@@ -6,19 +6,19 @@
   <div class="row">
     <div class="medium-7 large-7 columns">
       <section class="report__focus">
-        <% if @yesterdays_entry || @todays_entry %>
+        <% if (!@yesterdays_entry.nil? && !@yesterdays_entry.focus_on_tomorrow.blank?) || (!@todays_entry.nil? && !@todays_entry.focus_on_tomorrow.blank?) %>
         <header>
           <h1 class="title title--section">Focus</h1>
           <p class="report__description">Work on what matters to you</p>
         </header>
           <ul class="cards">
-            <% if @yesterdays_entry && !@yesterdays_entry.focus_on_tomorrow.blank? %>
+            <% if @yesterdays_entry.nil? && !@yesterdays_entry.focus_on_tomorrow.blank? %>
               <li class="card card--focus">
                 <h2 class="card__date">Today</h2>
                 <%= simple_format(@yesterdays_entry.focus_on_tomorrow, class:"card__content") %>
               </li>
             <% end %>
-            <% if @todays_entry && !@todays_entry.focus_on_tomorrow.blank? %>
+            <% if @todays_entry.nil? && !@todays_entry.focus_on_tomorrow.blank? %>
               <li class="card card--focus">
                 <h2 class="card__date">Tomorrow</h2>
                  <%= simple_format(@todays_entry.focus_on_tomorrow, class:"card__content") %>
