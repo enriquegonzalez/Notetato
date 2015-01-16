@@ -29,18 +29,19 @@ body {
 /* NAVIGATION */
 /*************************************************************/
 .navigation {
-  background: hsla(360, 100%, 100%, 1);
   background: hsla(0, 0%, 0%, 1);
+  /*background: hsla(16, 100%, 50%, 1);*/
   margin: 0;
-  /*padding: 1rem;*/
 }
   .navigation__items {
     list-style: none;
   }
     .navigation__item {
+      background: hsla(360, 100%, 100%, 1);
+      border-radius: 2rem 2rem 0 0;
       display: inline-block;
-      margin: 0;
-      padding: 1rem;
+      margin: 1rem 0 0 0;
+      padding: 1rem 1rem 0 1rem;
       text-align: center;
     }
       .navigation__item__link {
