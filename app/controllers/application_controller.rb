@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
       delete_guest_entry
     end
-    root_path
+    reports_path
   end
 
   def delete_guest_entry

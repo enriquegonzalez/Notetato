@@ -25,6 +25,29 @@ body {
   justify-content: center;
 }
 
+/*************************************************************/
+/* NAVIGATION */
+/*************************************************************/
+.navigation {
+  background: hsla(360, 100%, 100%, 1);
+  background: hsla(0, 0%, 0%, 1);
+  margin: 0;
+  /*padding: 1rem;*/
+}
+  .navigation__items {
+    list-style: none;
+  }
+    .navigation__item {
+      display: inline-block;
+      margin: 0;
+      padding: 1rem;
+      text-align: center;
+    }
+      .navigation__item__link {
+        font-family: 'Varela Round', sans-serif;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
 
 /*************************************************************/
 /* TEXT */
@@ -562,7 +585,7 @@ figure.feeling {
 /*************************************************************/
 /* FOUNDATION OVERRIDES */
 /*************************************************************/
-h1, p { margin-bottom: 0; }
+h1, ul, p { margin-bottom: 0; }
 
 input[type="email"], input[type="password"]  {
   border: transparent;

@@ -1,7 +1,7 @@
 <section class="screen screen--report">
-  <% if !user_signed_in? %>
-    <%= render 'reports/sample_report' %>
-  <% else %>
+  <% if user_signed_in? %>
     <%= render 'reports/report' %>
+  <% else %>
+    <%= render 'reports/sample_report' %>
   <% end %>
 </section>

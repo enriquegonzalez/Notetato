@@ -4,7 +4,7 @@
   <% if current_page?(root_path) && !user_signed_in? %>
     <p class="value-statement">Learn <span class="lowercase">from</span>  today, <span class="lowercase">and</span> focus <span class="lowercase">on</span>  tomorrow <span class="lowercase">with</span> Notetato.</p>
   <% elsif user_signed_in? %>
-    <nav>Navigation goes here.</nav>
+    <%= render 'layouts/navigation' %>
   <% end %>
   <%= render 'layouts/login_state' %>
 </header>
