@@ -2,7 +2,7 @@
   <div class="row">
     <div class="small-12 medium-9 large-8 large-centered columns">
       <header class="form--authentication__header clearfix">
-        <h1 class="title title--screen left">Sign-up</h1>
+        <h1 class="title title--screen left">Register</h1>
       </header>
       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: "form--authentication", method: :post }) do |f| %>
         <%= devise_error_messages! %>
@@ -21,7 +21,7 @@
         </div>
 
         <div class="actions">
-          <%= f.submit "Sign-up", class: "button radius form__button" %>
+          <%= f.submit "Create my account", class: "button radius form__button" %>
         </div>
 
       <% end %>
