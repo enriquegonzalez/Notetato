@@ -39,20 +39,37 @@ body {
   }
     .navigation__item {
       background: hsla(360, 100%, 100%, .5);
-      border-radius: 2rem 2rem 0 0;
+      border: 1px solid hsla(360, 100%, 100%, .5);
+      border-radius: 3rem 3rem 0 0;
       display: inline-block;
       margin: 1rem 0 0 0;
       padding: 1rem 1.5rem 0 1.5rem;
       text-align: center;
     }
+      .navigation__item:hover {
+        background: hsla(360, 100%, 100%, .75);
+      }
       .navigation__item--active {
         background: hsla(360, 100%, 100%, 1);
       }
+      .navigation__item--active:hover {
+        background: hsla(360, 100%, 100%, 1);
+      }
       .navigation__item__link {
+        color: hsla(0, 0%, 0%, .5);
         font-family: 'Varela Round', sans-serif;
         font-size: 1rem;
         text-transform: uppercase;
       }
+        .navigation__item__link:hover {
+          color: hsla(16, 100%, 50%, 1);
+        }
+        .navigation__item__link:active {
+          color: hsla(16, 100%, 50%, 1);
+        }
+          .navigation__item__link--active {
+            color: hsla(16, 100%, 50%, 1);
+          }
 
 /*************************************************************/
 /* TEXT */
