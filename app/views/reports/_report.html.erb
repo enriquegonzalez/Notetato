@@ -12,16 +12,16 @@
           <p class="report__description">Work on what matters to you</p>
         </header>
           <ul class="cards">
-            <% if @yesterdays_entry %>
+            <% if @yesterdays_entry && !@yesterdays_entry.focus_on_tomorrow.blank? %>
               <li class="card card--focus">
                 <h2 class="card__date">Today</h2>
-                <p class="card__content"><%= @yesterdays_entry.focus_on_tomorrow %></p>
+                <%= simple_format(@yesterdays_entry.focus_on_tomorrow, class:"card__content") %>
               </li>
             <% end %>
-            <% if @todays_entry %>
+            <% if @todays_entry && !@todays_entry.focus_on_tomorrow.blank? %>
               <li class="card card--focus">
                 <h2 class="card__date">Tomorrow</h2>
-                <p class="card__content"><%= @todays_entry.focus_on_tomorrow %></p>
+                 <%= simple_format(@todays_entry.focus_on_tomorrow, class:"card__content") %>
               </li>
             <% end %>
           </ul>
@@ -44,6 +44,7 @@
     </section>
   </div>
 
+  <% if !@avg_start_feeling.blank? %>
     <div class="medium-5 large-5 columns">
       <section class="report__mood">
         <header>
@@ -62,32 +63,33 @@
           <figcaption class="mood"><%= @mood_end %></figcaption>
         </figure>
         </div>
-
       </section>
     </div>
-  </div>
+  <% end %>
 
-  <div class="row">
-    <div class="large-12 columns">
-      <section class="report__gratitude">
-        <header>
-          <h1 class="title title--section">Gratitude</h1>
-          <p class="report__description">Recognize the good that happened this week</p>
-        </header>
-        <ul class="cards">
-        <% @weeks_entries.each do |entry|  %>
-          <li class="card card--gratitude">
-            <div class="row">
-              <div class="large-2 columns">
-                <span class="card__date"><%= entry.date.strftime("%A") %></span>
+  <% if @weeks_entries %>
+    <div class="row">
+      <div class="large-12 columns">
+        <section class="report__gratitude">
+          <header>
+            <h1 class="title title--section">Gratitude</h1>
+            <p class="report__description">Recognize the good that happened this week</p>
+          </header>
+          <ul class="cards">
+          <% @weeks_entries.each do |entry|  %>
+            <li class="card card--gratitude">
+              <div class="row">
+                <div class="large-2 columns">
+                  <span class="card__date"><%= entry.date.strftime("%A") %></span>
+                </div>
+                <div class="large-10 columns">
+                  <%= simple_format(entry.what_went_well, class: "card__content card__content--gratitude") %>
+                </div>
               </div>
-              <div class="large-10 columns">
-                <p class="card__content card__content--gratitude"><%= entry.what_went_well %></p>
-              </div>
-            </div>
-          </li>
-        <% end %>
-        </ul>
-      </section>
+            </li>
+          <% end %>
+          </ul>
+        </section>
+      </div>
     </div>
-  </div>
+  <% end %>

@@ -353,7 +353,7 @@ figure.feeling {
     .card__content {
       font-size: 1.25rem;
       line-height: 1.5rem;
-      margin: 0 0 .65rem 0;
+      margin: 0 0 1.5rem 0;
     }
     .card__date {
       color: hsla(16, 100%, 50%, 1);
@@ -512,7 +512,7 @@ figure.feeling {
       display:  inline-block;
       font-size: 1.25rem;
       font-weight: 300;
-      margin: 1rem;
+      margin: 1.5rem;
     }
       .show-entry__answer--none {
         color: hsla(0, 0%, 0%, .65);
