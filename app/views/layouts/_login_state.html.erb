@@ -1,11 +1,11 @@
 <% if user_signed_in? %>
   <div class="login-state">
     <p>
-      <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, class: "login-state__message login-state__message--sign-out" %>
+      <%= link_to 'Sign-out', destroy_user_session_path, :method => :delete, class: "login-state__message login-state__message--sign-out" %>
     </p>
   </div>
 <% else %>
   <div class="login-state">
-    <p><%= link_to 'Login', new_user_session_path, class: "login-state__message login-state__message--login" %> <em>or</em> <%= link_to 'Register', new_user_registration_path, class: "login-state__message login-state__message--sign-up" %></p>
+    <p><%= link_to 'Log-in', new_user_session_path, class: "login-state__message login-state__message--login" %> <em>or</em> <%= link_to 'Register', new_user_registration_path, class: "login-state__message login-state__message--sign-up" %></p>
   </div>
 <% end %>
