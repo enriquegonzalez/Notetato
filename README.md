@@ -1,4 +1,4 @@
-Notetato: Recognize the good in today
+Notetato: Learn from Today, and Focus on Tomorrow.
 =====================================
 
 ###README

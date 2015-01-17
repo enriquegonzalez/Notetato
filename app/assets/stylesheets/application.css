@@ -17,6 +17,7 @@
 
 body {
   background: hsla(201, 92%, 60%, .85);
+  /*background: hsla(360, 100%, 100%, 1);*/
   color: hsla(0, 0%, 0%, 1);
 }
 
