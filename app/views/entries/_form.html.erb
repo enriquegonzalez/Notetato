@@ -1,3 +1,9 @@
+<dl class="sub-nav">
+  <dt>see:</dt>
+  <dd class="active"><a href="#">Yesterdays</a></dd>
+  <dd><a href="#">Todays</a></dd>
+</dl>
+
 <section class="new-entry__form">
   <%= form_for(@entry, html: {class: "entry__form"}) do |f| %>
     <% if @entry.errors.any? %>
