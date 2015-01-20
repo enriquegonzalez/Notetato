@@ -4,7 +4,7 @@
       <header class="form--authentication__header clearfix">
         <h1 class="title title--screen left">Register</h1>
       </header>
-      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: "form--authentication", method: :post }) do |f| %>
+      <%= form_for(resource, as: resource_name, url: user_registration_path(resource), html: { method: :put, class: "form--authentication", method: :post }) do |f| %>
         <%= devise_error_messages! %>
 
         <div class="field">
