@@ -29,9 +29,10 @@ gem 'google-webfonts-rails'
 #Use Zurb's Foundation Framework
 gem 'foundation-rails'
 
-#Use Angular and jQuery JavaScript libraries
+#Use jQuery JavaScript libraries
 gem 'jquery-rails'
-gem 'angularjs-rails'
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
