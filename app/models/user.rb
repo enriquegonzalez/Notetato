@@ -26,10 +26,10 @@ class User < ActiveRecord::Base
     recipient = self
     yesterdays_entry = Entry.yesterday(recipient).last
 
-    #if !yesterdays_entry.nil? && !yesterdays_entry.focus_on_tomorrow.blank?
-      todays_focus = yesterdays_entry
+    if !yesterdays_entry.nil? && !yesterdays_entry.focus_on_tomorrow.blank?
+      todays_focus = yesterdays_entry.focus_on_tomorrow
       ReportMailer.focus_email(recipient, todays_focus).deliver
-    #end
+    end
 
   end
 
