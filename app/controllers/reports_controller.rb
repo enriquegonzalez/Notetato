@@ -10,8 +10,9 @@ class ReportsController < ApplicationController
       # Mood Shift
       @avg_start_feeling = @weeks_entries.average(:how_do_you_feel)
       @avg_end_feeling = @weeks_entries.average(:how_do_you_feel_now)
-      @mood_start = mood(@avg_start_feeling)
-      @mood_end = mood(@avg_end_feeling)
+
+      @mood_start = mood(@avg_start_feeling) if !@avg_start_feeling.nil?
+      @mood_end = mood(@avg_end_feeling) if !@avg_end_feeling.nil?
     end
 
   end

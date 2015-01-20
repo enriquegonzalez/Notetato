@@ -44,7 +44,7 @@
     </section>
   </div>
 
-  <% if !@avg_start_feeling.blank? %>
+  <% if !@avg_start_feeling.nil? %>
     <div class="medium-5 large-5 columns">
       <section class="report__mood">
         <header>
@@ -67,7 +67,7 @@
     </div>
   <% end %>
 
-  <% if @weeks_entries %>
+  <% if !@weeks_entries.empty? %>
     <div class="row">
       <div class="large-12 columns">
         <section class="report__gratitude">
