@@ -88,6 +88,13 @@ body {
   text-transform: uppercase;
 }
 
+.screen__title {
+  color: hsla(0, 0%, 0%, 1);
+  font-size: 1.85rem;
+  margin: 0;
+  text-align: center;
+}
+
 .title--section {
   color: hsla(0, 0%, 0%, 1);
   font-size: 2rem;

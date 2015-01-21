@@ -1,8 +1,8 @@
 <section class="screen--sign-up">
   <div class="row">
     <div class="small-12 medium-9 large-8 large-centered columns">
-      <header class="form--authentication__header clearfix">
-        <h1 class="title title--screen left">Register</h1>
+      <header class="form--authentication__header">
+        <h1 class="title screen__title">Register</h1>
       </header>
       <%= form_for(resource, as: resource_name, url: user_registration_path(resource), html: { method: :put, class: "form--authentication", method: :post }) do |f| %>
         <%= devise_error_messages! %>
