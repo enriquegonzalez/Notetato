@@ -660,7 +660,7 @@ input[type="email"]:focus, input[type="password"]:focus  {
   }
 
   .screen {
-    padding: 3rem 0;
+    padding: 0 0 3rem 0;
   }
     .screen--home { padding: 0 1.65rem 3rem 1.65rem; }
 
