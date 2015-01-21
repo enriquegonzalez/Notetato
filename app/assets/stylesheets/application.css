@@ -646,7 +646,8 @@ input[type="email"]:focus, input[type="password"]:focus  {
 
   .value-statement {
     font-size: 1.1rem;
-    margin: 0 auto 0 auto;
+    margin: 1rem auto 0 auto;
+    padding: 2rem 1rem;
   }
 
   .form__question, .form__label {
@@ -663,6 +664,10 @@ input[type="email"]:focus, input[type="password"]:focus  {
       margin-top: 0;
     }
 
+  .ad {
+    padding: 0;
+  }
+
     .screen--home { padding: 0 1.65rem 3rem 1.65rem; }
 
 
@@ -674,7 +679,7 @@ input[type="email"]:focus, input[type="password"]:focus  {
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   .value-statement {
     font-size: 1.65rem;
-    margin: 0 auto 0 auto;
+    margin: 1rem auto 0 auto;
   }
 
   .form__button {
