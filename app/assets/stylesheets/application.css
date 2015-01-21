@@ -649,6 +649,10 @@ input[type="email"]:focus, input[type="password"]:focus  {
     margin: 0 auto 0 auto;
   }
 
+  .form__question, .form__label {
+    font-size: 1.25rem;
+  }
+
   .form__button {
       font-size: 1.65rem;
       margin-bottom:  5rem;
