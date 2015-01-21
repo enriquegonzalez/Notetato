@@ -653,13 +653,17 @@ input[type="email"]:focus, input[type="password"]:focus  {
     font-size: 1.25rem;
   }
 
+  .option--feeling__emoticon {
+    width: 4rem;
+  }
+
   .form__button {
       font-size: 1.25rem;
       margin-bottom:  5rem;
       margin-top: 0;
     }
 
-    .screen--home { padding: 0 1.75rem 3rem 1.75rem; }
+    .screen--home { padding: 0 1.65rem 3rem 1.65rem; }
 
 
 } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
