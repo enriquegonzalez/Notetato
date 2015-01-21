@@ -707,6 +707,14 @@ input[type="email"]:focus, input[type="password"]:focus  {
     font-weight: normal;
   }
 
+  .arrow--right {
+    font-size: 2.45rem;
+    position: relative;
+    text-align: center;
+    top: -2.5rem;
+  }
+
+
   .cards {
     margin: 0;
   }
