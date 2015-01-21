@@ -707,6 +707,11 @@ input[type="email"]:focus, input[type="password"]:focus  {
     font-weight: normal;
   }
 
+  .mood__emoticon {
+    margin: 0 auto;
+    width: 4.65rem;
+  }
+
   .arrow--right {
     font-size: 2.45rem;
     position: relative;
