@@ -645,7 +645,7 @@ input[type="email"]:focus, input[type="password"]:focus  {
   }
 
   .value-statement {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     margin: 0 auto 0 auto;
   }
 
@@ -654,7 +654,7 @@ input[type="email"]:focus, input[type="password"]:focus  {
   }
 
   .form__button {
-      font-size: 1.65rem;
+      font-size: 1.25rem;
       margin-bottom:  5rem;
       margin-top: 0;
     }
