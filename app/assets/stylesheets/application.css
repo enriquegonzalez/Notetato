@@ -694,9 +694,36 @@ input[type="email"]:focus, input[type="password"]:focus  {
       padding: .5rem 0;
       width: 3rem;
     }
-
     .report__title__emoticon {
       width: 2rem;
+    }
+
+  .report__focus, .report__mood, .report__action, .report__gratitude {
+    padding: 1rem;
+  }
+
+  .report__description {
+    font-size: .85rem;
+    font-weight: normal;
+  }
+
+  .cards {
+    margin: 0;
+  }
+  .card {
+    background: hsla(360, 100%, 100%, .85);
+    padding: .65rem;
+  }
+    .card__content {
+      font-size: 1rem;
+      margin: 0;
+    }
+    .card__date {
+      color: hsla(16, 100%, 50%, 1);
+      font-family: 'Varela Round', sans-serif;
+      font-size: .85rem;
+      font-weight: 800;
+      text-transform: uppercase;
     }
 
 
