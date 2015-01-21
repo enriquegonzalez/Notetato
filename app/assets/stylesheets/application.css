@@ -645,13 +645,12 @@ input[type="email"]:focus, input[type="password"]:focus  {
   }
 
   .value-statement {
+    font-size: 1.25rem;
     margin: 0 auto 0 auto;
   }
 
   .form__button {
       font-size: 1.65rem;
-      font-style: italic;
-      letter-spacing: .195rem;
       margin-bottom:  5rem;
       margin-top: 0;
     }
@@ -664,7 +663,19 @@ input[type="email"]:focus, input[type="password"]:focus  {
 // Medium screens
 @media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .value-statement {
+    font-size: 1.65rem;
+    margin: 0 auto 0 auto;
+  }
+
+  .form__button {
+      font-size: 1.65rem;
+      margin-bottom:  5rem;
+      margin-top: 0;
+    }
+
+} /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 
 // Large screens
 @media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */

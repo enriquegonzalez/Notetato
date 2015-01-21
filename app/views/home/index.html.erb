@@ -1,10 +1,10 @@
 <section class="screen screen--home">
   <div class="row">
-    <div class="small-12 medium-9 large-7 columns">
+    <div class="small-12 medium-12 large-7 columns">
         <%= render 'home/new_entry' %>
     </div>
 
-    <div class="small-12 medium-9 large-5 columns">
+    <div class="small-12 medium-12 large-5 columns">
       <% if user_signed_in? %>
           <%= render 'home/report_ad' %>
       <% else %>
