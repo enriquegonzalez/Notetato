@@ -252,16 +252,16 @@ body {
   .form__field--text-area { height: 7rem; }
 
   .form__button {
-  background: hsla(0, 0%, 0%, .65);
-  color: hsla(360, 100%, 100%, .85);
-  font-family: 'Lobster', serif;
-  font-size: 2rem;
-  font-style: italic;
-  letter-spacing: .195rem;
-  margin-top: 2rem;
-  text-transform: capitalize;
-  width: 100%;
-}
+    background: hsla(0, 0%, 0%, .65);
+    color: hsla(360, 100%, 100%, .85);
+    font-family: 'Lobster', serif;
+    font-size: 2rem;
+    font-style: italic;
+    letter-spacing: .195rem;
+    margin-top: 2rem;
+    text-transform: capitalize;
+    width: 100%;
+  }
   .form__button:hover {
     background: hsla(0, 0%, 0%, 1);
     color: hsla(360, 100%, 100%, 1);
@@ -630,3 +630,51 @@ input[type="email"]:focus, input[type="password"]:focus  {
   display: block;
   padding: 1rem;
 }
+
+
+/*************************************************************/
+/* MEDIA QUERIES */
+/*************************************************************/
+
+// Small screens
+@media only screen {} /* Define mobile styles */
+
+@media only screen and (max-width: 40em) {
+  .app-logo {
+    position: static;
+  }
+
+  .value-statement {
+    margin: 0 auto 0 auto;
+  }
+
+  .form__button {
+      font-size: 1.65rem;
+      font-style: italic;
+      letter-spacing: .195rem;
+      margin-bottom:  5rem;
+      margin-top: 0;
+    }
+
+    .screen--home { padding: 0 1.75rem 3rem 1.75rem; }
+
+
+} /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+// Medium screens
+@media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+// Large screens
+@media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xxlarge screens */
