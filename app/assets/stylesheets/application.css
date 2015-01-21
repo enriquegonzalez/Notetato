@@ -365,16 +365,23 @@ figure.feeling {
 /*************************************************************/
 /* REPORT */
 /*************************************************************/
-.report__title__days {
+.report__title__emoticon-container {
   background: hsla(0, 0%, 93%, .25);
   border-radius: 5rem;
   color: hsla(16, 100%, 50%, 1);
   display: inline-block;
-  height: 4rem;
+  height: 4.65rem;
   padding: .65rem 0;
   text-align: center;
-  width: 4rem;
+  width: 4.65rem;
 }
+
+.report__title__emoticon {
+  display: inline-block;
+  margin: 0 auto;
+  width: 3rem;
+}
+
 .report__focus, .report__mood, .report__action, .report__gratitude {
   background: hsla(360, 100%, 100%, .45);
   padding: 2rem;
@@ -641,13 +648,18 @@ input[type="email"]:focus, input[type="password"]:focus  {
 
 @media only screen and (max-width: 40em) {
   .app-logo {
+    margin-bottom: 1rem;
     position: static;
   }
 
   .value-statement {
     font-size: 1.1rem;
-    margin: 1rem auto 0 auto;
+    margin: 0 auto 0 auto;
     padding: 2rem 1rem;
+  }
+
+  .screen {
+    padding: 3rem 0;
   }
 
   .form__question, .form__label {
@@ -677,9 +689,13 @@ input[type="email"]:focus, input[type="password"]:focus  {
 @media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .app-logo {
+    margin-bottom: 1rem;
+  }
+
   .value-statement {
     font-size: 1.65rem;
-    margin: 1rem auto 0 auto;
+    margin: 0 auto 0 auto;
   }
 
   .form__button {
