@@ -708,15 +708,18 @@ input[type="email"]:focus, input[type="password"]:focus  {
   }
 
   .mood__emoticon {
-    margin: 0 auto;
-    width: 4.65rem;
+    width: 4rem;
+  }
+
+  .mood {
+    font-size: .8rem;
   }
 
   .arrow--right {
     font-size: 2.45rem;
     position: relative;
     text-align: center;
-    top: -2.5rem;
+    top: -2rem;
   }
 
 
