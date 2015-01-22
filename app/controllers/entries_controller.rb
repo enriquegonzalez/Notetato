@@ -15,6 +15,8 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
+     @todays_entry = Entry.today(current_user).last
+      @yesterdays_entry = Entry.yesterday(current_user).last
   end
 
   # GET /entries/new
@@ -30,7 +32,7 @@ class EntriesController < ApplicationController
 
   # GET /entries/1/edit
   def edit
-    unless @entry.date == Date.today
+    unless @entry.date == Date.current
       respond_to do |format|
         format.html { redirect_to entry_path, alert: "I like you a lot, but you can only edit today's Notetato." }
       end

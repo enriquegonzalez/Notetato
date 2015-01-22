@@ -672,6 +672,7 @@ input[type="email"]:focus, input[type="password"]:focus  {
   }
     .screen--home { padding: 0 1.65rem 3rem 1.65rem; }
     .screen--index-entry { padding: 1rem; }
+    .screen--new-entry { padding: 1rem; }
 
   .form__question, .form__label {
     font-size: 1.25rem;
@@ -687,7 +688,7 @@ input[type="email"]:focus, input[type="password"]:focus  {
       margin-top: 0;
     }
 
-  .report__title {
+  .report__title, .screen__title {
     color: hsla(0, 0%, 0%, 1);
     font-size: 1.1rem;
     font-weight: 300;

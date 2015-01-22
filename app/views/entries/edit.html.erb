@@ -2,7 +2,7 @@
   <div class="row">
     <div class="small-12 columns">
       <section class="edit-entry__response">
-        <% if @entry.date == Date.today %>
+        <% if @entry.date == Date.current %>
           <header>
             <p class="clearfix">
               <span class="show-entry__date"><%= @entry.date.strftime("%m/%d/%Y") %></span>

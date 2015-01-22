@@ -1,16 +1,23 @@
 <section class="screen screen--show-entry">
   <div class="row">
     <div class="large-12 columns">
-<dl class="sub-nav">
-  <dt>see:</dt>
-  <dd class="active"><a href="#">Yesterdays</a></dd>
-  <dd><a href="#">Todays</a></dd>
-</dl>
+
+<%= @todays_entry.includes?(@entry) %>
+
+    <dl class="sub-nav">
+      <% if !@yesterdays_entry.nil? && (@todays_entry == @entry)  %>
+        <dt>see:</dt>
+        <dd class="active"><a href="#">Yesterdays</a></dd>
+      <% elsif !@todays_entry.nil? && (@yesterdays_entry == @entry) %>
+        <dd><a href="#">Todays</a></dd>
+      <% end %>
+    </dl>
+
       <section class="show-entry__response">
         <header>
           <p class="clearfix">
             <span class="show-entry__date"><%= @entry.date.strftime("%m/%d/%Y") %></span>
-            <% if @entry.date == Date.today %>
+            <% if @entry.date == Date.current %>
               <span class="show-entry__menu right">
               <%= link_to 'Edit', edit_entry_path(@entry), class: "button radius tiny show-entry__menu__item" %>
               </span>
