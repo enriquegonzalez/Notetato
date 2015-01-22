@@ -4,13 +4,11 @@
         <%= render 'home/new_entry' %>
     </div>
 
-    <div class="small-12 medium-12 large-5 columns">
-      <% if user_signed_in? %>
-          <%= render 'home/report_ad' %>
-      <% else %>
+    <% unless user_signed_in? %>
+      <div class="small-12 medium-12 large-5 columns">
         <%= render 'home/report_sample_ad' %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
 
   </div>
 </section>
