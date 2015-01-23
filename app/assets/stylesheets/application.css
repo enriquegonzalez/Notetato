@@ -685,10 +685,10 @@ input[type="email"]:focus, input[type="password"]:focus  {
     .screen--index-entry { padding: 1rem; }
     .screen--new-entry { padding: 1rem; }
     .screen--show-entry { padding: 1rem; }
+    .screen--edit-entry { padding: 1rem; }
 
-      .show-entry__questions {
-        padding: 0;
-      }
+      .show-entry__questions { padding: 0; }
+      .edit-entry__questions { padding: 0; }
 
       .show-entry__button--delete{
         float: none;
