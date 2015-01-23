@@ -22,7 +22,9 @@ body {
 }
 
 .center {
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
@@ -504,7 +506,9 @@ figure.feeling {
     }
 
     .index-entry__mood-shift {
+      display: -webkit-flex;
       display: flex;
+      -webkit-justify-content: center;
       justify-content: center;
       padding: 2rem;
     }
