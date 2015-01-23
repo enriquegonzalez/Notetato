@@ -43,8 +43,8 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(entry_params)
+    @entry.date = Date.current.in_time_zone(current_user.time_zone)
     @todays_entry = Entry.today(current_user).last
-
 
     respond_to do |format|
       if user_signed_in?
