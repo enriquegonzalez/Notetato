@@ -29,12 +29,14 @@ class User < ActiveRecord::Base
 
   def daily_focus_email
     recipient = self
+    if Time.current.in_time_zone(recipient.time_zone).hour == 7
       yesterdays_entry = Entry.yesterday(recipient).last
 
       if !yesterdays_entry.nil? && !yesterdays_entry.focus_on_tomorrow.blank?
         todays_focus = yesterdays_entry.focus_on_tomorrow
         ReportMailer.focus_email(recipient, todays_focus).deliver
       end
+    end
 
   end
 
