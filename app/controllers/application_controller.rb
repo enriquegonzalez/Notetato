@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   helper_method :mood
 
   # before_filter :authenticate_user!
-  around_filter :user_time_zone, if: @current_user
+  around_filter :user_time_zone, if: :current_user
 
   def after_sign_in_path_for(resource_or_scope)
     if cookies[:guest_entry] == "exists"
