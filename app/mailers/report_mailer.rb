@@ -1,7 +1,7 @@
 class ReportMailer < ActionMailer::Base
   default from: "notetato.app@gmail.com"
   # default "Message-ID"=>"#{Digest::SHA2.hexdigest(Time.now.to_i.to_s)}@gmail.com"
-  default "Message-ID" => lambda {"<#{SecureRandom.uuid}@gmail.com"}
+  default "Message-ID"=>"#{Digest::SHA2.hexdigest(Time.now.to_i.to_s)}@gmail.com"
 
   def focus_email(recipient, focus)
     @recipient = recipient
