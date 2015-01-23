@@ -20,6 +20,11 @@
           <%= f.password_field :password, autocomplete: "off", class: "form__field" %>
         </div>
 
+        <div>
+          <%= f.label :time_zone, class: "form__label" %>
+          <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.us_zones, :default => "Central Time (US & Canada)", class: "form__field" %>
+      </div>
+
         <div class="actions">
           <%= f.submit "Create my account", class: "button radius form__button" %>
         </div>

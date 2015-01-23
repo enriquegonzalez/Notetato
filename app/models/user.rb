@@ -9,7 +9,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates_uniqueness_of :email
 
+  validates :time_zone,
+    inclusion: {
+      in: ActiveSupport::TimeZone.zones_map(&:name).keys
+    }
 
 
   # def full_name

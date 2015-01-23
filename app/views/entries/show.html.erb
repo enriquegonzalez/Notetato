@@ -2,13 +2,12 @@
   <div class="row">
     <div class="large-12 columns">
 
-<%= @todays_entry.includes?(@entry) %>
-
     <dl class="sub-nav">
       <% if !@yesterdays_entry.nil? && (@todays_entry == @entry)  %>
         <dt>see:</dt>
         <dd class="active"><a href="#">Yesterdays</a></dd>
       <% elsif !@todays_entry.nil? && (@yesterdays_entry == @entry) %>
+        <dt>see:</dt>
         <dd><a href="#">Todays</a></dd>
       <% end %>
     </dl>
