@@ -65,9 +65,9 @@ class EntriesController < ApplicationController
                                             :expires  => Time.now + 900 }
         cookies[:how_do_you_feel]       = { :value    => entry_params[:how_do_you_feel],
                                             :expires  => Time.now + 900 }
-        cookies[:what_went_well]        = { :value    => entry_params[:what_went_well],
+        cookies[:what_went_well]        = { :value    => cryptor.encrypt(entry_params[:what_went_well]),
                                             :expires  => Time.now + 900 }
-        cookies[:focus_on_tomorrow]     = { :value    => entry_params[:focus_on_tomorrow ],
+        cookies[:focus_on_tomorrow]     = { :value    => cryptor.encrypt(entry_params[:focus_on_tomorrow ]),
                                             :expires  => Time.now + 900 }
         cookies[:how_do_you_feel_now]   = { :value    => entry_params[:how_do_you_feel_now],
                                             :expires  => Time.now + 900 }

@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
         @entry.focus_on_tomorrow     = cookies[:focus_on_tomorrow]
         @entry.how_do_you_feel_now   = cookies[:how_do_you_feel_now].to_i
         @entry.user_id               = current_user.id
+        @entry.date                  = Date.current.in_time_zone(current_user.time_zone)
       @entry.save
 
       delete_guest_entry
