@@ -10,3 +10,5 @@ Notetato: Learn from Today, and Focus on Tomorrow.
   - PostgreSQL
   - Zurb Foundation
   - Heroku Scheduler
+  - Mandrill by Mailchimp
+
