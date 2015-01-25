@@ -19,6 +19,10 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 
+# encryption
+gem 'cryptor'
+gem 'rbnacl-libsodium'
+
 # Better Errors
 gem 'better_errors'
 gem 'binding_of_caller'
@@ -47,6 +51,7 @@ gem 'rails_12factor', group: :production
 
 # Amazon Web Service
 gem 'aws-sdk'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

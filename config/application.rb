@@ -1,6 +1,8 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'cryptor'
+require 'cryptor/symmetric_encryption/ciphers/xsalsa20poly1305'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
