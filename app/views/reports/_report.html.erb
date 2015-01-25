@@ -15,13 +15,13 @@
             <% if !@yesterdays_entry.nil? && !@yesterdays_entry.focus_on_tomorrow.blank? %>
               <li class="card card--focus">
                 <h2 class="card__date">Today</h2>
-                <%= simple_format(@yesterdays_entry.focus_on_tomorrow, class:"card__content") %>
+                <%= simple_format(cryptor.decrypt(@yesterdays_entry.focus_on_tomorrow), class:"card__content") %>
               </li>
             <% end %>
             <% if !@todays_entry.nil? && !@todays_entry.focus_on_tomorrow.blank? %>
               <li class="card card--focus">
                 <h2 class="card__date">Tomorrow</h2>
-                 <%= simple_format(@todays_entry.focus_on_tomorrow, class:"card__content") %>
+                 <%= simple_format(cryptor.decrypt(@todays_entry.focus_on_tomorrow), class:"card__content") %>
               </li>
             <% end %>
           </ul>
@@ -81,7 +81,7 @@
                   <span class="card__date"><%= entry.date.strftime("%A") %></span>
                 </div>
                 <div class="large-10 columns">
-                  <%= simple_format(entry.what_went_well, class: "card__content card__content--gratitude") %>
+                  <%= simple_format(cryptor.decrypt(entry.what_went_well), class: "card__content card__content--gratitude") %>
                 </div>
               </div>
             </li>

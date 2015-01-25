@@ -43,6 +43,8 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(entry_params)
+    @entry.what_went_well = cryptor.encrypt(@entry.what_went_well)
+    @entry.focus_on_tomorrow = cryptor.encrypt(@entry.focus_on_tomorrow)
     @entry.date = Date.current.in_time_zone(current_user.time_zone)
     @todays_entry = Entry.today(current_user).last
 
@@ -109,6 +111,6 @@ class EntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params.require(:entry).permit(:date, :how_do_you_feel, :what_went_well, :what_didnt_go_well, :how_to_make_it_better, :focus_on_tomorrow, :how_do_you_feel_now, :user_id)
+      params.require(:entry).permit(:date, :how_do_you_feel, :what_went_well, :focus_on_tomorrow, :how_do_you_feel_now, :user_id)
     end
 end
