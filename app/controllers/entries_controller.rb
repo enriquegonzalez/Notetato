@@ -1,7 +1,7 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:create]
 
   # GET /entries
   # GET /entries.json
@@ -15,8 +15,8 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
-     @todays_entry = Entry.today(current_user).last
-      @yesterdays_entry = Entry.yesterday(current_user).last
+    @todays_entry = Entry.today(current_user).last
+    @yesterdays_entry = Entry.yesterday(current_user).last
   end
 
   # GET /entries/new
@@ -43,13 +43,13 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(entry_params)
-    @entry.what_went_well = cryptor.encrypt(@entry.what_went_well)
-    @entry.focus_on_tomorrow = cryptor.encrypt(@entry.focus_on_tomorrow)
-    @entry.date = Date.current.in_time_zone(current_user.time_zone)
-    @todays_entry = Entry.today(current_user).last
 
     respond_to do |format|
       if user_signed_in?
+        @entry.what_went_well = cryptor.encrypt(@entry.what_went_well)
+        @entry.focus_on_tomorrow = cryptor.encrypt(@entry.focus_on_tomorrow)
+        @entry.date = Date.current.in_time_zone(current_user.time_zone)
+        @todays_entry = Entry.today(current_user).last
           if @entry.save
             format.html { redirect_to @entry, notice: 'Notetato was successfully created.' }
             format.json { render :show, status: :created, location: @entry }
