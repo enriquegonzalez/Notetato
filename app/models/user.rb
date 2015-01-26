@@ -29,6 +29,7 @@ class User < ActiveRecord::Base
 
   def daily_focus_email
     recipient = self
+    cryptor = Cryptor::SymmetricEncryption.new(ENV["SECRET_KEY_CRYPTOR"])
     if Time.current.in_time_zone(recipient.time_zone).hour == 7
       yesterdays_entry = Entry.yesterday(recipient).last
 
