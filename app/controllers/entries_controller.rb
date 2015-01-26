@@ -84,8 +84,6 @@ class EntriesController < ApplicationController
   # PATCH/PUT /entries/1.json
   def update
     respond_to do |format|
-      @entry.what_went_well = cryptor.encrypt(@entry.what_went_well)
-      @entry.focus_on_tomorrow = cryptor.encrypt(@entry.focus_on_tomorrow)
       if @entry.update(entry_params)
         format.html { redirect_to @entry, notice: 'Your Notetato was successfully updated.' }
         format.json { render :show, status: :ok, location: @entry }

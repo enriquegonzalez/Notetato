@@ -8,6 +8,14 @@ class Entry < ActiveRecord::Base
   validates_uniqueness_of :date, :scope => :user_id
   validates_presence_of :how_do_you_feel, :how_do_you_feel_now
 
+  before_update :encrypt
+
+
+  def encrypt
+    cryptor = Cryptor::SymmetricEncryption.new(ENV["SECRET_KEY_CRYPTOR"])
+    self.what_went_well = cryptor.encrypt(self.what_went_well)
+    self.focus_on_tomorrow = cryptor.encrypt(self.focus_on_tomorrow)
+  end
 
   def save(*args)
     super
