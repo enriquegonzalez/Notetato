@@ -32,6 +32,8 @@ class EntriesController < ApplicationController
 
   # GET /entries/1/edit
   def edit
+    @entry.what_went_well = cryptor.decrypt(@entry.what_went_well)
+    @entry.focus_on_tomorrow = cryptor.decrypt(@entry.focus_on_tomorrow)
     unless @entry.date == Date.current
       respond_to do |format|
         format.html { redirect_to entry_path, alert: "I like you a lot, but you can only edit today's Notetato." }
