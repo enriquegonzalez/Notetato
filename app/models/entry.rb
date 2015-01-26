@@ -1,7 +1,7 @@
 class Entry < ActiveRecord::Base
   belongs_to :user
 
-  scope :this_week, -> (user) { where("date >= ? AND user_id = ?", DateTime.now.beginning_of_week, user.id) }
+  scope :this_week, -> (user) { where("date >= ? AND user_id = ?", Date.current.beginning_of_week, user.id) }
   scope :yesterday, -> (user) { where("date = ? AND user_id = ?", Date.yesterday.in_time_zone(user.time_zone), user.id) }
   scope :today, -> (user) { where("date = ? AND user_id = ?", Date.current.in_time_zone(user.time_zone), user.id) }
 
