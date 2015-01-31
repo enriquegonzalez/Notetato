@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get  '/feedback', to: "feedbacks#index"
+
   resources :reports
 
   resources :reminders

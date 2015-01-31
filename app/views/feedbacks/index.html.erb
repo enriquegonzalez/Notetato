@@ -1,0 +1,12 @@
+<section class="screen">
+  <header>
+    <h1 class="title screen__title">Help Make Notetato better</h1>
+  </header>
+  <p>Notetato is a newborn, help me raise it  by answering a few questions.</p>
+  <p>Your feedback code is: <%= SecureRandom.base64 %>&mdash;<%= current_user.id %></p>
+  <div class="feedback__iframe">
+    <iframe src="https://docs.google.com/forms/d/1QzzCgSfN8mHXC7CbYQ4pnASc-2jq5Omb3B5p03I1CXk/viewform?embedded=true" width="760" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+  </div>
+</section>
+
+
