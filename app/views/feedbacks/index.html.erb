@@ -3,9 +3,7 @@
     <h1 class="title screen__title">Help Make Notetato better</h1>
   </header>
   <p class="feedback-code"><span class="feedback-code__label">Your feedback code is:</span> <%= SecureRandom.uuid.slice(0...12) %>&dash;00<%= current_user.id %></p>
-  <div class="feedback__iframe">
-    <iframe src="https://docs.google.com/forms/d/1QzzCgSfN8mHXC7CbYQ4pnASc-2jq5Omb3B5p03I1CXk/viewform?embedded=true" width="360" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-  </div>
+    <iframe class="feedback__iframe" src="https://docs.google.com/forms/d/1QzzCgSfN8mHXC7CbYQ4pnASc-2jq5Omb3B5p03I1CXk/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 </section>
 
 
