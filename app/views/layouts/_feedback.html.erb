@@ -1,0 +1,5 @@
+<% if user_signed_in? && params[:controller] != 'feedbacks' %>
+  <div class="feedback__button">
+    <%= link_to "feedback!", feedback_path, class: "button button--feedback" %>
+  </div>
+<% end %>
