@@ -627,7 +627,7 @@ figure.feeling {
 
 /* FEEDBACK */
 .feedback__iframe {
-  height: 40rem;
+  height: 50rem;
   width: 100%;
 
 }
@@ -701,7 +701,7 @@ input[type="email"]:focus, input[type="password"]:focus  {
   }
 
   .feedback__iframe {
-    height: 45rem;
+    height: 55rem;
   }
 
   .screen {
@@ -799,6 +799,10 @@ input[type="email"]:focus, input[type="password"]:focus  {
       font-weight: 800;
       text-transform: uppercase;
     }
+
+.line-break {
+  display: block;
+}
 
 
 } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
