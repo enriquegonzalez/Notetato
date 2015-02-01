@@ -124,6 +124,15 @@ footer {
   text-transform: capitalize;
 }
 
+.feedback-code {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+  .feedback-code__label{
+    color: hsla(0, 100%, 50%, .65);
+    font-weight: 600;
+  }
+
 /*****************************************/
 /* TEXT - NOTIFICATIONS */
 /*****************************************/
@@ -678,6 +687,11 @@ input[type="email"]:focus, input[type="password"]:focus  {
     padding: 2rem 1rem;
   }
 
+  .feedback-code {
+    font-size: 1rem;
+    margin: 1rem;
+  }
+
   .screen {
     padding: 0 0 3rem 0;
   }
@@ -709,6 +723,10 @@ input[type="email"]:focus, input[type="password"]:focus  {
       margin-bottom:  5rem;
       margin-top: 0;
     }
+
+  .screen__title {
+    padding-top: 1rem;
+  }
 
   .report__title, .screen__title {
     color: hsla(0, 0%, 0%, 1);
