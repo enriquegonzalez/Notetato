@@ -3,9 +3,8 @@
     <li class="navigation__item <%= 'navigation__item--active' if params[:controller] == 'reports' %>">
       <%= link_to "Report", reports_path, class: "navigation__item__link #{'navigation__item__link--active' if params[:controller] == 'reports'}"%>
     </li>
-    <li class="navigation__item <%= 'navigation__item--active' if params[:controller] == 'entries' %>">
-      <%= link_to "Notetatos", entries_path, class: "navigation__item__link #{'navigation__item__link--active' if params[:controller] == 'entries'}"%>
+    <li class="navigation__item <%= 'navigation__item--active' if params[:controller] == 'moments' %>">
+      <%= link_to "Notetatos", moments_path, class: "navigation__item__link #{'navigation__item__link--active' if params[:controller] == 'moments'}"%>
     </li>
-<!--     <li class="navigation__item"><%#= link_to "Settings", settings_path, class: "navigation__item__link"%></li> -->
   </ul>
 </nav>

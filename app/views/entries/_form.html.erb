@@ -3,111 +3,112 @@
   <dd class="active"><a href="#">Yesterdays</a></dd>
   <dd><a href="#">Todays</a></dd>
 </dl> -->
-
+<!--
 <section class="new-entry__form">
-  <%= form_for(@entry, html: {class: "entry__form"}) do |f| %>
-    <% if @entry.errors.any? %>
+  <%#= form_for(@entry, html: {class: "entry__form"}) do |f| %>
+    <%# if @entry.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+        <h2><%#= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
 
         <ul>
-        <% @entry.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
+        <%# @entry.errors.full_messages.each do |message| %>
+          <li><%#= message %></li>
+        <%# end %>
         </ul>
       </div>
-    <% end %>
+    <%#end %>
 
     <div class="field">
-      <%= f.label :how_do_you_feel, class: "form__question" %>
+      <%#= f.label :how_do_you_feel, class: "form__question" %>
 
-      <%= f.label :how_do_you_feel, "Happy", :value => "1", class: "option--feeling" do %>
-        <%= f.radio_button :how_do_you_feel, 1 %>
+      <%#= f.label :how_do_you_feel, "Happy", :value => "1", class: "option--feeling" do %>
+        <%#= f.radio_button :how_do_you_feel, 1 %>
         <figure class="feeling feeling--happy">
           <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-happy.png" alt="Feeling Happy" class="option--feeling__emoticon">
           <figcaption class="option--feeling__emotion">Happy</figcaption>
         </figure>
-      <% end %>
+      <%# end %>
 
-      <%= f.label :how_do_you_feel, "Pleasant", :value => "2", class: "option--feeling" do %>
-        <%= f.radio_button :how_do_you_feel, 2 %>
+      <%#= f.label :how_do_you_feel, "Pleasant", :value => "2", class: "option--feeling" do %>
+        <%#= f.radio_button :how_do_you_feel, 2 %>
         <figure class="feeling feeling--pleasant">
           <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-pleasant.png" alt="Feeling Pleasant" class="option--feeling__emoticon">
           <figcaption class="option--feeling__emotion">Pleasant</figcaption>
         </figure>
-      <% end %>
+      <%# end %>
 
-      <%= f.label :how_do_you_feel, "Sad", :value => "3", class: "option--feeling" do %>
-        <%= f.radio_button :how_do_you_feel, 3 %>
+      <%#= f.label :how_do_you_feel, "Sad", :value => "3", class: "option--feeling" do %>
+        <%#= f.radio_button :how_do_you_feel, 3 %>
         <figure class="feeling feeling--sad">
           <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-sad.png" alt="Feeling Sad" class="option--feeling__emoticon">
           <figcaption class="option--feeling__emotion">Sad</figcaption>
         </figure>
-      <% end %>
+      <%# end %>
 
-      <%= f.label :how_do_you_feel, "Angry", :value => "4", class: "option--feeling" do %>
-        <%= f.radio_button :how_do_you_feel, 4 %>
+      <%#= f.label :how_do_you_feel, "Angry", :value => "4", class: "option--feeling" do %>
+        <%#= f.radio_button :how_do_you_feel, 4 %>
         <figure class="feeling feeling--angry">
           <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-angry.png" alt="Feeling Angry" class="option--feeling__emoticon">
           <figcaption class="option--feeling__emotion">Angry</figcaption>
         </figure>
-      <% end %>
+      <%# end %>
     </div>
 
      <div class="field">
-      <%= f.label :what_went_well, "What went well today", class: "form__question" %>
-      <%= f.text_area :what_went_well, class: "form__field form__field--text-area" %>
+      <%#= f.label :what_went_well, "What went well today", class: "form__question" %>
+      <%#= f.text_area :what_went_well, class: "form__field form__field--text-area" %>
     </div>
 
 
     <div class="field">
-      <%= f.label :focus_on_tomorrow, "What is the one thing you want to work on tomorrow", class: "form__question" %>
-      <%= f.text_area :focus_on_tomorrow, class: "form__field form__field--text-area" %>
+      <%#= f.label :focus_on_tomorrow, "What is the one thing you want to work on tomorrow", class: "form__question" %>
+      <%#= f.text_area :focus_on_tomorrow, class: "form__field form__field--text-area" %>
     </div>
 
     <div class="field">
-      <%= f.label :how_do_you_feel_now, class: "form__question" %>
+      <%#= f.label :how_do_you_feel_now, class: "form__question" %>
 
-      <%= f.label :how_do_you_feel_now, "Happy", :value => "1", class: "option--feeling" do %>
-        <%= f.radio_button :how_do_you_feel_now, 1 %>
+      <%#= f.label :how_do_you_feel_now, "Happy", :value => "1", class: "option--feeling" do %>
+        <%#= f.radio_button :how_do_you_feel_now, 1 %>
         <figure class="feeling feeling--happy">
           <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-happy.png" alt="Feeling Happy" class="option--feeling__emoticon">
           <figcaption class="option--feeling__emotion">Happy</figcaption>
         </figure>
-      <% end %>
+      <%# end %>
 
-      <%= f.label :how_do_you_feel_now, "Pleasant", :value => "2", class: "option--feeling" do %>
-        <%= f.radio_button :how_do_you_feel_now, 2 %>
+      <%#= f.label :how_do_you_feel_now, "Pleasant", :value => "2", class: "option--feeling" do %>
+        <%#= f.radio_button :how_do_you_feel_now, 2 %>
         <figure class="feeling feeling--pleasant">
           <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-pleasant.png" alt="Feeling Pleasant" class="option--feeling__emoticon">
           <figcaption class="option--feeling__emotion">Pleasant</figcaption>
         </figure>
-      <% end %>
+      <%# end %>
 
-      <%= f.label :how_do_you_feel_now, "Sad", :value => "3", class: "option--feeling" do %>
-        <%= f.radio_button :how_do_you_feel_now, 3 %>
+      <%#= f.label :how_do_you_feel_now, "Sad", :value => "3", class: "option--feeling" do %>
+        <%#= f.radio_button :how_do_you_feel_now, 3 %>
         <figure class="feeling feeling--sad">
           <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-sad.png" alt="Feeling Sad" class="option--feeling__emoticon">
           <figcaption class="option--feeling__emotion">Sad</figcaption>
         </figure>
-      <% end %>
+      <%# end %>
 
-      <%= f.label :how_do_you_feel_now, "Angry", :value => "4", class: "option--feeling" do %>
-        <%= f.radio_button :how_do_you_feel_now, 4 %>
+      <%#= f.label :how_do_you_feel_now, "Angry", :value => "4", class: "option--feeling" do %>
+        <%#= f.radio_button :how_do_you_feel_now, 4 %>
         <figure class="feeling feeling--angry">
           <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-angry.png" alt="Feeling Angry" class="option--feeling__emoticon">
           <figcaption class="option--feeling__emotion">Angry</figcaption>
         </figure>
-      <% end %>
+      <%# end %>
     </div>
 
     <div class="actions">
-        <% if user_signed_in? %>
-          <%= f.hidden_field :user_id, :value => current_user.id %>
-          <%= f.submit "Note it!", class: "button radius form__button" %>
-        <% else %>
-          <%= f.submit "Login and Note it!", class: "button radius form__button" %>
-        <% end %>
+        <%# if user_signed_in? %>
+          <%#= f.hidden_field :user_id, :value => current_user.id %>
+          <%#= f.submit "Note it!", class: "button radius form__button" %>
+        <%# else %>
+          <%#= f.submit "Login and Note it!", class: "button radius form__button" %>
+        <%# end %>
     </div>
-  <% end %>
+  <%# end %>
 </section>
+ -->

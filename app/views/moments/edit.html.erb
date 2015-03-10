@@ -1,6 +1,21 @@
-<h1>Editing moment</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @moment %> |
-<%= link_to 'Back', moments_path %>
+<section class="screen screen--edit-moment">
+  <div class="row">
+    <div class="small-12 columns">
+      <section class="edit-moment__response">
+        <% if @moment.date == Date.current %>
+          <header>
+            <p class="clearfix">
+              <span class="show-moment__date"><%= @moment.date.strftime("%m/%d/%Y") %></span>
+              <span class="show-moment__menu right">
+                <%= link_to 'Cancel', @moment, class: "button radius tiny show-moment__menu__item" %>
+              </span>
+            </p>
+          </header>
+          <section class="edit-moment__questions">
+            <%= render 'form' %>
+          </section>
+        <% end %>
+      </section>
+    </div>
+  </div>
+</section>

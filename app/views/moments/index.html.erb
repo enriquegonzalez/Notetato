@@ -1,23 +1,65 @@
-<h1>Listing moments</h1>
+<section class="screen screen--index-moment">
+  <div class="row">
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @moments.each do |moment| %>
-      <tr>
-        <td><%= link_to 'Show', moment %></td>
-        <td><%= link_to 'Edit', edit_moment_path(moment) %></td>
-        <td><%= link_to 'Destroy', moment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <% if @yesterdays_moment %>
+    <div class=" large-6 columns">
+      <section class="index-moment index-moment--yesterday">
+        <header>
+          <h1 class="title index-moment__title">Yesterday</h1>
+        </header>
+        <p class="index-moment__excerpt"><%= truncate(cryptor.decrypt(@yesterdays_moment.what_went_well), length: 35) %></p>
+        <div class="index-moment__mood-shift">
+          <figure class="feeling feeling--<%= mood(@yesterdays_moment.how_do_you_feel) %>">
+            <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-<%= mood(@yesterdays_moment.how_do_you_feel) %>.png" alt="Feeling <%= mood(@yesterdays_moment.how_do_you_feel) %>" class="mood__emoticon">
+            <figcaption class="mood"><%= mood(@yesterdays_moment.how_do_you_feel) %></figcaption>
+          </figure>
+          <span class="index-moment__mood-shift__arrow--right">&#10157;</span>
+          <figure class="feeling feeling--<%= mood(@yesterdays_moment.how_do_you_feel_now) %>">
+            <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-<%= mood(@yesterdays_moment.how_do_you_feel_now) %>.png" alt="Feeling <%= mood(@yesterdays_moment.how_do_you_feel_now) %>" class="mood__emoticon">
+            <figcaption class="mood"><%= mood(@yesterdays_moment.how_do_you_feel_now) %></figcaption>
+          </figure>
+        </div>
+        <%= link_to "View Notetato", @yesterdays_moment, class: "button radius index-moment__button" %>
+      </section>
+    </div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
+    <% if @todays_moment %>
+      <div class=" large-6 columns">
+        <section class="index-moment index-moment--today">
+          <header>
+            <h1 class="title index-moment__title">Today</h1>
+          </header>
+          <p class="index-moment__excerpt"><%= truncate(cryptor.decrypt(@todays_moment.what_went_well), length: 35) %></p>
+          <div class="index-moment__mood-shift">
+            <figure class="feeling feeling--<%= mood(@todays_moment.how_do_you_feel) %>">
+              <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-<%= mood(@todays_moment.how_do_you_feel) %>.png" alt="Feeling <%= mood(@todays_moment.how_do_you_feel) %>" class="mood__emoticon">
+              <figcaption class="mood"><%= mood(@todays_moment.how_do_you_feel) %></figcaption>
+            </figure>
+            <span class="index-moment__mood-shift__arrow--right">&#10157;</span>
+            <figure class="feeling feeling--<%= mood(@todays_moment.how_do_you_feel_now) %>">
+              <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-<%= mood(@todays_moment.how_do_you_feel_now) %>.png" alt="Feeling <%= mood(@todays_moment.how_do_you_feel_now) %>" class="mood__emoticon">
+              <figcaption class="mood"><%= mood(@todays_moment.how_do_you_feel_now) %></figcaption>
+            </figure>
+          </div>
+          <%= link_to "View Notetato", @todays_moment, class: "button radius index-moment__button" %>
+        </section>
+      </div>
+    <% else %>
+      <div class=" large-5 columns">
+      <aside class="ad">
+        <header>
+          <h1 class="title ad__title">&#x266A; Don't you forget about me &#x266A;</h1>
+        </header>
+        <div class="center">
+          <figure class="feeling feeling--sad">
+            <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-sad.png" alt="Feeling sad %>" class="mood__emoticon">
+          </figure>
+        </div>
+        <%= link_to "Add today's Notetato", new_moment_path, class: "button radius ad__button" %>
+      </aside>
+      </div>
+    <% end %>
 
-<%= link_to 'New Moment', new_moment_path %>
+  </div>
+</section>

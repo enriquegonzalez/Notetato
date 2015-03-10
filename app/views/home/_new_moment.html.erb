@@ -53,7 +53,7 @@
       <%= f.text_area :why, class: "form__field form__field--text-area" %>
     </div>
 
-    <div class="field hide">
+    <div class="field">
       <%= f.label :what_went_well, "Tell me about one good thing that's happened today", class: "form__question" %>
       <%= f.text_area :what_went_well, class: "form__field form__field--text-area" %>
     </div>
@@ -62,7 +62,7 @@
 
 
 
-    <div class="actions hide">
+    <div class="actions">
         <% if user_signed_in? %>
           <%= f.hidden_field :user_id, :value => current_user.id %>
           <%= f.submit "Note it!", class: "button radius form__button" %>

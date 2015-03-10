@@ -274,7 +274,7 @@ footer {
   padding: 1rem 2rem;
 }
 
-.new-entry__form .field {
+.new-moment__form .field {
   border-top: 2px dotted hsla(0, 0%, 93%, 1);
   padding: 2rem 0rem;
 }
@@ -311,7 +311,7 @@ footer {
   }
 
 /*****************************************/
-/* FORM - ENTRY EMOTION OPTIONS */
+/* FORM - moment EMOTION OPTIONS */
 /*****************************************/
 .option--feeling {
   display: inline-block;
@@ -533,20 +533,20 @@ figure.feeling {
   /* HOME */
   .screen--home { padding: 0 3rem 3rem 3rem; }
 
-  /* ENTRY */
-    /* ENTRY INDEX */
-    .index-entry {
+  /* moment */
+    /* moment INDEX */
+    .index-moment {
       padding: 1rem;
     }
 
-    .index-entry__title {
+    .index-moment__title {
       color: hsla(16, 100%, 50%, 1);
       font-size: 1.65rem;
       margin: 0;
       text-align: center;
     }
 
-    .index-entry__mood-shift {
+    .index-moment__mood-shift {
       display: -webkit-flex;
       display: flex;
       -webkit-justify-content: center;
@@ -554,34 +554,34 @@ figure.feeling {
       padding: 2rem;
     }
 
-      .index-entry__mood-shift__arrow--right {
+      .index-moment__mood-shift__arrow--right {
         color: hsla(16, 100%, 50%, 1);
         font-size: 3rem;
       }
-    .index-entry__excerpt {
+    .index-moment__excerpt {
       padding: 0 2rem;
       font-size: 1.25rem;
       font-style: italic;
       text-align: center;
     }
-      .index-entry__excerpt:before {
+      .index-moment__excerpt:before {
         content: '\201C';
       }
-      .index-entry__excerpt:after {
+      .index-moment__excerpt:after {
         content: '\201D';
       }
 
-    .index-entry__button {
+    .index-moment__button {
       background: hsla(0, 0%, 0%, .75);
       font-size: .85rem;
       letter-spacing: .065rem;
       margin: 1rem auto;
       text-transform: uppercase;
     }
-    .index-entry__button:hover { background: hsla(0, 0%, 0%, 1);}
+    .index-moment__button:hover { background: hsla(0, 0%, 0%, 1);}
 
-    /* ENTRY SHOW */
-    .show-entry__menu__item {
+    /* moment SHOW */
+    .show-moment__menu__item {
       background: hsla(35, 100%, 50%, 1);
       color: hsla(360, 100%, 100%, 1);
       display: inline-block;
@@ -589,21 +589,21 @@ figure.feeling {
       text-transform: uppercase;
     }
 
-      .show-entry__menu__item:hover {
+      .show-moment__menu__item:hover {
         background: hsla(40, 100%, 50%, 1);
         color: hsla(360, 100%, 100%, 1);
       }
 
-    .show-entry__date {
+    .show-moment__date {
       color: hsla(16, 100%, 50%, 1);
       font-size: 1rem;
       font-weight: 600;
     }
 
-    .show-entry__questions {
+    .show-moment__questions {
       padding: 0 5rem 5rem 5rem;
     }
-    .show-entry__question {
+    .show-moment__question {
       border-top: 1px dotted hsla(0, 0%, 0%, .25);
       color: hsla(0, 0%, 0%, .85);
       font-size: 1.25rem;
@@ -614,23 +614,23 @@ figure.feeling {
       padding-top: 2rem;
     }
 
-    .show-entry__question ~ figure {
+    .show-moment__question ~ figure {
       margin-left:  2rem;
     }
 
-    .show-entry__answer {
+    .show-moment__answer {
       display:  inline-block;
       font-size: 1.25rem;
       font-weight: 300;
       margin: 1.5rem;
     }
-      .show-entry__answer--none {
+      .show-moment__answer--none {
         color: hsla(0, 0%, 0%, .65);
         font-style: italic;
         text-transform: capitalize;
       }
 
-    .show-entry__button--delete{
+    .show-moment__button--delete{
       background: hsla(0, 100%, 50%, 1);
       color: hsla(360, 100%, 100%, 1);
       display: inline-block;
@@ -640,13 +640,13 @@ figure.feeling {
       width: 20rem;
     }
 
-      .show-entry__button--delete:hover {
+      .show-moment__button--delete:hover {
         background: hsla(0, 100%, 40%, 1);
         color: hsla(360, 100%, 100%, 1);
       }
 
-    /* ENTRY EDIT */
-    .edit-entry__questions {
+    /* moment EDIT */
+    .edit-moment__questions {
       padding: 0 5rem 5rem 5rem;
     }
 
@@ -734,15 +734,15 @@ input[type="email"]:focus, input[type="password"]:focus  {
     padding: 0 0 3rem 0;
   }
     .screen--home { padding: 0 1.65rem 3rem 1.65rem; }
-    .screen--index-entry { padding: 1rem; }
-    .screen--new-entry { padding: 1rem; }
-    .screen--show-entry { padding: 1rem; }
-    .screen--edit-entry { padding: 1rem; }
+    .screen--index-moment { padding: 1rem; }
+    .screen--new-moment { padding: 1rem; }
+    .screen--show-moment { padding: 1rem; }
+    .screen--edit-moment { padding: 1rem; }
 
-      .show-entry__questions { padding: 0; }
-      .edit-entry__questions { padding: 0; }
+      .show-moment__questions { padding: 0; }
+      .edit-moment__questions { padding: 0; }
 
-      .show-entry__button--delete{
+      .show-moment__button--delete{
         float: none;
         margin: 0 auto;
         width: 15rem;
