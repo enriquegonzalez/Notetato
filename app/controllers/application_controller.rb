@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
 
       delete_guest_moment
     end
-    reports_path
+    moment_path(@moment)
   end
 
   def delete_guest_moment

@@ -2,16 +2,6 @@
   <div class="row">
     <div class="large-12 columns">
 
-    <dl class="sub-nav">
-      <% if !@yesterdays_moment.nil? && (@todays_moment == @moment)  %>
-        <dt>see:</dt>
-        <dd class="active"><a href="#">Yesterdays</a></dd>
-      <% elsif !@todays_moment.nil? && (@yesterdays_moment == @moment) %>
-        <dt>see:</dt>
-        <dd><a href="#">Todays</a></dd>
-      <% end %>
-    </dl>
-
       <section class="show-moment__response">
         <header>
           <p class="clearfix">
@@ -33,7 +23,14 @@
             </figcaption>
           </figure>
 
-          <p class="show-moment__question">What went well today?</p>
+          <p class="show-moment__question">Why?</p>
+          <% if !@moment.why.blank? %>
+            <%= simple_format(cryptor.decrypt(@moment.why), class: "show-moment__answer") %>
+          <% else %>
+            <p class="show-moment__answer show-moment__answer--none">No answer.</p>
+          <% end %>
+
+          <p class="show-moment__question">Tell me about one good thing that happened today</p>
           <% if !@moment.what_went_well.blank? %>
             <%= simple_format(cryptor.decrypt(@moment.what_went_well), class: "show-moment__answer") %>
           <% else %>
@@ -41,21 +38,6 @@
           <% end %>
 
 
-          <p class="show-moment__question">What is the one thing you want to work on tomorrow?</p>
-          <% if !@moment.focus_on_tomorrow.blank? %>
-            <%= simple_format(cryptor.decrypt(@moment.focus_on_tomorrow), class: "show-moment__answer") %>
-          <% else %>
-            <p class="show-moment__answer show-moment__answer--none">No answer.</p>
-          <% end %>
-
-
-          <p class="show-moment__question">How do you feel now?</p>
-          <figure class="feeling feeling--<%= mood(@moment.how_do_you_feel_now) %>">
-            <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-<%= mood(@moment.how_do_you_feel_now) %>.png" alt="Feeling <%= mood(@moment.how_do_you_feel_now) %>" class="option--feeling__emoticon">
-            <figcaption class="option--feeling__emotion">
-              <%= mood(@moment.how_do_you_feel_now) %>
-            </figcaption>
-          </figure>
         </section>
         <footer>
           <div class="clearfix">
