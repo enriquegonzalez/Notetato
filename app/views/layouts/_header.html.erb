@@ -3,7 +3,7 @@
   <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/notetato-logo-grey.png" class="app-logo">
   <%= render 'layouts/login_state' %>
   <% if current_page?(root_path) && !user_signed_in? %>
-    <p class="value-statement">Learn <span class="lowercase">from</span>  today, <span class="lowercase">and</span> focus <span class="lowercase">on</span>  tomorrow <span class="lowercase">with</span> Notetato.</p>
+    <p class="value-statement">Note <span class="lowercase">and</span> improve your mood <span class="lowercase">with</span> Notetato.</p>
   <% elsif user_signed_in? %>
     <%= render 'layouts/navigation' %>
   <% end %>
