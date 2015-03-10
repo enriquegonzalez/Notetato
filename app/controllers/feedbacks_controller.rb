@@ -7,4 +7,3 @@ class FeedbacksController < ApplicationController
   end
 
 end
-
