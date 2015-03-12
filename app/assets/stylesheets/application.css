@@ -22,9 +22,6 @@ html, body {
   color: hsla(0, 0%, 0%, 1);
 }
 
-body {
-}
-
 footer {
   border-top: 1px dotted hsla(0, 0%, 0%, .25);
   margin: 5rem 0;
@@ -50,7 +47,7 @@ footer {
   color: hsla(0, 0%, 0%, 1);
   letter-spacing: .075rem;
   font-family: 'Varela Round', sans-serif;
-  font-style: italic;
+  /*font-style: italic;*/
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -59,6 +56,35 @@ footer {
     background: hsla(45, 100%, 50%, 1);
     color: hsla(0, 0%, 0%, 1);
   }
+
+/*************************************************************/
+/* LISTS */
+/*************************************************************/
+ul, .list {
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+li, .list__item {
+  list-style: none;
+}
+
+.list__title {
+  color: hsla(0, 0%, 0%, 1);
+  font-family: 'Varela Round', sans-serif;
+  font-size: .85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/*****************************/
+/* TILES */
+/*****************************/
+.tile {
+  border: 1px solid hsla(0,0%,0%,1);
+  padding: .5rem;
+}
+
 
 /*************************************************************/
 /* NAVIGATION */
@@ -505,6 +531,7 @@ figure.feeling {
 }
 
 .mood {
+  font-size: .75rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -535,7 +562,7 @@ figure.feeling {
 
   /* moment */
     /* moment INDEX */
-    .index-moment {
+/*    .index-moment {
       padding: 1rem;
     }
 
@@ -578,7 +605,7 @@ figure.feeling {
       margin: 1rem auto;
       text-transform: uppercase;
     }
-    .index-moment__button:hover { background: hsla(0, 0%, 0%, 1);}
+    .index-moment__button:hover { background: hsla(0, 0%, 0%, 1);}*/
 
     /* moment SHOW */
     .show-moment__menu__item {
@@ -658,6 +685,15 @@ figure.feeling {
 
 }
 
+/*************************************************************/
+/* MEDIA */
+/*************************************************************/
+.media {margin:10px;}
+.media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.media .img {float:left; margin-right: 10px;}
+.media .img img{display:block;}
+.media .imgExt{float:right; margin-left: 10px;}
+
 
 /*************************************************************/
 /* RAILS SELECTORS */
@@ -681,7 +717,7 @@ figure.feeling {
 /*************************************************************/
 /* FOUNDATION OVERRIDES */
 /*************************************************************/
-h1, ul, p { margin-bottom: 0; }
+h1, p { margin-bottom: 0; }
 
 input[type="email"], input[type="password"] {
   border: transparent;

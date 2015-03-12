@@ -1,30 +1,110 @@
 <section class="screen screen--index-moment">
   <div class="row">
+    <div class="large-12 columns">
 
-    <% if @todays_moment %>
+      <!-- TODAY -->
+      <% unless @moments_today.blank? %>
+        <h2 class="list__title">Today</h2>
+        <ul class="list list--moments">
+          <li class="list__item">
+            <section class="tile tile--daily-moments">
+              <div class="row">
+                <div class="small-3 large-3 columns">
+                  <figure class="feeling feeling--<%= mood(mood_average(Date.current.in_time_zone(@current_user.time_zone))) %>">
+                    <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-<%= mood(mood_average(Date.current.in_time_zone(@current_user.time_zone))) %>.png" alt="Feeling <%= mood(mood_average(Date.current.in_time_zone(@current_user.time_zone))) %>" class="mood__emoticon">
+                    <figcaption class="mood">
+                      <%= mood(mood_average(Date.current.in_time_zone(@current_user.time_zone))) %>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="small-7 large-6 columns">
+                  <div class="row">
+                    <div class="large-6 columns">
+                      <p class="daily-moments__count">Moments: 3</p>
+                    </div>
+                    <div class="large-6 columns">
+                      <p class="daily-moments__count">Good things: 2</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="small-2 large-3 columns">
+                  <p class="daily-moments__menu">i c o n </p>
+                </div>
+              </div>
+
+              <div class="row hide">
+                <div class="small-12 columns">
+                  <% @moments_today.each do |moment| %>
+                    <p>*Feeling with mood*<br><%= truncate(cryptor.decrypt(moment.why), length: 35) %></p>
+                    <p>*List of Good things*<br><%= truncate(cryptor.decrypt(moment.what_went_well), length: 35) %></p>
+                  <% end %>
+                </div>
+              </div>
+            </section>
+
+          </li>
+        </ul>
+      <% else %>
+        <%= render 'add_moment' %>
+      <% end %>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PLAY TIME -->
+<!-- <%# if @moments %>
+
+  <%# @moment_dates.each do |date| %>
+    <section class="moment-day">
+      <header class="moment-day__header">
+        <h1 class="moment-day__date"><%#= date.strftime("%m/%d/%Y") %></h1>
+      </header>
+      <h2>*Average Mood for today*</h2>
+      <p><%#= mood_average(date) %></p>
+
+      <%# @moments.each do |moment| %>
+        <%# if moment.date == date %>
+          <div class="">
+            <p>*Feeling with mood*<br><%#= truncate(cryptor.decrypt(moment.why), length: 35) %></p>
+            <p>*List of Good things*<br><%#= truncate(cryptor.decrypt(moment.what_went_well), length: 35) %></p>
+          </div>
+        <%# end %>
+      <%# end %>
+    </section>
+  <%# end %>
+
+<%# else %>
+  <%#= render 'add_moment' %>
+<%# end %> -->
+
+
+
+
+<!-- OLD CODE -->
+<!--     <%# if @todays_moment %>
       <div class=" large-6 columns">
         <section class="index-moment index-moment--today">
           <header>
             <h1 class="title index-moment__title">Today</h1>
           </header>
-          <p class="index-moment__excerpt"><%= truncate(cryptor.decrypt(@todays_moment.what_went_well), length: 35) %></p>
+          <p class="index-moment__excerpt"><%#= truncate(cryptor.decrypt(@todays_moment.what_went_well), length: 35) %></p>
           <div class="index-moment__mood-shift">
-            <figure class="feeling feeling--<%= mood(@todays_moment.how_do_you_feel) %>">
-              <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-<%= mood(@todays_moment.how_do_you_feel) %>.png" alt="Feeling <%= mood(@todays_moment.how_do_you_feel) %>" class="mood__emoticon">
-              <figcaption class="mood"><%= mood(@todays_moment.how_do_you_feel) %></figcaption>
+            <figure class="feeling feeling--<%#= mood(@todays_moment.how_do_you_feel) %>">
+              <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-<%#= mood(@todays_moment.how_do_you_feel) %>.png" alt="Feeling <%#= mood(@todays_moment.how_do_you_feel) %>" class="mood__emoticon">
+              <figcaption class="mood"><%#= mood(@todays_moment.how_do_you_feel) %></figcaption>
             </figure>
             <span class="index-moment__mood-shift__arrow--right">&#10157;</span>
-            <figure class="feeling feeling--<%= mood(@todays_moment.how_do_you_feel_now) %>">
-              <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-<%= mood(@todays_moment.how_do_you_feel_now) %>.png" alt="Feeling <%= mood(@todays_moment.how_do_you_feel_now) %>" class="mood__emoticon">
-              <figcaption class="mood"><%= mood(@todays_moment.how_do_you_feel_now) %></figcaption>
+            <figure class="feeling feeling--<%#= mood(@todays_moment.how_do_you_feel_now) %>">
+              <img src="https://s3-us-west-2.amazonaws.com/notetato-static-media/emoticons/notetato-<%#= mood(@todays_moment.how_do_you_feel_now) %>.png" alt="Feeling <%#= mood(@todays_moment.how_do_you_feel_now) %>" class="mood__emoticon">
+              <figcaption class="mood"><%#= mood(@todays_moment.how_do_you_feel_now) %></figcaption>
             </figure>
           </div>
-          <%= link_to "View Notetato", @todays_moment, class: "button radius index-moment__button" %>
+          <%#= link_to "View Notetato", @todays_moment, class: "button radius index-moment__button" %>
         </section>
       </div>
-    <% else %>
-      <%= render 'add_moment' %>
-    <% end %>
-
-  </div>
-</section>
+    <%# else %>
+      <%#= render 'add_moment' %>
+    <%# end %> -->

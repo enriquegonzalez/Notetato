@@ -6,9 +6,13 @@ class MomentsController < ApplicationController
   respond_to :html
 
   def index
+    @moments_today = Moment.mine_today(current_user)
+    @moments_yesterday = Moment.mine_yesterday(current_user)
     @moments = Moment.mine(current_user)
-    # @todays_moments = Moment.today(current_user)
-    # @yesterdays_moments = Moment.yesterday(current_user)
+    # @moment_dates = Moment.my_moment_dates(current_user)
+
+
+
     respond_with(@moments)
   end
 
@@ -36,7 +40,6 @@ class MomentsController < ApplicationController
           if @moment.save
             format.html { redirect_to @moment, notice: 'Moment was successfully created.' }
             format.json { render :show, status: :created, location: @moment }
-            respond_with(@moment)
           else
             format.html { render :new }
             format.json { render json: @moment.errors, status: :unprocessable_entity }
